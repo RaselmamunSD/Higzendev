@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
@@ -11,9 +11,11 @@ const CTA = () => {
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
           Contact us today to learn how we can help your business grow and succeed in the digital world.
         </p>
-        <Button className="px-8 py-6 text-lg glow-effect-strong">
-          Request a Free Consultation
-        </Button>
+        <Link to="/schedule-meeting">
+          <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-4 h-auto text-lg glow-effect">
+            Schedule Meeting
+          </Button>
+        </Link>
       </div>
     </section>
   );

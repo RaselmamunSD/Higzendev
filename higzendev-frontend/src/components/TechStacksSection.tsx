@@ -21,7 +21,7 @@ const TechStacksSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-[#0f0f0f] to-background relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
@@ -33,11 +33,13 @@ const TechStacksSection = () => {
             to keep pace with the competitive market
           </p>
         </div>
+      </div>
 
+      <div className="w-full">
         {/* First row - scrolling right */}
-        <div className="relative mb-12 overflow-hidden">
-          <div className="flex animate-marquee-right">
-            {[...techStacksRow1, ...techStacksRow1].map((tech, index) => (
+        <div className="relative mb-12 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+          <div className="flex animate-marquee-right" style={{ width: 'max-content' }}>
+            {[...techStacksRow1, ...techStacksRow1, ...techStacksRow1, ...techStacksRow1, ...techStacksRow1].map((tech, index) => (
               <div key={index} className="flex-shrink-0 mx-4">
                 <div className={`w-28 h-28 md:w-32 md:h-32 rounded-full ${tech.color} flex items-center justify-center font-semibold text-lg shadow-card-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300`}>
                   {tech.name}
@@ -48,9 +50,9 @@ const TechStacksSection = () => {
         </div>
         
         {/* Second row - scrolling left */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-marquee-left">
-            {[...techStacksRow2, ...techStacksRow2].map((tech, index) => (
+        <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+          <div className="flex animate-marquee-left" style={{ width: 'max-content' }}>
+            {[...techStacksRow2, ...techStacksRow2, ...techStacksRow2, ...techStacksRow2, ...techStacksRow2].map((tech, index) => (
               <div key={index} className="flex-shrink-0 mx-4">
                 <div className={`w-28 h-28 md:w-32 md:h-32 rounded-full ${tech.color} flex items-center justify-center font-semibold text-lg shadow-card-glow hover:shadow-glow transform hover:scale-110 transition-all duration-300`}>
                   {tech.name}

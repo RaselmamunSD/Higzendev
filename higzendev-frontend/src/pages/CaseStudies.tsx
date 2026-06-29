@@ -278,14 +278,14 @@ const CaseStudies = () => {
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Want similar results for your company? Let's talk about your project and how we can help you achieve your goals.
               </p>
-              <Link to="/contact">
+              <Link to="/schedule-meeting">
                 <Button 
                   size="lg" 
                   className="px-10 py-7 text-lg font-semibold rounded-xl bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 animate-fade-in group"
                   style={{ animationDelay: '0.3s' }}
                 >
                   <Users className="h-5 w-5 mr-2" />
-                  Book a Free Consultation
+                  Schedule Meeting
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </Link>

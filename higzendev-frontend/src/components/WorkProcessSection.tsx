@@ -14,7 +14,7 @@ const WorkProcessSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#121212] via-background to-[#121212] relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto mb-12 text-center">

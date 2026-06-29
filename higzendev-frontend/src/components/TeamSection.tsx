@@ -179,14 +179,15 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="relative -mx-4 sm:-mx-6 lg:-mx-8 px-3 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border border-white/5"
+      className="relative w-full py-10 sm:py-16 lg:py-20 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
     >
       {/* ambient glows */}
       <div aria-hidden="true" className="absolute -top-32 -left-20 w-[20rem] sm:w-[28rem] h-[20rem] sm:h-[28rem] rounded-full bg-primary/10 blur-[80px] sm:blur-[120px] pointer-events-none"></div>
       <div aria-hidden="true" className="absolute -bottom-32 -right-20 w-[20rem] sm:w-[28rem] h-[20rem] sm:h-[28rem] rounded-full bg-secondary/10 blur-[80px] sm:blur-[120px] pointer-events-none"></div>
 
       {/* Header */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-end mb-4 sm:mb-6 lg:mb-8 px-1 sm:px-4 lg:px-6 pt-2 sm:pt-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-end mb-8 sm:mb-10 lg:mb-12 pt-2 sm:pt-4">
         <div>
           <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
             <span aria-hidden="true" className="h-px w-8 sm:w-10 bg-primary"></span>
@@ -223,6 +224,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
             </Link>
           </div>
         </div>
+        </div>
       </div>
 
       {/* Edge fades */}
@@ -231,7 +233,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
 
       {/* Auto-rotating row */}
       <div
-        className={prefersReducedMotion ? 'relative py-3 sm:py-4 overflow-x-auto' : 'relative overflow-hidden py-3 sm:py-4'}
+        className={prefersReducedMotion ? 'relative py-3 sm:py-4 overflow-x-auto w-full' : 'relative overflow-hidden py-3 sm:py-4 w-full [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]'}
         role="region"
         aria-label="Team members carousel"
         aria-roledescription="carousel"
@@ -772,10 +774,12 @@ const TeamSection = () => {
               </div>
             </div>
           </>
-        ) : (
-          <HomeTeamShowcase members={[...foundingTeam, ...executiveTeam, ...teamMembers] as TeamMemberProps[]} />
-        )}
+        ) : null}
       </div>
+
+      {!isTeamPage && (
+        <HomeTeamShowcase members={[...foundingTeam, ...executiveTeam, ...teamMembers] as TeamMemberProps[]} />
+      )}
     </section>
   );
 };

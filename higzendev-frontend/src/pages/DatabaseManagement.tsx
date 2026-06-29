@@ -230,7 +230,7 @@ const DatabaseManagement = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Link to="/schedule-meeting">Get Free Consultation</Link>
+                <Link to="/schedule-meeting">Schedule Meeting</Link>
               </Button>
             </div>
           </div>

@@ -186,7 +186,7 @@ const ClientTestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-[#121212] via-background to-[#121212] relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative">
         {/* Header */}
@@ -199,9 +199,11 @@ const ClientTestimonialsSection = () => {
             rely on us as a strategic partner to scale their development teams.
           </p>
         </div>
+      </div>
 
+      <div className="w-full">
         {/* Brand Logos - Single Line Scrolling */}
-        <div className="mb-10 md:mb-16 overflow-hidden">
+        <div className="mb-10 md:mb-16 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
           <div className="flex animate-marquee-slow hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
             {[...brandLogos, ...brandLogos, ...brandLogos].map((logo, index) => (
               <div key={index} className="flex-shrink-0 mx-2 md:mx-3 bg-card rounded-lg p-3 md:p-4 lg:p-6 shadow-card-glow hover:shadow-glow border border-border transition-all duration-300 group hover:scale-105 w-28 h-16 sm:w-32 sm:h-18 md:w-36 md:h-20 lg:w-40 lg:h-24 flex items-center justify-center">
@@ -216,8 +218,8 @@ const ClientTestimonialsSection = () => {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className="mb-10 md:mb-16">
-          <div className="overflow-hidden" ref={emblaRef}>
+        <div className="mb-10 md:mb-16 w-full">
+          <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_2%,black_98%,transparent)] px-2 sm:px-4" ref={emblaRef}>
             <div className="flex gap-3 sm:gap-4 md:gap-6">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="flex-none">
@@ -234,6 +236,9 @@ const ClientTestimonialsSection = () => {
           </div>
         </div>
 
+        </div>
+
+      <div className="container mx-auto px-4 relative">
         {/* CTA Section */}
         <div className="text-center">
           <Link to="/case-studies">

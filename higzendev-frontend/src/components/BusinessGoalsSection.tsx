@@ -53,7 +53,7 @@ const BusinessGoalsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-[#0f0f0f] to-background relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto mb-16 text-center">
