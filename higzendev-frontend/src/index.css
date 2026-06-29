@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 92% 61%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 7%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 199 92% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 15%;
+    --input: 0 0% 7%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    --glow-primary: 199 89% 48%;
+    --glow-secondary: 199 92% 61%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 92% 61%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 7%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 199 92% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 15%;
+    --input: 0 0% 7%;
+    --ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Prevent text size adjustment on mobile */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    /* Minimum readable font size on mobile */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Ensure minimum touch target size for interactive elements */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    min-height: 44px;
+  }
+
+  /* Exceptions for inline links */
+  p a,
+  span a,
+  .inline-link {
+    min-height: auto;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 10px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .glow-effect-strong {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.7);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 4px 14px hsl(var(--glow-primary) / 0.3);
+  }
+
+  .shadow-glow-lg {
+    box-shadow: 0 8px 24px hsl(var(--glow-primary) / 0.4);
+  }
+}
+
+@layer components {
+  /* Touch-friendly button base */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Mobile-optimized text sizes */
+  .text-mobile-safe {
+    @apply text-base sm:text-sm;
+  }
+
+  /* Responsive section padding */
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile-first card layout */
+  .card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+  }
+
+  /* Swipe-friendly container */
+  .swipe-container {
+    @apply overflow-x-auto scrollbar-hide snap-x snap-mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .swipe-item {
+    @apply snap-center flex-shrink-0;
+  }
+
+  /* Hide scrollbar for swipe containers */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Typing Wave Animation for Chatbot */
+@keyframes typingWave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
