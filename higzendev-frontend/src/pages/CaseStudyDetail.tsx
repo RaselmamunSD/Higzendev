@@ -33,7 +33,7 @@ const CaseStudyDetail = () => {
         "Achieved 99.9% system uptime"
       ],
       testimonial: {
-        text: "TechWave delivered exceptional results. Their automation system transformed our payment processing capabilities and significantly improved our operational efficiency. The team was professional, responsive, and delivered on time.",
+        text: "HigzenDev delivered exceptional results. Their automation system transformed our payment processing capabilities and significantly improved our operational efficiency. The team was professional, responsive, and delivered on time.",
         author: "Ahmed Rahman",
         position: "Chief Technology Officer, bKash Limited"
       },
@@ -93,7 +93,7 @@ const CaseStudyDetail = () => {
         "Automated report generation saving 100+ hours monthly"
       ],
       testimonial: {
-        text: "The analytics dashboard provided invaluable insights that helped us make data-driven decisions. TechWave's team understood our complex requirements and delivered a solution that transformed our operations.",
+        text: "The analytics dashboard provided invaluable insights that helped us make data-driven decisions. HigzenDev's team understood our complex requirements and delivered a solution that transformed our operations.",
         author: "Dr. Nasreen Khan",
         position: "Chief Data Officer, Grameenphone"
       },
@@ -123,7 +123,7 @@ const CaseStudyDetail = () => {
         "Achieved full HIPAA compliance"
       ],
       testimonial: {
-        text: "TechWave's solution significantly improved our hospital operations and patient care quality. The system is intuitive, reliable, and has transformed how we deliver healthcare services.",
+        text: "HigzenDev's solution significantly improved our hospital operations and patient care quality. The system is intuitive, reliable, and has transformed how we deliver healthcare services.",
         author: "Dr. Mahmud Hassan",
         position: "Director of IT, Square Hospitals"
       },
@@ -183,7 +183,7 @@ const CaseStudyDetail = () => {
         "Annual savings of $2.5M in operational costs"
       ],
       testimonial: {
-        text: "The inventory system revolutionized our supply chain management and reduced costs significantly. TechWave's team delivered exactly what we needed with excellent post-deployment support.",
+        text: "The inventory system revolutionized our supply chain management and reduced costs significantly. HigzenDev's team delivered exactly what we needed with excellent post-deployment support.",
         author: "Kamal Uddin",
         position: "Supply Chain Director, ACI Limited"
       },

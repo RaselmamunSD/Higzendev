@@ -20,7 +20,7 @@ const CaseStudies = () => {
       industry: "FinTech",
       technologies: ["Django", "React", "PostgreSQL"],
       year: "2023",
-      testimonial: "TechWave delivered exceptional results. Their automation system transformed our payment processing capabilities.",
+      testimonial: "HigzenDev delivered exceptional results. Their automation system transformed our payment processing capabilities.",
       gradient: "from-pink-500 via-rose-500 to-red-500"
     },
     {
@@ -59,7 +59,7 @@ const CaseStudies = () => {
       industry: "Healthcare",
       technologies: ["Angular", "Spring Boot", "MySQL"],
       year: "2023",
-      testimonial: "TechWave's solution significantly improved our hospital operations and patient care quality.",
+      testimonial: "HigzenDev's solution significantly improved our hospital operations and patient care quality.",
       gradient: "from-orange-500 via-amber-500 to-yellow-500"
     },
     {

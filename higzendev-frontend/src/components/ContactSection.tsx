@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,7 +6,7 @@ import { PhoneCall, Mail, MapPin, CheckCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-dark-section">
+    <section className="py-24 bg-background/95">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -18,7 +17,7 @@ const ContactSection = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-dark-card p-8 rounded-lg border border-border">
+            <div className="bg-card p-8 rounded-lg border border-border shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Us</h3>
               <form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -45,13 +44,13 @@ const ContactSection = () => {
                   <Textarea placeholder="How can we help you?" className="h-32" />
                 </div>
                 
-                <Button className="w-full glow-effect">Submit Request</Button>
+                <Button className="w-full shadow-glow">Submit Request</Button>
               </form>
             </div>
 
             <div>
-              <div className="bg-dark-card text-foreground p-8 rounded-lg mb-8 border border-border">
-                <h3 className="text-2xl font-bold mb-6">TechWave at a Glance:</h3>
+              <div className="bg-card text-foreground p-8 rounded-lg mb-8 border border-border shadow-lg">
+                <h3 className="text-2xl font-bold mb-6">HigzenDev at a Glance:</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="text-primary" size={20} />
@@ -79,7 +78,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">01870966718</p>
                   </div>
                 </div>
 
@@ -89,7 +88,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-foreground">Email</h4>
-                    <p className="text-muted-foreground">info@techwave.com</p>
+                    <p className="text-muted-foreground">contact@higzendev.com</p>
                   </div>
                 </div>
 
@@ -100,8 +99,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="text-lg font-medium text-foreground">Office Location</h4>
                     <p className="text-muted-foreground">
-                      123 Tech Street, Suite 101<br />
-                      San Francisco, CA 94107
+                      Dhaka, Bangladesh
                     </p>
                   </div>
                 </div>

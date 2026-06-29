@@ -10,13 +10,13 @@ const CompanyHistorySection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-800 mb-6">
-              About TechWave
+              About HigzenDev
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               From Humble Beginnings to Global Partner.
             </h2>
             <p className="text-lg mb-8 text-gray-700">
-              Founded in 2016, TechWave provides IT consulting and software
+              Founded in 2016, HigzenDev provides IT consulting and software
               development services. With the help of a passionate team and talented
               individuals.
             </p>

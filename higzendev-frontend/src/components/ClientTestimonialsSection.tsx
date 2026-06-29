@@ -94,49 +94,49 @@ const ClientTestimonialsSection = () => {
       logo: "https://via.placeholder.com/150x50?text=Kliktt",
       clientName: "Chris Withers",
       title: "CEO & Founder",
-      testimonial: "Heartfelt appreciation to TechWave Limited for believing in my vision. Their talented developers can take any challenges against all odds and helped to bring Kliktt into life.",
+      testimonial: "Heartfelt appreciation to HigzenDev Limited for believing in my vision. Their talented developers can take any challenges against all odds and helped to bring Kliktt into life.",
       clientImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=WellTeam",
       clientName: "Troy Flower",
       title: "Founder",
-      testimonial: "TechWave exceeded expectations with proactive suggestions, responsiveness, and dedication. From co-founders to team, working with them was a delight!",
+      testimonial: "HigzenDev exceeded expectations with proactive suggestions, responsiveness, and dedication. From co-founders to team, working with them was a delight!",
       clientImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=Limestone",
       clientName: "Henric Ehrenblad",
       title: "Founder",
-      testimonial: "I came down Bangladesh and visited the TechWave office. It feels like they are a great cultured company and that's one of the reasons, why it's so fun to work with them.",
+      testimonial: "I came down Bangladesh and visited the HigzenDev office. It feels like they are a great cultured company and that's one of the reasons, why it's so fun to work with them.",
       clientImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=TechCorp",
       clientName: "Sarah Johnson",
       title: "CTO",
-      testimonial: "Outstanding technical expertise and professional service. TechWave delivered our project on time and exceeded all expectations.",
+      testimonial: "Outstanding technical expertise and professional service. HigzenDev delivered our project on time and exceeded all expectations.",
       clientImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=InnovateLab",
       clientName: "Michael Chen",
       title: "Product Manager",
-      testimonial: "Working with TechWave was seamless. Their attention to detail and innovative solutions helped us scale our platform effectively.",
+      testimonial: "Working with HigzenDev was seamless. Their attention to detail and innovative solutions helped us scale our platform effectively.",
       clientImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=CloudSync",
       clientName: "Emily Rodriguez",
       title: "Founder & CEO",
-      testimonial: "TechWave's cloud solutions transformed our business operations. Their team is professional, responsive, and highly skilled.",
+      testimonial: "HigzenDev's cloud solutions transformed our business operations. Their team is professional, responsive, and highly skilled.",
       clientImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=DataFlow",
       clientName: "David Kim",
       title: "Lead Developer",
-      testimonial: "Exceptional database management and optimization services. TechWave helped us improve performance by 300%.",
+      testimonial: "Exceptional database management and optimization services. HigzenDev helped us improve performance by 300%.",
       clientImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -150,14 +150,14 @@ const ClientTestimonialsSection = () => {
       logo: "https://via.placeholder.com/150x50?text=EcomPlus",
       clientName: "Robert Wilson",
       title: "Business Owner",
-      testimonial: "TechWave built our e-commerce platform from scratch. Sales increased by 250% after launch. Highly recommended!",
+      testimonial: "HigzenDev built our e-commerce platform from scratch. Sales increased by 250% after launch. Highly recommended!",
       clientImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
     },
     {
       logo: "https://via.placeholder.com/150x50?text=AIVenture",
       clientName: "Lisa Anderson",
       title: "AI Specialist",
-      testimonial: "Their AI development capabilities are impressive. TechWave helped us implement machine learning solutions that revolutionized our workflow.",
+      testimonial: "Their AI development capabilities are impressive. HigzenDev helped us implement machine learning solutions that revolutionized our workflow.",
       clientImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
     }
   ];

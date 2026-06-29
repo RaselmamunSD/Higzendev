@@ -31,9 +31,9 @@ const VisionSection = () => {
                   Delivering Diverse Projects Across Industries for Numerous Companies
                 </h3>
                 <p className="text-lg mb-6">
-                  Founded in 2016, TechWave provides IT consulting and software 
+                  Founded in 2016, HigzenDev provides IT consulting and software 
                   development services. With the help of a passionate team and talented 
-                  individuals dedicated to positively impacting the world, TechWave's 
+                  individuals dedicated to positively impacting the world, HigzenDev's 
                   products help businesses grow and succeed. Our goal is to create digital 
                   experiences that will make your life simpler and more enjoyable.
                 </p>

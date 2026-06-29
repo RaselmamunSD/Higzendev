@@ -46,7 +46,7 @@ interface TeamMemberProps {
 const TeamMember = ({ 
   name, 
   position, 
-  color = "bg-gray-800", 
+  color = "bg-muted/30", 
   imagePath,
   bio,
   linkedIn,
@@ -362,7 +362,7 @@ const TeamSection = () => {
     {
       name: 'Biplab Chandra Sarker',
       position: 'Founding Director',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: 'https://linkedin.com/',
       imagePath: '',
       facebook: '',
@@ -374,7 +374,7 @@ const TeamSection = () => {
     {
       name: 'Md. Imrul Hasan',
       position: 'Founding Director',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -390,7 +390,7 @@ const TeamSection = () => {
     {
       name: 'Md Abdul Mukit',
       position: 'Chief Operating Officer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: 'https://linkedin.com/',
       imagePath: '',
       facebook: '',
@@ -402,7 +402,7 @@ const TeamSection = () => {
     {
       name: 'Sarah Johnson',
       position: 'SVP, Engineering',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: 'https://linkedin.com/',
       imagePath: '',
       facebook: '',
@@ -414,7 +414,7 @@ const TeamSection = () => {
     {
       name: 'David Martinez',
       position: 'VP, Product',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: 'https://linkedin.com/',
       imagePath: '',
       facebook: '',
@@ -426,7 +426,7 @@ const TeamSection = () => {
     {
       name: 'Emily Wong',
       position: 'AVP, Design',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: 'https://linkedin.com/',
       imagePath: '',
       facebook: '',
@@ -442,7 +442,7 @@ const TeamSection = () => {
     {
       name: 'Robert Taylor',
       position: 'QA Engineer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -453,7 +453,7 @@ const TeamSection = () => {
     {
       name: 'Alex Chen',
       position: 'Full Stack Developer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -464,7 +464,7 @@ const TeamSection = () => {
     {
       name: 'Maria Rodriguez',
       position: 'UX/UI Designer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -475,7 +475,7 @@ const TeamSection = () => {
     {
       name: 'James Wilson',
       position: 'DevOps Engineer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -486,7 +486,7 @@ const TeamSection = () => {
     {
       name: 'Lisa Chang',
       position: 'Frontend Developer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -497,7 +497,7 @@ const TeamSection = () => {
     {
       name: 'Michael Brown',
       position: 'Backend Developer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -508,7 +508,7 @@ const TeamSection = () => {
     {
       name: 'Nina Patel',
       position: 'Data Scientist',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -519,7 +519,7 @@ const TeamSection = () => {
     {
       name: 'Carlos Mendez',
       position: 'Mobile Developer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -530,7 +530,7 @@ const TeamSection = () => {
     {
       name: 'Sophie Laurent',
       position: 'Product Manager',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -541,7 +541,7 @@ const TeamSection = () => {
     {
       name: 'David Kim',
       position: 'Security Engineer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -552,7 +552,7 @@ const TeamSection = () => {
     {
       name: 'Amanda Foster',
       position: 'Technical Writer',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',
@@ -563,7 +563,7 @@ const TeamSection = () => {
     {
       name: 'Ryan O\'Connor',
       position: 'Cloud Architect',
-      color: 'bg-gray-900',
+      color: 'bg-background',
       linkedIn: '',
       imagePath: '',
       facebook: '',

@@ -18,7 +18,7 @@ const LocationSection = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      lines: ['+880 1811 966 314', 'Mon – Sat, 9:00 – 18:00'],
+      lines: ['01870966718', 'Mon – Sat, 9:00 – 18:00'],
       gradient: 'from-violet-500/20 to-fuchsia-500/20',
       iconColor: 'text-violet-400',
       ring: 'ring-violet-400/30',
@@ -26,7 +26,7 @@ const LocationSection = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      lines: ['info@techwave.com', 'Reply within 24 hours'],
+      lines: ['contact@higzendev.com', 'Reply within 24 hours'],
       gradient: 'from-emerald-500/20 to-teal-500/20',
       iconColor: 'text-emerald-400',
       ring: 'ring-emerald-400/30',

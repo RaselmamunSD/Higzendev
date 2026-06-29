@@ -226,7 +226,7 @@ const ScheduleMeeting = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 bg-slate-800/40 backdrop-blur-sm rounded-xl border border-slate-700/30 hover:bg-slate-800/60 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-2 text-slate-100">Email</h3>
-                <p className="text-slate-400">hello@techwave.com</p>
+                <p className="text-slate-400">contact@higzendev.com</p>
               </div>
               <div className="p-6 bg-slate-800/40 backdrop-blur-sm rounded-xl border border-slate-700/30 hover:bg-slate-800/60 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-2 text-slate-100">Phone</h3>

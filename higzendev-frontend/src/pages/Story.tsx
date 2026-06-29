@@ -78,7 +78,7 @@ const Story = () => {
                     Explain the tagline: "The Soul of Tech"? What message does it convey?
                   </h3>
                   <p className="text-[#F5F7FA] leading-relaxed">
-                    The tagline "The Soul of Tech" communicates TechWave's commitment to infusing 
+                    The tagline "The Soul of Tech" communicates HigzenDev's commitment to infusing 
                     technology with creativity, humanity, and depth. It encapsulates the company's belief that 
                     technology is not just a tool but a medium through which businesses can express 
                     themselves and connect with their audiences profoundly.
@@ -143,10 +143,10 @@ const Story = () => {
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <div className="md:w-1/2">
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
-                  The Glorious Story of TechWave
+                  The Glorious Story of HigzenDev
                 </h2>
                 <p className="text-lg text-[#A0AEC0] leading-relaxed">
-                  TechWave stands apart as a dynamic B2B-focused agency, renowned for delivering 
+                  HigzenDev stands apart as a dynamic B2B-focused agency, renowned for delivering 
                   comprehensive, innovative digital solutions tailored specifically to the evolving needs of 
                   businesses. We help web and software development agencies grow faster by reducing 
                   their operational and development costs, improving work efficiency, and meeting 
@@ -225,7 +225,7 @@ const Story = () => {
                       <h3 className="text-2xl font-bold text-purple-400 mb-4">2020 - Transformation</h3>
                       <p className="text-[#F5F7FA]">
                         The pivotal transition from freelancer to company founder. 
-                        TechWave was officially born with a mission to innovate.
+                        HigzenDev was officially born with a mission to innovate.
                       </p>
                     </div>
                   </div>
@@ -328,7 +328,7 @@ const Story = () => {
         <section className="bg-gradient-to-br from-[#1A1A1A] to-[#0D1117] py-20 px-8">
           <div className="max-w-7xl mx-auto scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
-              The Transition to TechWave (2020)
+              The Transition to HigzenDev (2020)
             </h2>
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <div className="md:w-1/2">
@@ -340,7 +340,7 @@ const Story = () => {
                       Our previous brand name might convey a limited focus, while our proper
                       emphasis has always been global. Thus, we embarked on a quest to discover a suitable name
                       that could encompass the entirety of our services. Through diligent searching, we stumbled
-                      upon the domain "TechWave," a name that perfectly encapsulates our offerings. This choice
+                      upon the domain "HigzenDev," a name that perfectly encapsulates our offerings. This choice
                       seamlessly aligns with our mission and perspective.
                     </p>
                   </div>
@@ -377,7 +377,7 @@ const Story = () => {
         <section className="bg-black py-20 px-8">
           <div className="max-w-7xl mx-auto scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
-              The Formation of TechWave (2020)
+              The Formation of HigzenDev (2020)
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
@@ -385,13 +385,13 @@ const Story = () => {
                   How does our brand identity translate to our values?
                 </h3>
                 <p className="text-xl text-[#A0AEC0] leading-relaxed">
-                  The term "TechWave" implies innovation and technological advancement. This concept reflects our aspiration to excel through our partnerships with our
+                  The term "HigzenDev" implies innovation and technological advancement. This concept reflects our aspiration to excel through our partnerships with our
                   clients. Likewise, we strive to empower our clients, aiding them in achieving their own brilliance in the business landscape.
                 </p>
               </div>
               
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#1E90FF] to-[#00C896] bg-clip-text text-transparent">
-                Building a Brand: Shaping TechWave
+                Building a Brand: Shaping HigzenDev
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -400,12 +400,12 @@ const Story = () => {
                   <div className="relative z-10">
                     <Users className="w-12 h-12 text-[#1E90FF] mb-6" />
                     <h3 className="text-2xl font-bold mb-4 text-center text-[#1E90FF]">
-                      How did TechWave's website develop over time?
+                      How did HigzenDev's website develop over time?
                     </h3>
                     <p className="text-[#F5F7FA] leading-relaxed">
-                      The journey began with our initial website and later transformed into TechWave. Initially, our
+                      The journey began with our initial website and later transformed into HigzenDev. Initially, our
                       offerings were limited to services such as Web Development, WordPress Web
-                      Development, and SEO. However, as time progressed, TechWave expanded its horizons to
+                      Development, and SEO. However, as time progressed, HigzenDev expanded its horizons to
                       encompass a comprehensive suite of services essential for businesses to thrive online.
                     </p>
                   </div>
@@ -419,7 +419,7 @@ const Story = () => {
                       The preparations for the official launch
                     </h3>
                     <p className="text-[#F5F7FA] leading-relaxed">
-                      TechWave officially launched in 2020, starting as a venture with a small team.
+                      HigzenDev officially launched in 2020, starting as a venture with a small team.
                       After registering the domain and securing an office, the initial team included
                       web developers, an SEO expert, a social media marketer, and office staff. Now we've
                       grown to 50+ members, with continuous expansion each month. The decision to have an
@@ -437,7 +437,7 @@ const Story = () => {
         <section className="bg-gradient-to-br from-[#0D1117] to-[#1A1A1A] py-20 px-8">
           <div className="max-w-7xl mx-auto scroll-animate">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
-              TechWave's Official Launch and Vision (2021)
+              HigzenDev's Official Launch and Vision (2021)
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -449,7 +449,7 @@ const Story = () => {
                     Establishing a dedicated team: How did this shape growth?
                   </h3>
                   <p className="text-[#F5F7FA] leading-relaxed">
-                    The choice to form dedicated teams at TechWave aimed to
+                    The choice to form dedicated teams at HigzenDev aimed to
                     enhance services and offer specialized client support. As
                     our company grew, dedicated teams improved efficiency,
                     quality, and customization. This decision significantly
@@ -467,10 +467,10 @@ const Story = () => {
                 <div className="relative z-10">
                   <Target className="w-12 h-12 text-[#00C896] mb-6" />
                   <h3 className="text-xl font-bold mb-4 text-center text-[#00C896]">
-                    The mission of TechWave: Aim to encourage creativity
+                    The mission of HigzenDev: Aim to encourage creativity
                   </h3>
                   <p className="text-[#F5F7FA] leading-relaxed">
-                    TechWave is on a mission to simplify our clients'
+                    HigzenDev is on a mission to simplify our clients'
                     businesses and help them expand. We believe that if our
                     clients succeed, we succeed. Our goal is to make
                     technology accessible and beneficial for businesses of all
@@ -488,7 +488,7 @@ const Story = () => {
                     Future Vision and Growth
                   </h3>
                   <p className="text-[#F5F7FA] leading-relaxed">
-                    Looking forward, TechWave continues to evolve and adapt to
+                    Looking forward, HigzenDev continues to evolve and adapt to
                     emerging technologies and market demands. Our vision is to
                     become a global leader in digital transformation,
                     helping businesses worldwide harness the power of

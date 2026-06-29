@@ -317,7 +317,7 @@ const Blog = () => {
               Tech Insights & Innovation
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Stay updated with the latest insights, trends, and breakthrough technologies from TechWave
+              Stay updated with the latest insights, trends, and breakthrough technologies from HigzenDev
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">

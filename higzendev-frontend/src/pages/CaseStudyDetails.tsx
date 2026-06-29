@@ -96,7 +96,7 @@ const CaseStudyDetails = () => {
         }
       ],
       testimonial: {
-        quote: "TechWave delivered beyond our expectations. The mobile banking platform has transformed our customer experience and positioned us as a leader in digital banking. The security features and user interface are world-class.",
+        quote: "HigzenDev delivered beyond our expectations. The mobile banking platform has transformed our customer experience and positioned us as a leader in digital banking. The security features and user interface are world-class.",
         author: "Sarah Johnson",
         position: "Chief Technology Officer, SecureBank Digital"
       },
@@ -287,7 +287,7 @@ const CaseStudyDetails = () => {
         }
       ],
       testimonial: {
-        quote: "TechWave transformed our e-commerce business completely. The new platform handles our peak traffic flawlessly and the AI recommendations have significantly improved our sales. It's been a game-changer for our growth.",
+        quote: "HigzenDev transformed our e-commerce business completely. The new platform handles our peak traffic flawlessly and the AI recommendations have significantly improved our sales. It's been a game-changer for our growth.",
         author: "Jennifer Martinez",
         position: "VP of Technology, RetailTech Global"
       },
@@ -473,7 +473,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Challenge Section */}
-        <section className="py-16 bg-gray-800">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
@@ -494,7 +494,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Solution Section */}
-        <section className="py-16 bg-gray-900">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
@@ -505,7 +505,7 @@ const CaseStudyDetails = () => {
               
               <div className="grid md:grid-cols-2 gap-8">
                 {caseStudy.solution.approaches.map((approach, index) => (
-                  <Card key={index} className="bg-gray-800 border-gray-700">
+                  <Card key={index} className="bg-muted/30 border-gray-700">
                     <CardHeader>
                       <CardTitle className="text-white flex items-center gap-3">
                         <span className="text-2xl">{approach.icon}</span>
@@ -523,7 +523,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Technologies Section */}
-        <section className="py-16 bg-gray-800">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-white mb-8">Technologies Used</h2>
@@ -539,7 +539,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Results Section */}
-        <section className="py-16 bg-gray-900">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Results & Impact</h2>
@@ -561,7 +561,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Timeline Section */}
-        <section className="py-16 bg-gray-800">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Project Timeline</h2>
@@ -601,7 +601,7 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-900">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Success Story?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -611,7 +611,7 @@ const CaseStudyDetails = () => {
               <Button asChild className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-3 text-lg">
                 <Link to="/request-quote">Start Your Project</Link>
               </Button>
-              <Button asChild variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-3 text-lg">
+              <Button asChild variant="outline" className="border-gray-600 text-gray-300 hover:bg-muted/30 px-8 py-3 text-lg">
                 <Link to="/schedule-meeting">Schedule Consultation</Link>
               </Button>
             </div>

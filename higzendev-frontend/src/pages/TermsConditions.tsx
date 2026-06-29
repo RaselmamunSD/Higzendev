@@ -32,7 +32,7 @@ const TermsConditions = () => {
                   Acceptance of Terms
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-base">
-                  By accessing and using TechWave Limited's services, you accept and agree to be bound by 
+                  By accessing and using HigzenDev Limited's services, you accept and agree to be bound by 
                   the terms and provision of this agreement. If you do not agree to abide by the above, 
                   please do not use this service.
                 </p>
@@ -44,7 +44,7 @@ const TermsConditions = () => {
                   Services Description
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-base">
-                  TechWave Limited provides software development, web development, mobile app development, 
+                  HigzenDev Limited provides software development, web development, mobile app development, 
                   and related technology services. We reserve the right to modify or discontinue any 
                   service at any time without notice.
                 </p>
@@ -101,7 +101,7 @@ const TermsConditions = () => {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-base">
                   Upon full payment, clients retain ownership of custom-developed software. However, 
-                  TechWave Limited retains rights to any pre-existing intellectual property, frameworks, 
+                  HigzenDev Limited retains rights to any pre-existing intellectual property, frameworks, 
                   or methodologies used in the development process.
                 </p>
               </div>
@@ -112,7 +112,7 @@ const TermsConditions = () => {
                   Limitation of Liability
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-base">
-                  TechWave Limited shall not be liable for any indirect, incidental, special, 
+                  HigzenDev Limited shall not be liable for any indirect, incidental, special, 
                   consequential, or punitive damages arising out of or relating to the use of our 
                   services, even if we have been advised of the possibility of such damages.
                 </p>
@@ -150,7 +150,7 @@ const TermsConditions = () => {
                   For questions regarding these terms and conditions, please contact us at:
                 </p>
                 <div className="mt-4 space-y-2 p-6 bg-muted/30 rounded-xl border border-border/30">
-                  <p className="text-foreground font-medium">📧 Email: legal@techwave.com</p>
+                  <p className="text-foreground font-medium">📧 Email: contact@higzendev.com</p>
                   <p className="text-foreground font-medium">📞 Phone: +880 1234 567890</p>
                   <p className="text-foreground font-medium">📍 Address: 123 Tech Street, Dhaka, Bangladesh</p>
                 </div>

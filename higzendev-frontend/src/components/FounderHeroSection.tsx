@@ -21,13 +21,13 @@ const FounderHeroSection = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-xl blur-lg opacity-30"></div>
                 <Avatar className="w-64 h-64 mx-auto rounded-xl relative border-2 border-purple-400/30">
-                  <AvatarImage src="/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png" alt="Michael Chen - Founder of TechWave" />
-                  <AvatarFallback className="text-4xl bg-gray-800 text-white">MC</AvatarFallback>
+                  <AvatarImage src="/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png" alt="Michael Chen - Founder of HigzenDev" />
+                  <AvatarFallback className="text-4xl bg-muted/30 text-white">MC</AvatarFallback>
                 </Avatar>
               </div>
             </div>
             
-            <Card className="bg-gray-800/80 border border-gray-700/50 backdrop-blur-sm">
+            <Card className="bg-muted/30/80 border border-gray-700/50 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <h2 className="text-2xl font-bold mb-2 text-white">Michael Chen</h2>
                 <p className="text-lg text-purple-400 mb-4 font-medium">Founder & CEO</p>
@@ -70,7 +70,7 @@ const FounderHeroSection = () => {
             
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Michael Chen founded TechWave in 2010 with a vision to bridge the talent gap in the 
+                Michael Chen founded HigzenDev in 2010 with a vision to bridge the talent gap in the 
                 software development industry. Drawing from his experience at tech giants like Google, 
                 he recognized the growing need for skilled developers who could deliver high-quality 
                 solutions efficiently.
@@ -92,10 +92,10 @@ const FounderHeroSection = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-white flex items-center gap-3">
                   <span className="w-8 h-1 bg-gradient-to-r from-blue-400 to-green-400 rounded-full"></span>
-                  The TechWave Vision
+                  The HigzenDev Vision
                 </h3>
                 <p className="text-gray-300 leading-relaxed pl-11">
-                  Michael founded TechWave with a clear mission: to help businesses access the top 1% of 
+                  Michael founded HigzenDev with a clear mission: to help businesses access the top 1% of 
                   software development talent without the traditional hiring headaches. He built the company 
                   on core principles of technical excellence, transparent communication, and results-driven 
                   development.
@@ -108,12 +108,12 @@ const FounderHeroSection = () => {
                   Leadership Philosophy
                 </h3>
                 <div className="pl-11 space-y-4">
-                  <blockquote className="text-lg italic text-gray-200 border-l-4 border-purple-400 pl-4 bg-gray-800/30 py-3 rounded-r-lg">
+                  <blockquote className="text-lg italic text-gray-200 border-l-4 border-purple-400 pl-4 bg-muted/30/30 py-3 rounded-r-lg">
                     "Great software is built by great people who genuinely care about solving problems."
                   </blockquote>
                   <p className="text-gray-300 leading-relaxed">
                     His leadership approach emphasizes continuous learning, mentorship, and 
-                    creating an environment where innovation thrives. Under his guidance, TechWave has grown 
+                    creating an environment where innovation thrives. Under his guidance, HigzenDev has grown 
                     from a small team of 5 developers to over 100 IT professionals serving clients worldwide.
                   </p>
                 </div>

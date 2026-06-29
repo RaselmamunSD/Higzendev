@@ -19,13 +19,13 @@ const SuccessStoriesSection = () => {
               Success Stories That Inspire
             </h2>
             <p className="mb-6 text-gray-300">
-              At TechWave, we believe in the power of innovation and determination. Our journey is
+              At HigzenDev, we believe in the power of innovation and determination. Our journey is
               paved with inspiring success stories that showcase the incredible potential when passion
               meets technology.
             </p>
             <p className="mb-8 text-gray-300">
               Explore the inspiring tales of startups and established businesses alike, as they soar to new
-              heights by unlocking the potential of TechWave solutions.
+              heights by unlocking the potential of HigzenDev solutions.
             </p>
             
             <hr className="my-8" />
@@ -38,7 +38,7 @@ const SuccessStoriesSection = () => {
               
               <div>
                 <h3 className="font-bold text-lg text-white">Determined Success:</h3>
-                <p className="text-gray-300">Stories of overcoming challenges with TechWave support.</p>
+                <p className="text-gray-300">Stories of overcoming challenges with HigzenDev support.</p>
               </div>
               
               <div>

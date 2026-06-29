@@ -10,10 +10,10 @@ const ClientSuccessSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Client Success Stories: How <span className="text-[#ff7d47]">TechWave Delivers</span> Results
+              Client Success Stories: How <span className="text-[#ff7d47]">HigzenDev Delivers</span> Results
             </h2>
             <p className="text-gray-300 mb-6">
-              At TechWave, we believe success isn't just about products or services, but the real results we deliver to our clients. 
+              At HigzenDev, we believe success isn't just about products or services, but the real results we deliver to our clients. 
               Our client success stories showcase how we partner with businesses from various industries to solve complex 
               challenges and create tailored solutions that drive true value.
             </p>

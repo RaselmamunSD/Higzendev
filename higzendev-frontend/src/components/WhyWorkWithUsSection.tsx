@@ -11,7 +11,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (
-    <Card className="border border-gray-700 h-full bg-gray-800">
+    <Card className="border border-gray-700 h-full bg-muted/30">
       <CardContent className="pt-6">
         <div className="flex flex-col items-center text-center">
           <div className="p-3 bg-primary rounded-full text-white mb-4">
@@ -50,7 +50,7 @@ const WhyWorkWithUsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
+    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">

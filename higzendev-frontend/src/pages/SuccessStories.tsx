@@ -20,7 +20,7 @@ const SuccessStories = () => {
       impact: "Increased revenue by $2M annually",
       duration: "6 months",
       rating: 5,
-      testimonial: "TechWave transformed our entire business. The new platform can handle 10x our previous traffic.",
+      testimonial: "HigzenDev transformed our entire business. The new platform can handle 10x our previous traffic.",
       image: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png",
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
       year: "2023"
@@ -145,7 +145,7 @@ const SuccessStories = () => {
         </section>
 
         {/* Filter Section */}
-        <section className="py-16 bg-gray-800">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Filter by Industry</h2>
@@ -170,11 +170,11 @@ const SuccessStories = () => {
         </section>
 
         {/* Success Stories Grid */}
-        <section className="py-16 bg-gray-900">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredStories.map((story) => (
-                <Card key={story.id} className="bg-gray-800 border-gray-700 hover:border-green-500 transition-all duration-300 group">
+                <Card key={story.id} className="bg-muted/30 border-gray-700 hover:border-green-500 transition-all duration-300 group">
                   <CardHeader>
                     <div className="aspect-video mb-4 overflow-hidden rounded-lg">
                       <img 
