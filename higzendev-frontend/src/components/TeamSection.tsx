@@ -732,10 +732,15 @@ const TeamSection = () => {
                 </div>
               )}
             </div>
+          </>
+        ) : null}
+      </div>
 
+      {isTeamPage && (
+        <div className="w-full">
             <div
               id="team-members-carousel"
-              className={prefersReducedMotion ? 'relative overflow-x-auto mb-12 sm:mb-16 lg:mb-20' : 'relative overflow-hidden mb-12 sm:mb-16 lg:mb-20'}
+              className={prefersReducedMotion ? 'relative overflow-x-auto mb-12 sm:mb-16 lg:mb-20 w-full' : 'relative overflow-hidden mb-12 sm:mb-16 lg:mb-20 w-full [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]'}
               role="region"
               aria-labelledby="our-team-members-heading"
               aria-roledescription="carousel"
@@ -743,7 +748,7 @@ const TeamSection = () => {
               <ul
                 className={`flex space-x-4 sm:space-x-6 lg:space-x-8 list-none p-0 m-0 ${prefersReducedMotion ? 'w-max' : 'animate-marquee hover:pause-marquee focus-within:[animation-play-state:paused]'} ${membersAnimationPaused ? '[animation-play-state:paused]' : ''}`}
               >
-                {(prefersReducedMotion ? teamMembers : teamMembers.concat(teamMembers)).map((member, index) => {
+                {(prefersReducedMotion ? teamMembers : [...teamMembers, ...teamMembers, ...teamMembers, ...teamMembers]).map((member, index) => {
                   const isDuplicate = !prefersReducedMotion && index >= teamMembers.length;
                   return (
                     <li
@@ -757,7 +762,12 @@ const TeamSection = () => {
                 })}
               </ul>
             </div>
+        </div>
+      )}
 
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10 mb-12 sm:mb-16 lg:mb-20">
+        {isTeamPage ? (
+          <>
             <div className="text-center px-2 sm:px-4">
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-10 lg:p-12 max-w-4xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">

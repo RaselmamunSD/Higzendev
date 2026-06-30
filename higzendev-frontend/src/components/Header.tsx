@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Home, Info, Briefcase, Package, PenLine, Factory, FileText, CalendarDays, Users, BookOpen, Rocket, UserCircle } from 'lucide-react';
 import {
   NavigationMenu,
@@ -16,6 +16,19 @@ const Header = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const isActive = (path: string, exact: boolean = false) => {
+    return exact ? currentPath === path : currentPath.startsWith(path);
+  };
+
+  const navItemClass = (path: string, exact: boolean = false) => {
+    const active = isActive(path, exact);
+    return `relative hover:text-primary transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'} ${active ? 'text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full' : 'after:content-[""] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all after:duration-300 hover:after:w-full'}`;
+  };
+
+  const isAboutActive = currentPath.startsWith('/about') && currentPath !== '/about/team';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,15 +73,15 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-5 ml-16">
-          <button onClick={() => navigateToTop('/')} className={`hover:text-softgreen transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'}`}>Home</button>
+          <button onClick={() => navigateToTop('/')} className={navItemClass('/', true)}>Home</button>
           
           {/* About Dropdown */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                 <NavigationMenuTrigger className={`bg-transparent hover:bg-softgreen hover:text-white focus:bg-softgreen focus:text-white data-[state=open]:bg-softgreen data-[state=open]:text-white font-semibold border-none px-2 py-1 rounded-md transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'}`}>
+                 <NavigationMenuTrigger className={`relative bg-transparent hover:bg-primary/20 hover:text-primary focus:bg-primary/20 focus:text-primary data-[state=open]:bg-primary/20 data-[state=open]:text-primary font-semibold border-none px-2 py-1 rounded-md transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-base'} ${isAboutActive ? 'text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-16px)] after:h-[2px] after:bg-primary after:rounded-full' : ''}`}>
                    <span className="flex items-center">
-                     About <ChevronDown className="ml-1 h-3 w-3" />
+                     About
                    </span>
                  </NavigationMenuTrigger>
                  <NavigationMenuContent className="min-w-[200px] z-[100]">
@@ -104,19 +117,19 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
           
-          <button onClick={() => navigateToTop('/services')} className={`hover:text-softgreen transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'}`}>Services</button>
-          <button onClick={() => navigateToTop('/products')} className={`hover:text-softgreen transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'}`}>Products</button>
-          <button onClick={() => navigateToTop('/blog')} className={`hover:text-softgreen transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'}`}>Blog</button>
-          <button onClick={() => navigateToTop('/about/team')} className={`hover:text-softgreen transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'}`}>Team</button>
+          <button onClick={() => navigateToTop('/services')} className={navItemClass('/services')}>Services</button>
+          <button onClick={() => navigateToTop('/products')} className={navItemClass('/products')}>Products</button>
+          <button onClick={() => navigateToTop('/blog')} className={navItemClass('/blog')}>Blog</button>
+          <button onClick={() => navigateToTop('/about/team')} className={navItemClass('/about/team', true)}>Team</button>
           
-          <button onClick={() => navigateToTop('/industries')} className={`hover:bg-softgreen hover:text-white transition-all duration-300 font-semibold px-3 py-1.5 rounded-md border border-transparent hover:border-softgreen ${isScrolled ? 'text-sm' : 'text-base'}`}>
+          <button onClick={() => navigateToTop('/industries')} className={navItemClass('/industries')}>
             Industries
           </button>
           
           <div className="flex items-center space-x-2 ml-3">
             <Button 
               onClick={() => navigateToTop('/request-quote')} 
-              className={`bg-softgreen hover:bg-softgreen/80 text-white font-medium rounded-md transition-all duration-300 hover:scale-105 ${
+              className={`bg-primary hover:bg-primary/80 text-white font-medium rounded-md transition-all duration-300 hover:scale-105 ${
                 isScrolled ? 'px-3 py-1.5 h-8 text-xs' : 'px-4 py-2 h-9 text-sm'
               }`}
             >
