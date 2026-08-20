@@ -72,40 +72,58 @@ const ContactSection = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="flex gap-4 items-start">
+                {/* Phone */}
+                <div className="flex gap-4 items-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <PhoneCall size={24} />
+                    <PhoneCall size={22} />
                   </div>
-                  <div className="space-y-1.5">
-                    <h4 className="text-lg font-medium text-foreground">Phone & WhatsApp</h4>
-                    <a href="tel:+8801870966718" className="text-muted-foreground hover:text-primary transition-colors block text-base font-medium">
+                  <div>
+                    <h4 className="text-lg font-medium text-foreground">Phone</h4>
+                    <a href="tel:+8801870966718" className="text-muted-foreground hover:text-primary transition-colors block">
                       +880 1870-966718
                     </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex gap-4 items-center">
+                  <div className="h-12 w-12 rounded-full bg-emerald-500/15 flex items-center justify-center p-2.5 flex-shrink-0 border border-emerald-500/30">
+                    <img 
+                      src="/images/whatsapp-icon.png" 
+                      alt="WhatsApp" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium text-foreground">WhatsApp</h4>
                     <a 
                       href="https://wa.me/8801870966718" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 text-xs font-semibold shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md hover:shadow-emerald-500/10"
+                      className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors block hover:underline"
                     >
-                      <MessageCircle className="w-4 h-4 fill-emerald-500/20 text-emerald-400" />
-                      <span>Chat on WhatsApp</span>
+                      +880 1870-966718
                     </a>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                {/* Email */}
+                <div className="flex gap-4 items-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <Mail size={24} />
+                    <Mail size={22} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-foreground">Email</h4>
-                    <p className="text-muted-foreground">contact@higzendev.com</p>
+                    <a href="mailto:contact@higzendev.com" className="text-muted-foreground hover:text-primary transition-colors block">
+                      contact@higzendev.com
+                    </a>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                {/* Location */}
+                <div className="flex gap-4 items-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <MapPin size={24} />
+                    <MapPin size={22} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-foreground">Office Location</h4>
