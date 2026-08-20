@@ -79,7 +79,7 @@ const TechStacksSection: React.FC = () => {
     : allTechs.filter(t => t.category === selectedCategory || (selectedCategory === 'mobile' && t.category === 'db'));
 
   return (
-    <section className="py-20 sm:py-24 relative bg-gradient-to-b from-background via-muted/15 to-background overflow-hidden border-y border-border/40">
+    <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 relative bg-gradient-to-b from-background via-muted/15 to-background overflow-hidden border-y border-border/40">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 -left-32 w-80 h-80 bg-primary/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-1/3 -right-32 w-80 h-80 bg-purple-500/10 rounded-full blur-[130px] pointer-events-none" />

@@ -180,7 +180,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="relative w-full py-10 sm:py-16 lg:py-20 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
+      className="relative w-full pt-6 sm:pt-10 lg:pt-12 pb-10 sm:pb-16 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
     >
       {/* ambient glows */}
       <div aria-hidden="true" className="absolute -top-32 -left-20 w-[20rem] sm:w-[28rem] h-[20rem] sm:h-[28rem] rounded-full bg-primary/10 blur-[80px] sm:blur-[120px] pointer-events-none"></div>
