@@ -88,7 +88,7 @@ const ScheduleMeeting = () => {
                 <p className="text-slate-400 mb-6">15-minute WhatsApp consultation</p>
                 <Button 
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white transition-all duration-300"
-                  onClick={() => window.open('https://wa.me/8801811966314', '_blank')}
+                  onClick={() => window.open('https://wa.me/8801870966718', '_blank')}
                 >
                   WhatsApp Call
                 </Button>
@@ -229,8 +229,9 @@ const ScheduleMeeting = () => {
                 <p className="text-slate-400">contact@higzendev.com</p>
               </div>
               <div className="p-6 bg-slate-800/40 backdrop-blur-sm rounded-xl border border-slate-700/30 hover:bg-slate-800/60 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-2 text-slate-100">Phone</h3>
-                <p className="text-slate-400">+880 1811-966314</p>
+                <h3 className="text-xl font-bold mb-2 text-slate-100">Phone & WhatsApp</h3>
+                <a href="tel:+8801870966718" className="text-slate-400 hover:text-primary transition-colors block">+880 1870-966718</a>
+                <a href="https://wa.me/8801870966718" target="_blank" rel="noopener noreferrer" className="text-green-400 text-xs mt-1 block hover:underline">Chat on WhatsApp</a>
               </div>
               <div className="p-6 bg-slate-800/40 backdrop-blur-sm rounded-xl border border-slate-700/30 hover:bg-slate-800/60 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-2 text-slate-100">Office Hours</h3>

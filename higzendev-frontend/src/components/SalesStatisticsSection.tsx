@@ -19,8 +19,11 @@ const SalesStatisticsSection = () => {
         <p className="text-white mb-8 max-w-3xl mx-auto">
           Achieve your sales goals with us | How to sell your digital products instantly? Visit the link below to get complete digital marketing solutions
         </p>
-        <Button className="bg-[#008080] hover:bg-[#006666] text-white mb-16">
-          WHATSAPP NOW
+        <Button 
+          onClick={() => window.open('https://wa.me/8801870966718', '_blank')}
+          className="bg-[#008080] hover:bg-[#006666] text-white mb-16 shadow-lg hover:scale-105 transition-transform"
+        >
+          WHATSAPP NOW (+880 1870-966718)
         </Button>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-black/40 backdrop-blur-sm rounded-lg p-8">

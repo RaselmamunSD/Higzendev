@@ -240,8 +240,26 @@ export const FounderHero: React.FC = () => {
                       <Github className="w-4 h-4" />
                     </a>
                     <a 
-                      href="mailto:contact@higzendev.com" 
+                      href="https://wa.me/8801870966718" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
                       className="p-2.5 rounded-xl bg-muted/60 hover:bg-emerald-500/20 hover:text-emerald-400 text-muted-foreground border border-border/60 transition-all duration-200 hover:scale-110"
+                      aria-label="WhatsApp (+880 1870-966718)"
+                      title="WhatsApp: +880 1870-966718"
+                    >
+                      <span className="text-xs font-bold">WA</span>
+                    </a>
+                    <a 
+                      href="tel:+8801870966718" 
+                      className="p-2.5 rounded-xl bg-muted/60 hover:bg-primary/20 hover:text-primary text-muted-foreground border border-border/60 transition-all duration-200 hover:scale-110"
+                      aria-label="Call (+880 1870-966718)"
+                      title="Call: +880 1870-966718"
+                    >
+                      <span className="text-xs font-bold">Tel</span>
+                    </a>
+                    <a 
+                      href="mailto:contact@higzendev.com" 
+                      className="p-2.5 rounded-xl bg-muted/60 hover:bg-blue-500/20 hover:text-blue-400 text-muted-foreground border border-border/60 transition-all duration-200 hover:scale-110"
                       aria-label="Email"
                     >
                       <Mail className="w-4 h-4" />

@@ -77,8 +77,13 @@ const ContactSection = () => {
                     <PhoneCall size={24} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">01870966718</p>
+                    <h4 className="text-lg font-medium text-foreground">Phone & WhatsApp</h4>
+                    <a href="tel:+8801870966718" className="text-muted-foreground hover:text-primary transition-colors block">
+                      +880 1870-966718
+                    </a>
+                    <a href="https://wa.me/8801870966718" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 text-xs font-semibold mt-0.5 inline-flex items-center gap-1">
+                      <span>💬</span> Chat on WhatsApp
+                    </a>
                   </div>
                 </div>
 

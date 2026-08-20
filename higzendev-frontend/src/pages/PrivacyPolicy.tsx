@@ -116,7 +116,8 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="mt-4 space-y-2 p-6 bg-muted/30 rounded-xl border border-border/30">
                   <p className="text-foreground font-medium">📧 Email: contact@higzendev.com</p>
-                  <p className="text-foreground font-medium">📞 Phone: +880 1234 567890</p>
+                  <p className="text-foreground font-medium">📞 Phone: +880 1870-966718</p>
+                  <p className="text-foreground font-medium">💬 WhatsApp: +880 1870-966718</p>
                   <p className="text-foreground font-medium">📍 Address: 123 Tech Street, Dhaka, Bangladesh</p>
                 </div>
               </div>

@@ -337,7 +337,7 @@ const AIChatbot = () => {
 
                     {/* WhatsApp Option */}
                     <button
-                      onClick={() => handleExternalLink('https://wa.me/8801764996464')}
+                      onClick={() => handleExternalLink('https://wa.me/8801870966718')}
                       className="w-full flex items-center gap-3 p-3 sm:p-3.5 rounded-xl bg-card border border-border hover:border-green-300 hover:shadow-md transition-all duration-300 group"
                     >
                       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-green-500 flex-shrink-0">
