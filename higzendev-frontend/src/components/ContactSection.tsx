@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { PhoneCall, Mail, MapPin, CheckCircle } from 'lucide-react';
+import { PhoneCall, Mail, MapPin, CheckCircle, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -72,17 +72,23 @@ const ContactSection = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-start">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     <PhoneCall size={24} />
                   </div>
-                  <div>
+                  <div className="space-y-1.5">
                     <h4 className="text-lg font-medium text-foreground">Phone & WhatsApp</h4>
-                    <a href="tel:+8801870966718" className="text-muted-foreground hover:text-primary transition-colors block">
+                    <a href="tel:+8801870966718" className="text-muted-foreground hover:text-primary transition-colors block text-base font-medium">
                       +880 1870-966718
                     </a>
-                    <a href="https://wa.me/8801870966718" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 text-xs font-semibold mt-0.5 inline-flex items-center gap-1">
-                      <span>💬</span> Chat on WhatsApp
+                    <a 
+                      href="https://wa.me/8801870966718" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 text-xs font-semibold shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md hover:shadow-emerald-500/10"
+                    >
+                      <MessageCircle className="w-4 h-4 fill-emerald-500/20 text-emerald-400" />
+                      <span>Chat on WhatsApp</span>
                     </a>
                   </div>
                 </div>
