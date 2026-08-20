@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
+import EliteFounderSection from './EliteFounderSection';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -642,6 +643,9 @@ const TeamSection = () => {
             </div>
           </div>
         )}
+        {/* Founder & Lead Software Engineer Spotlight */}
+        {isTeamPage && <EliteFounderSection />}
+
         {/* Executive Team Section */}
         {isTeamPage && (
           <>
