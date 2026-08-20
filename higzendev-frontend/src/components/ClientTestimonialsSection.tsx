@@ -1,77 +1,153 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Sparkles, Star, Quote, ArrowRight, CheckCircle2 } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface TestimonialCardProps {
-  logo: string;
   clientName: string;
   title: string;
+  company: string;
   testimonial: string;
   clientImage?: string;
+  rating?: number;
 }
 
-const TestimonialCard = ({ logo, clientName, title, testimonial, clientImage }: TestimonialCardProps) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
+  clientName, 
+  title, 
+  company, 
+  testimonial, 
+  clientImage, 
+  rating = 5 
+}) => {
   const initials = clientName
     .split(' ')
     .map(part => part[0])
-    .join('');
-
-  // Vary star ratings for different testimonials
-  const getStarRating = (name: string) => {
-    const ratings: { [key: string]: number } = {
-      'Chris Withers': 5,
-      'Troy Flower': 4,
-      'Henric Ehrenblad': 4,
-      'Sarah Johnson': 5,
-      'Michael Chen': 3,
-      'Emily Rodriguez': 4,
-      'David Kim': 5,
-      'Jessica Taylor': 3,
-      'Robert Wilson': 4,
-      'Lisa Anderson': 5
-    };
-    return ratings[name] || 4;
-  };
-
-  const starRating = getStarRating(clientName);
+    .join('')
+    .slice(0, 2);
 
   return (
-    <div className="bg-card rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 shadow-glow border-2 border-primary/20 h-full flex flex-col min-w-[280px] w-[280px] sm:min-w-[320px] sm:w-[320px] md:min-w-[360px] md:w-[360px] lg:min-w-[400px] lg:w-[400px] hover:border-primary transition-all duration-300 hover:scale-105">
-      <div className="flex flex-col items-center text-center mb-4 md:mb-6 lg:mb-8">
-        <Avatar className="h-16 w-16 sm:h-18 sm:w-18 md:h-20 md:w-20 lg:h-24 lg:w-24 mb-3 md:mb-4 lg:mb-6 border-2 border-primary/30">
+    <div className="bg-card/80 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-border/80 hover:border-primary/50 shadow-xl transition-all duration-300 hover:-translate-y-1.5 h-full flex flex-col justify-between min-w-[290px] w-[290px] sm:min-w-[340px] sm:w-[340px] md:min-w-[380px] md:w-[380px] group relative overflow-hidden">
+      {/* Subtle top corner gradient glow */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none group-hover:bg-primary/20 transition-all duration-500" />
+
+      <div>
+        {/* Top row: Star Rating + Quote Icon */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className={`w-4 h-4 ${i < rating ? 'text-amber-400 fill-amber-400' : 'text-muted-foreground/30'}`}
+              />
+            ))}
+          </div>
+          <Quote className="w-6 h-6 text-primary/40 group-hover:text-primary transition-colors" />
+        </div>
+
+        {/* Testimonial quote text */}
+        <p className="text-sm sm:text-base text-foreground/90 leading-relaxed italic mb-6">
+          "{testimonial}"
+        </p>
+      </div>
+
+      {/* Client author footer */}
+      <div className="pt-4 border-t border-border/60 flex items-center gap-3.5">
+        <Avatar className="h-12 w-12 rounded-2xl border border-primary/30 shrink-0">
           {clientImage ? (
-            <AvatarImage src={clientImage} alt={clientName} />
+            <AvatarImage src={clientImage} alt={clientName} className="object-cover" />
           ) : (
-            <AvatarFallback className="bg-primary/10 text-primary text-base sm:text-lg md:text-xl font-bold">{initials}</AvatarFallback>
+            <AvatarFallback className="bg-gradient-to-tr from-primary to-cyan-500 text-white font-bold text-sm">
+              {initials}
+            </AvatarFallback>
           )}
         </Avatar>
-        <h4 className="font-bold text-primary text-base sm:text-lg md:text-xl mb-1 md:mb-2">{clientName}</h4>
-      </div>
-      
-      <p className="text-muted-foreground flex-grow leading-relaxed text-center mb-4 md:mb-6 lg:mb-8 text-sm sm:text-base">
-        &ldquo;{testimonial}&rdquo;
-      </p>
-      
-      <div className="flex justify-center space-x-1">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <svg
-            key={star}
-            className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${star <= starRating ? 'text-primary' : 'text-muted-foreground/30'} fill-current`}
-            viewBox="0 0 20 20"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-        ))}
+
+        <div className="overflow-hidden">
+          <div className="flex items-center gap-1.5">
+            <h4 className="font-bold text-foreground text-sm sm:text-base truncate group-hover:text-primary transition-colors">
+              {clientName}
+            </h4>
+            <CheckCircle2 className="w-3.5 h-3.5 text-primary fill-primary/20 shrink-0" />
+          </div>
+          <p className="text-xs text-muted-foreground truncate">
+            {title} • <span className="text-primary font-medium">{company}</span>
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
-const ClientTestimonialsSection = () => {
+const brandLogos = [
+  { name: 'Meta', url: 'https://logo.clearbit.com/meta.com' },
+  { name: 'IBM', url: 'https://logo.clearbit.com/ibm.com' },
+  { name: 'Oracle', url: 'https://logo.clearbit.com/oracle.com' },
+  { name: 'SAP', url: 'https://logo.clearbit.com/sap.com' },
+  { name: 'PayPal', url: 'https://logo.clearbit.com/paypal.com' },
+  { name: 'Samsung', url: 'https://logo.clearbit.com/samsung.com' },
+  { name: 'Google', url: 'https://logo.clearbit.com/google.com' },
+  { name: 'Microsoft', url: 'https://logo.clearbit.com/microsoft.com' },
+  { name: 'Apple', url: 'https://logo.clearbit.com/apple.com' },
+  { name: 'Amazon', url: 'https://logo.clearbit.com/amazon.com' },
+  { name: 'Netflix', url: 'https://logo.clearbit.com/netflix.com' },
+  { name: 'Spotify', url: 'https://logo.clearbit.com/spotify.com' },
+];
+
+const testimonials = [
+  {
+    clientName: "Chris Withers",
+    title: "CEO & Founder",
+    company: "Kliktt",
+    testimonial: "Heartfelt appreciation to HigzenDev for believing in my vision. Their talented developers take on complex challenges and helped bring Kliktt into life.",
+    clientImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  },
+  {
+    clientName: "Troy Flower",
+    title: "Founder",
+    company: "WellTeam",
+    testimonial: "HigzenDev exceeded expectations with proactive suggestions, responsiveness, and dedication. From technical leads to developers, working with them is a delight!",
+    clientImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  },
+  {
+    clientName: "Henric Ehrenblad",
+    title: "Founder",
+    company: "Limestone",
+    testimonial: "I visited the HigzenDev team in person. They have an exceptional engineering culture and world-class standards. It's why they remain our core tech partner.",
+    clientImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  },
+  {
+    clientName: "Sarah Johnson",
+    title: "Chief Technology Officer",
+    company: "TechCorp Global",
+    testimonial: "Outstanding technical expertise and reliable engineering delivery. HigzenDev delivered our distributed microservices platform ahead of schedule with zero downtime.",
+    clientImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  },
+  {
+    clientName: "Emily Rodriguez",
+    title: "Founder & CEO",
+    company: "CloudSync Labs",
+    testimonial: "HigzenDev's cloud architecture and AI agent integrations transformed our SaaS operations. Their team is responsive, highly skilled, and obsessively meticulous.",
+    clientImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  },
+  {
+    clientName: "David Kim",
+    title: "VP of Engineering",
+    company: "DataFlow Systems",
+    testimonial: "Exceptional database scalability and API optimization. HigzenDev helped us improve query performance by over 300% on high-load workloads.",
+    clientImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+    rating: 5
+  }
+];
+
+const ClientTestimonialsSection: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     align: 'start',
@@ -83,176 +159,106 @@ const ClientTestimonialsSection = () => {
     if (emblaApi) {
       const interval = setInterval(() => {
         emblaApi.scrollNext();
-      }, 3000); // Auto-scroll every 3 seconds
+      }, 3500);
 
       return () => clearInterval(interval);
     }
   }, [emblaApi]);
 
-  const testimonials = [
-    {
-      logo: "https://via.placeholder.com/150x50?text=Kliktt",
-      clientName: "Chris Withers",
-      title: "CEO & Founder",
-      testimonial: "Heartfelt appreciation to HigzenDev Limited for believing in my vision. Their talented developers can take any challenges against all odds and helped to bring Kliktt into life.",
-      clientImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=WellTeam",
-      clientName: "Troy Flower",
-      title: "Founder",
-      testimonial: "HigzenDev exceeded expectations with proactive suggestions, responsiveness, and dedication. From co-founders to team, working with them was a delight!",
-      clientImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=Limestone",
-      clientName: "Henric Ehrenblad",
-      title: "Founder",
-      testimonial: "I came down Bangladesh and visited the HigzenDev office. It feels like they are a great cultured company and that's one of the reasons, why it's so fun to work with them.",
-      clientImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=TechCorp",
-      clientName: "Sarah Johnson",
-      title: "CTO",
-      testimonial: "Outstanding technical expertise and professional service. HigzenDev delivered our project on time and exceeded all expectations.",
-      clientImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=InnovateLab",
-      clientName: "Michael Chen",
-      title: "Product Manager",
-      testimonial: "Working with HigzenDev was seamless. Their attention to detail and innovative solutions helped us scale our platform effectively.",
-      clientImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=CloudSync",
-      clientName: "Emily Rodriguez",
-      title: "Founder & CEO",
-      testimonial: "HigzenDev's cloud solutions transformed our business operations. Their team is professional, responsive, and highly skilled.",
-      clientImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=DataFlow",
-      clientName: "David Kim",
-      title: "Lead Developer",
-      testimonial: "Exceptional database management and optimization services. HigzenDev helped us improve performance by 300%.",
-      clientImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=MobileFirst",
-      clientName: "Jessica Taylor",
-      title: "Head of Product",
-      testimonial: "Their mobile app development expertise is top-notch. Our app now has excellent user ratings and engagement.",
-      clientImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=EcomPlus",
-      clientName: "Robert Wilson",
-      title: "Business Owner",
-      testimonial: "HigzenDev built our e-commerce platform from scratch. Sales increased by 250% after launch. Highly recommended!",
-      clientImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      logo: "https://via.placeholder.com/150x50?text=AIVenture",
-      clientName: "Lisa Anderson",
-      title: "AI Specialist",
-      testimonial: "Their AI development capabilities are impressive. HigzenDev helped us implement machine learning solutions that revolutionized our workflow.",
-      clientImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
-
-  const brandLogos = [
-    { src: 'https://logo.clearbit.com/google.com', alt: 'Google' },
-    { src: 'https://logo.clearbit.com/microsoft.com', alt: 'Microsoft' },
-    { src: 'https://logo.clearbit.com/apple.com', alt: 'Apple' },
-    { src: 'https://logo.clearbit.com/amazon.com', alt: 'Amazon' },
-    { src: 'https://logo.clearbit.com/netflix.com', alt: 'Netflix' },
-    { src: 'https://logo.clearbit.com/spotify.com', alt: 'Spotify' },
-    { src: 'https://logo.clearbit.com/airbnb.com', alt: 'Airbnb' },
-    { src: 'https://logo.clearbit.com/uber.com', alt: 'Uber' },
-    { src: 'https://logo.clearbit.com/tesla.com', alt: 'Tesla' },
-    { src: 'https://logo.clearbit.com/intel.com', alt: 'Intel' },
-    { src: 'https://logo.clearbit.com/cisco.com', alt: 'Cisco' },
-    { src: 'https://logo.clearbit.com/adobe.com', alt: 'Adobe' },
-    { src: 'https://logo.clearbit.com/salesforce.com', alt: 'Salesforce' },
-    { src: 'https://logo.clearbit.com/nvidia.com', alt: 'NVIDIA' },
-    { src: 'https://logo.clearbit.com/meta.com', alt: 'Meta' },
-    { src: 'https://logo.clearbit.com/ibm.com', alt: 'IBM' },
-    { src: 'https://logo.clearbit.com/oracle.com', alt: 'Oracle' },
-    { src: 'https://logo.clearbit.com/sap.com', alt: 'SAP' },
-    { src: 'https://logo.clearbit.com/paypal.com', alt: 'PayPal' },
-    { src: 'https://logo.clearbit.com/samsung.com', alt: 'Samsung' }
-  ];
-
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="container mx-auto px-4 relative">
-        {/* Header */}
-        <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-            Trusted by <span className="text-primary">20+</span> Leading Brands
+    <section className="py-20 sm:py-24 bg-gradient-to-b from-background via-muted/15 to-background relative overflow-hidden border-y border-border/40">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
+            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+            <span>CLIENT PROOF & REPUTATION</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
+            Trusted by{' '}
+            <span className="bg-gradient-to-r from-primary via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              20+ Leading Brands
+            </span>{' '}
+            Worldwide
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-            Our expertise has consistently exceeded expectations of our clients. Top brands
-            rely on us as a strategic partner to scale their development teams.
+
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Our engineering expertise consistently delivers transformative results. Top global brands rely on us as their dedicated technology partner.
           </p>
+        </div>
+
+      </div>
+
+      {/* Brand Logos Infinite Marquee */}
+      <div className="relative w-full overflow-hidden mb-16">
+        {/* Side Gradient Fades */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+
+        <div className="flex animate-marquee-slow hover:[animation-play-state:paused] py-2" style={{ width: 'max-content' }}>
+          {[...brandLogos, ...brandLogos, ...brandLogos].map((logo, index) => (
+            <div
+              key={`${logo.name}-${index}`}
+              className="flex-shrink-0 mx-2.5 sm:mx-3 px-5 py-3 rounded-2xl bg-card/60 border border-border/70 backdrop-blur-md hover:border-primary/50 hover:bg-card/90 transition-all duration-300 flex items-center justify-center gap-3 h-16 min-w-[150px] shadow-sm group hover:scale-105"
+            >
+              <img 
+                src={logo.url} 
+                alt={logo.name} 
+                className="max-h-6 max-w-[80px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+              <span className="text-xs sm:text-sm font-semibold text-foreground/80 group-hover:text-foreground">
+                {logo.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="w-full">
-        {/* Brand Logos - Single Line Scrolling */}
-        <div className="mb-10 md:mb-16 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-          <div className="flex animate-marquee-slow hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
-            {[...brandLogos, ...brandLogos, ...brandLogos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 mx-2 md:mx-3 bg-card rounded-lg p-3 md:p-4 lg:p-6 shadow-card-glow hover:shadow-glow border border-border transition-all duration-300 group hover:scale-105 w-28 h-16 sm:w-32 sm:h-18 md:w-36 md:h-20 lg:w-40 lg:h-24 flex items-center justify-center">
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt} 
-                  className="max-w-full max-h-10 sm:max-h-12 md:max-h-14 lg:max-h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+      {/* Client Testimonials Carousel */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]" ref={emblaRef}>
+          <div className="flex gap-4 sm:gap-6 py-2">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="flex-none">
+                <TestimonialCard
+                  clientName={testimonial.clientName}
+                  title={testimonial.title}
+                  company={testimonial.company}
+                  testimonial={testimonial.testimonial}
+                  clientImage={testimonial.clientImage}
+                  rating={testimonial.rating}
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="mb-10 md:mb-16 w-full">
-          <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_2%,black_98%,transparent)] px-2 sm:px-4" ref={emblaRef}>
-            <div className="flex gap-3 sm:gap-4 md:gap-6">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-none">
-                  <TestimonialCard
-                    logo={testimonial.logo}
-                    clientName={testimonial.clientName}
-                    title={testimonial.title}
-                    testimonial={testimonial.testimonial}
-                    clientImage={testimonial.clientImage}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        </div>
-
-      <div className="container mx-auto px-4 relative">
-        {/* CTA Section */}
-        <div className="text-center">
-          <Link to="/case-studies">
-            <Button 
-              size="lg" 
-              variant="default"
-            >
-              See Our Case Studies
-            </Button>
-          </Link>
-          <p className="text-muted-foreground mt-4">
-            Discover how we've helped brands achieve their goals
+        {/* CTA Footer */}
+        <div className="text-center mt-14">
+          <Button
+            asChild
+            size="lg"
+            className="h-12 px-8 rounded-xl bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-700 text-white font-semibold shadow-lg shadow-primary/20 group"
+          >
+            <Link to="/case-studies" className="flex items-center gap-2">
+              Explore Our Case Studies & Results
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+          <p className="text-xs sm:text-sm text-muted-foreground mt-3">
+            Discover how we have helped high-growth enterprises scale efficiently.
           </p>
         </div>
+
       </div>
     </section>
   );
