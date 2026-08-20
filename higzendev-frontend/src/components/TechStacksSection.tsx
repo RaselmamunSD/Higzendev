@@ -15,6 +15,7 @@ const techListRow1: TechItem[] = [
   { name: 'React', category: 'frontend', categoryLabel: 'UI Library', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'Next.js', category: 'frontend', categoryLabel: 'React Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', color: 'from-white/20 to-slate-500/10', borderHover: 'hover:border-white/60' },
   { name: 'Python', category: 'ai', categoryLabel: 'AI & Data', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', color: 'from-yellow-500/20 to-blue-500/10', borderHover: 'hover:border-yellow-400/60' },
+  { name: 'FastAPI', category: 'backend', categoryLabel: 'Python Async API', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg', color: 'from-teal-500/20 to-emerald-500/10', borderHover: 'hover:border-teal-400/60' },
   { name: 'Node.js', category: 'backend', categoryLabel: 'Runtime', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg', color: 'from-green-500/20 to-emerald-500/10', borderHover: 'hover:border-green-400/60' },
   { name: 'TypeScript', category: 'frontend', categoryLabel: 'Type Safety', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg', color: 'from-blue-500/20 to-indigo-500/10', borderHover: 'hover:border-blue-400/60' },
   { name: 'Go', category: 'backend', categoryLabel: 'Distributed Systems', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg', color: 'from-cyan-500/20 to-teal-500/10', borderHover: 'hover:border-cyan-400/60' },
@@ -25,6 +26,7 @@ const techListRow1: TechItem[] = [
 ];
 
 const techListRow2: TechItem[] = [
+  { name: 'Django', category: 'backend', categoryLabel: 'Python Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg', color: 'from-emerald-700/20 to-green-600/10', borderHover: 'hover:border-emerald-400/60' },
   { name: 'Flutter', category: 'mobile', categoryLabel: 'Cross-Platform', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'Docker', category: 'cloud', categoryLabel: 'Containers', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
   { name: 'PostgreSQL', category: 'db', categoryLabel: 'Relational DB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', color: 'from-blue-500/20 to-indigo-500/10', borderHover: 'hover:border-blue-400/60' },
