@@ -1,0 +1,29 @@
+services:
+  # Production container (Multi-stage build + Nginx static server)
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: higzendev-frontend
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  # Development container with Hot Module Replacement (HMR)
+  # Run using: docker compose --profile dev up
+  frontend-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: higzendev-frontend-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
