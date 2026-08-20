@@ -58,12 +58,14 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/images/higzendev-logo.png" 
-              alt="HigzenDev Logo" 
-              className={`mr-2 transition-all duration-300 ${isScrolled ? 'h-9' : 'h-11'}`}
-            />
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className={`transition-all duration-300 rounded-xl bg-white p-1 flex items-center justify-center shadow-md ${isScrolled ? 'h-9 w-9' : 'h-11 w-11'}`}>
+              <img 
+                src="/images/higzendev-logo.png" 
+                alt="HigzenDev Logo" 
+                className="h-full w-full object-contain"
+              />
+            </div>
             <span className={`font-bold transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-2xl'}`}>
               <span className="text-white">Higzen</span>
               <span className="text-blue-500">Dev</span>

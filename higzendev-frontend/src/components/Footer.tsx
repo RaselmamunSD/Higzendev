@@ -73,12 +73,14 @@ const Footer = () => {
             <div className="space-y-4">
               <button onClick={() => navigateToTop('/')} className="inline-block group">
                 <div className="flex items-center gap-3">
-                  <img
-                    src="/images/higzendev-logo.png"
-                    alt="HigzenDev Logo"
-                    className="h-9 transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <span className="text-base font-bold tracking-tight">
+                  <div className="h-10 w-10 rounded-xl bg-white p-1 flex items-center justify-center shadow-md">
+                    <img
+                      src="/images/higzendev-logo.png"
+                      alt="HigzenDev Logo"
+                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <span className="text-lg font-bold tracking-tight">
                     <span className="text-foreground">Higzen</span>
                     <span className="text-primary">Dev</span>
                   </span>

@@ -267,11 +267,11 @@ const AIChatbot = () => {
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
                 <div className="relative flex-shrink-0">
-                  <div className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 rounded-full bg-gradient-to-br from-white/20 to-white/5 p-0.5 shadow-lg">
+                  <div className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 rounded-full bg-white p-1 shadow-lg flex items-center justify-center">
                     <img 
-                      src="/lovable-uploads/b9b8125a-32af-42bb-8078-5806ae38b242.png" 
-                      alt="AI Assistant" 
-                      className="h-full w-full rounded-full object-cover"
+                      src="/images/higzendev-logo.png" 
+                      alt="HigzenDev AI Assistant" 
+                      className="h-full w-full object-contain"
                     />
                   </div>
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-green-400 rounded-full border-2 border-white animate-pulse shadow-sm" />
@@ -304,11 +304,13 @@ const AIChatbot = () => {
                   {/* Avatar Message Bubble */}
                   <div className="flex gap-3 p-3 sm:p-4">
                     <div className="relative flex-shrink-0">
-                      <img 
-                        src="/lovable-uploads/b9b8125a-32af-42bb-8078-5806ae38b242.png" 
-                        alt="AI Assistant" 
-                        className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shadow-md"
-                      />
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white p-1 shadow-md flex items-center justify-center border border-purple-300/40">
+                        <img 
+                          src="/images/higzendev-logo.png" 
+                          alt="HigzenDev AI Assistant" 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                       <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-background" />
                     </div>
                     <div className="bg-muted rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm max-w-[85%]">
@@ -398,11 +400,13 @@ const AIChatbot = () => {
                 {/* Welcome Message */}
                 <div className="flex gap-2 sm:gap-3 mb-4 sm:mb-5">
                   <div className="relative flex-shrink-0">
-                    <img 
-                      src="/lovable-uploads/b9b8125a-32af-42bb-8078-5806ae38b242.png" 
-                      alt="AI Assistant" 
-                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-purple-400/30 shadow-md"
-                    />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white p-1 shadow-md flex items-center justify-center border-2 border-purple-400/30">
+                      <img 
+                        src="/images/higzendev-logo.png" 
+                        alt="HigzenDev AI Assistant" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <div className="absolute -bottom-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-400 rounded-full border-2 border-card" />
                   </div>
                   <div className="bg-muted/80 rounded-2xl rounded-bl-sm px-3 py-2 sm:px-4 sm:py-3 border border-border/30 shadow-sm max-w-[85%]">
@@ -516,11 +520,13 @@ const AIChatbot = () => {
                       >
                         {message.sender === 'bot' && (
                           <div className="relative flex-shrink-0 mt-1">
-                            <img 
-                              src="/lovable-uploads/b9b8125a-32af-42bb-8078-5806ae38b242.png" 
-                              alt="AI Assistant" 
-                              className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full object-cover border-2 border-purple-400/30 shadow-md"
-                            />
+                            <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white p-0.5 shadow-md flex items-center justify-center border border-purple-400/30">
+                              <img 
+                                src="/images/higzendev-logo.png" 
+                                alt="HigzenDev AI Assistant" 
+                                className="w-full h-full object-contain"
+                              />
+                            </div>
                             <div className="absolute -bottom-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-green-400 rounded-full border-2 border-card" />
                           </div>
                         )}
@@ -553,11 +559,13 @@ const AIChatbot = () => {
                     {isLoading && (
                       <div className="flex gap-2 sm:gap-3 justify-start animate-fade-in">
                         <div className="relative flex-shrink-0 mt-1">
-                          <img 
-                            src="/lovable-uploads/b9b8125a-32af-42bb-8078-5806ae38b242.png" 
-                            alt="AI Assistant" 
-                            className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full object-cover border-2 border-purple-400/30 shadow-md"
-                          />
+                          <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white p-0.5 shadow-md flex items-center justify-center border border-purple-400/30">
+                            <img 
+                              src="/images/higzendev-logo.png" 
+                              alt="HigzenDev AI Assistant" 
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
                           <div className="absolute -bottom-0.5 -right-0.5 w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-green-400 rounded-full border-2 border-card animate-pulse" />
                         </div>
                         <div className="bg-gradient-to-r from-muted/90 to-muted/70 rounded-2xl rounded-bl-md px-4 py-3 sm:px-5 sm:py-3.5 border border-purple-200/30 shadow-lg backdrop-blur-sm">
