@@ -579,6 +579,10 @@ const TeamSection = () => {
   // Show all team members on the team page, but limit to 4 on other pages
   const isTeamPage = window.location.pathname === '/about/team';
 
+  if (!isTeamPage) {
+    return <HomeTeamShowcase members={[...foundingTeam, ...executiveTeam, ...teamMembers] as TeamMemberProps[]} />;
+  }
+
   return (
     <section aria-label="Meet our team" className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Background Pattern */}
@@ -590,177 +594,156 @@ const TeamSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         {/* Hero Section */}
-        {isTeamPage && (
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <div className="max-w-4xl mx-auto px-2 sm:px-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent leading-tight">
-                Meet the Minds Behind the Code
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                A passionate team driving digital innovation and <span className="text-white font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">solving problems</span> with cutting-edge technology
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <Heart size={14} className="text-red-400" />
-                  <span>We build with passion</span>
-                </div>
-                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                <div className="flex items-center space-x-2">
-                  <Coffee size={14} className="text-amber-400" />
-                  <span>Fueled by coffee</span>
-                </div>
-                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                <div className="flex items-center space-x-2">
-                  <Star size={14} className="text-yellow-400" />
-                  <span>Driven by innovation</span>
-                </div>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="max-w-4xl mx-auto px-2 sm:px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent leading-tight">
+              Meet the Minds Behind the Code
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
+              A passionate team driving digital innovation and <span className="text-white font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">solving problems</span> with cutting-edge technology
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Heart size={14} className="text-red-400" />
+                <span>We build with passion</span>
+              </div>
+              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+              <div className="flex items-center space-x-2">
+                <Coffee size={14} className="text-amber-400" />
+                <span>Fueled by coffee</span>
+              </div>
+              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+              <div className="flex items-center space-x-2">
+                <Star size={14} className="text-yellow-400" />
+                <span>Driven by innovation</span>
               </div>
             </div>
           </div>
-        )}
+        </div>
         
         {/* Our Values Section */}
-        {isTeamPage && (
-          <div className="mb-12 sm:mb-16 lg:mb-20">
-            <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white">Journey With Us</h2>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-                Collaborating With Us Is Your Pathway to Success
-              </p>
-            </div>
-          
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
-              {features.map((feature, index) => (
-                <FeatureCard 
-                  key={index}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                  bgColor={feature.bgColor}
-                />
-              ))}
-            </div>
+        <div className="mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white">Journey With Us</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
+              Collaborating With Us Is Your Pathway to Success
+            </p>
           </div>
-        )}
+        
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
+            {features.map((feature, index) => (
+              <FeatureCard 
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                bgColor={feature.bgColor}
+              />
+            ))}
+          </div>
+        </div>
+
         {/* Founder & Lead Software Engineer Spotlight */}
-        {isTeamPage && <EliteFounderSection />}
+        <EliteFounderSection />
 
         {/* Executive Team Section */}
-        {isTeamPage && (
-          <>
-            <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-                Executive Team
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
-                Strategic leaders driving operational excellence and innovation
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
-              {executiveTeam.map((member, index) => (
-                <TeamMember 
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  color={member.color}
-                  imagePath={member.imagePath}
-                  linkedIn={member.linkedIn}
-                  facebook={member.facebook}
-                  twitter={member.twitter}
-                  isLeadership={member.isLeadership}
-                  quote={member.quote}
-                  funFact={member.funFact}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+            Executive Team
+          </h2>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
+            Strategic leaders driving operational excellence and innovation
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
+          {executiveTeam.map((member, index) => (
+            <TeamMember 
+              key={index}
+              name={member.name}
+              position={member.position}
+              color={member.color}
+              imagePath={member.imagePath}
+              linkedIn={member.linkedIn}
+              facebook={member.facebook}
+              twitter={member.twitter}
+              isLeadership={member.isLeadership}
+              quote={member.quote}
+              funFact={member.funFact}
+            />
+          ))}
+        </div>
 
-        {isTeamPage ? (
-          <>
-            <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
-              <h2 id="our-team-members-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                Our Team Members
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
-                Talented individuals who bring our vision to life every day
-              </p>
-              {!prefersReducedMotion && (
-                <div className="mt-4 sm:mt-6 flex justify-center">
-                  <button
-                    type="button"
-                    onClick={() => setMembersPaused(p => !p)}
-                    aria-label={membersPaused ? 'Resume team members carousel' : 'Pause team members carousel'}
-                    aria-pressed={membersPaused}
-                    aria-controls="team-members-carousel"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-xs sm:text-sm text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  >
-                    {membersPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
-                    <span>{membersPaused ? 'Resume' : 'Pause'} animation</span>
-                  </button>
-                </div>
-              )}
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
+          <h2 id="our-team-members-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+            Our Team Members
+          </h2>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
+            Talented individuals who bring our vision to life every day
+          </p>
+          {!prefersReducedMotion && (
+            <div className="mt-4 sm:mt-6 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setMembersPaused(p => !p)}
+                aria-label={membersPaused ? 'Resume team members carousel' : 'Pause team members carousel'}
+                aria-pressed={membersPaused}
+                aria-controls="team-members-carousel"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-xs sm:text-sm text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {membersPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
+                <span>{membersPaused ? 'Resume' : 'Pause'} animation</span>
+              </button>
             </div>
-          </>
-        ) : null}
+          )}
+        </div>
       </div>
 
-      {isTeamPage && (
-        <div className="w-full">
-            <div
-              id="team-members-carousel"
-              className={prefersReducedMotion ? 'relative overflow-x-auto mb-12 sm:mb-16 lg:mb-20 w-full' : 'relative overflow-hidden mb-12 sm:mb-16 lg:mb-20 w-full [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]'}
-              role="region"
-              aria-labelledby="our-team-members-heading"
-              aria-roledescription="carousel"
-            >
-              <ul
-                className={`flex space-x-4 sm:space-x-6 lg:space-x-8 list-none p-0 m-0 ${prefersReducedMotion ? 'w-max' : 'animate-marquee hover:pause-marquee focus-within:[animation-play-state:paused]'} ${membersAnimationPaused ? '[animation-play-state:paused]' : ''}`}
-              >
-                {(prefersReducedMotion ? teamMembers : [...teamMembers, ...teamMembers, ...teamMembers, ...teamMembers]).map((member, index) => {
-                  const isDuplicate = !prefersReducedMotion && index >= teamMembers.length;
-                  return (
-                    <li
-                      key={index}
-                      aria-hidden={isDuplicate ? 'true' : undefined}
-                      className="flex-shrink-0 w-64 sm:w-72 lg:w-80 list-none"
-                    >
-                      <TeamMember {...member} />
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+      <div className="w-full">
+        <div
+          id="team-members-carousel"
+          className={prefersReducedMotion ? 'relative overflow-x-auto mb-12 sm:mb-16 lg:mb-20 w-full' : 'relative overflow-hidden mb-12 sm:mb-16 lg:mb-20 w-full [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]'}
+          role="region"
+          aria-labelledby="our-team-members-heading"
+          aria-roledescription="carousel"
+        >
+          <ul
+            className={`flex space-x-4 sm:space-x-6 lg:space-x-8 list-none p-0 m-0 ${prefersReducedMotion ? 'w-max' : 'animate-marquee hover:pause-marquee focus-within:[animation-play-state:paused]'} ${membersAnimationPaused ? '[animation-play-state:paused]' : ''}`}
+          >
+            {(prefersReducedMotion ? teamMembers : [...teamMembers, ...teamMembers, ...teamMembers, ...teamMembers]).map((member, index) => {
+              const isDuplicate = !prefersReducedMotion && index >= teamMembers.length;
+              return (
+                <li
+                  key={index}
+                  aria-hidden={isDuplicate ? 'true' : undefined}
+                  className="flex-shrink-0 w-64 sm:w-72 lg:w-80 list-none"
+                >
+                  <TeamMember {...member} />
+                </li>
+              );
+            })}
+          </ul>
         </div>
-      )}
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10 mb-12 sm:mb-16 lg:mb-20">
-        {isTeamPage ? (
-          <>
-            <div className="text-center px-2 sm:px-4">
-              <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-10 lg:p-12 max-w-4xl mx-auto">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Want to Join the Team?
-                </h2>
-                <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                  We're always looking for passionate individuals who want to make a difference
-                </p>
-                <Link to="/careers">
-                  <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-white px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25">
-                    See Open Roles
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </>
-        ) : null}
+        <div className="text-center px-2 sm:px-4">
+          <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-10 lg:p-12 max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Want to Join the Team?
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              We're always looking for passionate individuals who want to make a difference
+            </p>
+            <Link to="/careers">
+              <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-white px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/25">
+                See Open Roles
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
-
-      {!isTeamPage && (
-        <HomeTeamShowcase members={[...foundingTeam, ...executiveTeam, ...teamMembers] as TeamMemberProps[]} />
-      )}
     </section>
   );
 };
