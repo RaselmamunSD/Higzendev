@@ -642,39 +642,6 @@ const TeamSection = () => {
             </div>
           </div>
         )}
-
-        {/* Founding Team Section */}
-        {isTeamPage && (
-          <>
-            <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Our Valued Shareholders
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
-                Visionary leaders who founded our company and continue to guide our journey
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
-              {foundingTeam.map((member, index) => (
-                <TeamMember 
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  color={member.color}
-                  imagePath={member.imagePath}
-                  linkedIn={member.linkedIn}
-                  facebook={member.facebook}
-                  twitter={member.twitter}
-                  isLeadership={member.isLeadership}
-                  quote={member.quote}
-                  funFact={member.funFact}
-                />
-              ))}
-            </div>
-          </>
-        )}
-
         {/* Executive Team Section */}
         {isTeamPage && (
           <>
