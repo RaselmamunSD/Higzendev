@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd higzendev-frontend && npm install && npm run build",
+  "outputDirectory": "higzendev-frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

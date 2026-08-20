@@ -1,0 +1,10 @@
+{
+  "name": "higzendev",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm --prefix higzendev-frontend run dev",
+    "build": "npm --prefix higzendev-frontend run build",
+    "preview": "npm --prefix higzendev-frontend run preview"
+  }
+}
