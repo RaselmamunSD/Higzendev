@@ -1,34 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import TeamHero from '../components/team/TeamHero';
-import LeadershipSpotlight from '../components/team/LeadershipSpotlight';
-import TeamRoster from '../components/team/TeamRoster';
-import EngineeringCulture from '../components/team/EngineeringCulture';
-import TeamCTA from '../components/team/TeamCTA';
+import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 
-const Team: React.FC = () => {
+const Team = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background selection:bg-primary selection:text-primary-foreground">
+    <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-grow">
-        {/* Team Hero with DNA Stats */}
-        <TeamHero />
-
-        {/* Founder & Lead Software Engineers Spotlight (Short Introductions) */}
-        <LeadershipSpotlight />
-
-        {/* Interactive Discipline-Filtered Engineering Squads */}
-        <TeamRoster />
-
-        {/* Engineering Culture & Standards */}
-        <EngineeringCulture />
-
-        {/* Strategic Hiring & Careers CTA Banner */}
-        <TeamCTA />
-
-        {/* Contact Form Section */}
+        <TeamSection />
         <ContactSection />
       </main>
       <Footer />
