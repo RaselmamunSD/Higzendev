@@ -180,7 +180,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="relative w-full pt-6 sm:pt-10 lg:pt-12 pb-10 sm:pb-16 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
+      className="relative w-full pt-8 sm:pt-10 lg:pt-12 pb-8 sm:pb-10 lg:pb-12 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
     >
       {/* ambient glows */}
       <div aria-hidden="true" className="absolute -top-32 -left-20 w-[20rem] sm:w-[28rem] h-[20rem] sm:h-[28rem] rounded-full bg-primary/10 blur-[80px] sm:blur-[120px] pointer-events-none"></div>
@@ -188,7 +188,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
 
       {/* Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-end mb-8 sm:mb-10 lg:mb-12 pt-2 sm:pt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-end mb-6 sm:mb-8 pt-1">
         <div>
           <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
             <span aria-hidden="true" className="h-px w-8 sm:w-10 bg-primary"></span>

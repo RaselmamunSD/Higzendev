@@ -166,7 +166,7 @@ const ClientTestimonialsSection: React.FC = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-20 sm:py-24 bg-gradient-to-b from-background via-muted/15 to-background relative overflow-hidden border-y border-border/40">
+    <section className="pt-10 sm:pt-14 pb-16 sm:pb-20 bg-gradient-to-b from-background via-muted/15 to-background relative overflow-hidden border-y border-border/40">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
 
