@@ -24,7 +24,7 @@ export const FounderLetter: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary">Executive Message</h3>
-                  <p className="text-xl sm:text-2xl font-bold text-foreground">A Personal Note from Michael</p>
+                  <p className="text-xl sm:text-2xl font-bold text-foreground">A Personal Note from MD Rasel Mamun</p>
                 </div>
               </div>
               <div className="hidden sm:block text-right">
@@ -39,19 +39,19 @@ export const FounderLetter: React.FC = () => {
               </p>
               
               <p>
-                When I started my journey in tech over 15 years ago, software engineering was about craftsmanship, elegance, and solving human problems. Over the years, as software ate the world, an unfortunate trend emerged: agencies started viewing developers as fungible commodities and clients as transaction numbers.
+                Software engineering is about craftsmanship, architectural elegance, and solving mission-critical problems with resilience. In a world full of cookie-cutter agencies, we take pride in taking complete technical stewardship of your vision.
               </p>
 
               <p>
-                I founded <span className="text-primary font-semibold">HigzenDev</span> to restore that lost ethos. We don’t just write code; we take complete technical stewardship of your vision. We bring Silicon Valley engineering standards, transparent real-time communication, and an uncompromising pursuit of perfection.
+                I founded <span className="text-primary font-semibold">HigzenDev</span> to provide global founders and businesses with top-tier engineering talent, transparent real-time communication, and uncompromising software quality.
               </p>
 
               <p>
-                Whether you are modernizing a legacy enterprise cloud or building a disruptive AI-first venture, my team and I stand beside you as deeply committed co-architects. We measure our success solely by the compounding value we deliver to your bottom line.
+                Whether you are modernizing complex cloud infrastructure, deploying high-concurrency backends, or launching AI-first products, my team and I stand beside you as deeply committed technical partners.
               </p>
 
               <p>
-                Thank you for trusting us with your most ambitious ideas.
+                Thank you for trusting HigzenDev with your most ambitious digital products.
               </p>
             </div>
 
@@ -59,10 +59,10 @@ export const FounderLetter: React.FC = () => {
             <div className="mt-10 pt-8 border-t border-border/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
                 <div className="text-2xl sm:text-3xl font-serif italic text-primary font-medium tracking-wide">
-                  Michael Chen
+                  MD Rasel Mamun
                 </div>
                 <div className="text-xs font-semibold text-muted-foreground mt-1">
-                  Founder & CEO, HigzenDev Technologies
+                  Founder & Lead Software Engineer, HigzenDev
                 </div>
               </div>
 

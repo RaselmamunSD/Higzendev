@@ -34,40 +34,40 @@ const stats = [
 const storyTabs = [
   {
     id: 'origin',
-    title: 'The Google Journey',
+    title: 'The Engineering Journey',
     icon: Terminal,
-    headline: 'Scaling Hyper-Systems at Global Scale',
-    description: `After graduating with top honors from MIT's Computer Science & Artificial Intelligence Laboratory (CSAIL), Michael spent nearly a decade leading mission-critical cloud infrastructure projects at Google. 
+    headline: 'Architecting Hyper-Systems & Distributed Cloud',
+    description: `With a relentless passion for high-performance software engineering and complex system architecture, MD Rasel Mamun has spearheaded mission-critical digital systems and distributed infrastructure.
 
-Managing hyper-distributed systems serving over 500 million daily active users gave him deep firsthand insights into what separates standard development from elite, failure-proof software engineering.`,
-    highlight: 'Key Focus: Distributed Data Pipelines, Zero-Downtime Cloud, High-Concurrency Architectures'
+Managing hyper-scalable systems with zero downtime gave him deep firsthand insights into what separates standard development from elite, failure-proof software engineering.`,
+    highlight: 'Key Focus: Distributed Cloud Infrastructure, System Architecture, High-Concurrency Engines'
   },
   {
     id: 'mission',
     title: 'Why HigzenDev Was Born',
     icon: Zap,
-    headline: 'Eliminating the Software Engineering Talent Crisis',
-    description: `In 2018, Michael observed a critical industry bottleneck: traditional outsourcing agencies prioritized headcount over craftsmanship, while hiring in-house talent took months and exorbitant capital.
+    headline: 'Eliminating the Software Engineering Quality Gap',
+    description: `MD Rasel Mamun observed a critical industry bottleneck: traditional outsourcing agencies prioritized headcount over craftsmanship, while hiring in-house talent took months and exorbitant capital.
 
-HigzenDev was built on a radically different premise: providing tech founders and enterprises with instant access to the top 1% vetted engineering talent, operating as deeply embedded strategic partners.`,
-    highlight: 'Key Focus: Top 1% Talent Filter, Silicon Valley Engineering Rigor, Direct Developer Collaboration'
+HigzenDev was built on a radically different premise: providing global founders and enterprises with instant access to top-tier vetted engineering talent, operating as deeply embedded strategic partners.`,
+    highlight: 'Key Focus: Top 1% Engineering Rigor, Clean Code Standards, Direct Technical Collaboration'
   },
   {
     id: 'philosophy',
     title: 'Engineering Doctrine',
     icon: Layers,
     headline: 'Zero-Fluff, High-Velocity, Bulletproof Code',
-    description: `Michael champions a "Zero-Technical-Debt" culture. Every line of code written by HigzenDev teams is treated as high-leverage business infrastructure that must scale gracefully for years.
+    description: `MD Rasel Mamun champions a "Zero-Technical-Debt" culture. Every line of code written by HigzenDev teams is treated as high-leverage business infrastructure that must scale gracefully for years.
 
-His philosophy bridges executive strategic clarity with hands-on technical precision—ensuring engineering roadmaps directly accelerate revenue and product moat.`,
-    highlight: 'Key Focus: Clean Microservices, Automated QA by Default, Radical Transparency'
+His philosophy bridges executive strategic clarity with hands-on technical precision—ensuring engineering roadmaps directly accelerate product moat and client growth.`,
+    highlight: 'Key Focus: Clean Microservices, Automated QA by Default, Radical Technical Transparency'
   },
   {
     id: 'vision',
     title: 'The AI & Cloud Frontier',
     icon: Cpu,
     headline: 'Pioneering Next-Gen Intelligent Architectures',
-    description: `Looking ahead to 2025 and beyond, Michael is steering HigzenDev into the forefront of generative AI, autonomous dev workflows, and edge-native architectures.
+    description: `Steering HigzenDev into the forefront of generative AI, autonomous dev workflows, and edge-native architectures.
 
 We help enterprises transition from legacy monolithic systems to intelligent, self-optimizing platforms powered by cutting-edge LLMs and resilient cloud ecosystems.`,
     highlight: 'Key Focus: Enterprise LLM Integration, Vector Data Stores, Edge AI Scalability'
@@ -120,7 +120,7 @@ export const FounderHero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl font-normal leading-relaxed"
           >
-            Meet <strong className="text-foreground font-semibold">Michael Chen</strong> — ex-Google Principal Engineer, MIT CSAIL Alum, and founder of a globally recognized engineering powerhouse.
+            Meet <strong className="text-foreground font-semibold">MD Rasel Mamun</strong> — Founder & Lead Software Engineer at HigzenDev, architecting high-scale software systems, distributed cloud platforms, and modern AI engineering.
           </motion.p>
         </div>
 
@@ -147,21 +147,21 @@ export const FounderHero: React.FC = () => {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
-                    Available for Keynote & Advisory
+                    Available for Architecture Advisory
                   </div>
-                  <Badge variant="outline" className="border-primary/40 text-primary bg-primary/5 text-xs">
-                    Ex-Google
+                  <Badge variant="outline" className="border-primary/40 text-primary bg-primary/5 text-xs font-mono font-semibold">
+                    Lead Architect
                   </Badge>
                 </div>
 
                 {/* Avatar with Cyber Halo */}
-                <div className="relative mx-auto w-48 h-48 sm:w-56 sm:h-56 mb-6">
+                <div className="relative mx-auto w-52 sm:w-60 mb-6">
                   <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-primary via-cyan-400 to-purple-600 opacity-70 blur-md group-hover:opacity-100 transition-all duration-500" />
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/50 bg-muted">
+                  <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-primary/50 bg-muted shadow-2xl">
                     <img 
-                      src="/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png" 
-                      alt="Michael Chen - Founder of HigzenDev"
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      src="/images/rasel-mamun-desk.jpg" 
+                      alt="MD Rasel Mamun - Founder & Lead Software Engineer at HigzenDev"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                 </div>
@@ -169,32 +169,32 @@ export const FounderHero: React.FC = () => {
                 {/* Name & Title */}
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center gap-1.5 justify-center">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Michael Chen</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-foreground">MD Rasel Mamun</h2>
                     <CheckCircle2 className="w-5 h-5 text-primary fill-primary/20" />
                   </div>
-                  <p className="text-sm sm:text-base font-semibold text-primary mt-1">Founder & Chief Executive Officer</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">HigzenDev Technologies Inc.</p>
+                  <p className="text-sm sm:text-base font-semibold text-primary mt-1">Founder & Lead Software Engineer</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">HigzenDev Technologies</p>
                 </div>
 
                 {/* Verified Credentials Pills */}
                 <div className="space-y-2.5 mb-6 text-xs sm:text-sm">
                   <div className="flex items-center gap-3 p-2.5 rounded-xl bg-muted/40 border border-border/60 hover:border-primary/40 transition-colors">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                      <GraduationCap className="w-4 h-4" />
+                      <Terminal className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">MIT CSAIL Graduate</div>
-                      <div className="text-muted-foreground text-xs">B.S. & M.Eng in Computer Science</div>
+                      <div className="font-semibold text-foreground">Full-Stack & Cloud Architecture</div>
+                      <div className="text-muted-foreground text-xs">High-Throughput Enterprise Systems</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3 p-2.5 rounded-xl bg-muted/40 border border-border/60 hover:border-primary/40 transition-colors">
                     <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
-                      <Briefcase className="w-4 h-4" />
+                      <Cpu className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">Ex-Principal Engineer @ Google</div>
-                      <div className="text-muted-foreground text-xs">Infrastructure & Cloud Platforms</div>
+                      <div className="font-semibold text-foreground">Distributed Systems & AI Pipelines</div>
+                      <div className="text-muted-foreground text-xs">Microservices, FastAPI & Modern Stacks</div>
                     </div>
                   </div>
 
@@ -203,8 +203,8 @@ export const FounderHero: React.FC = () => {
                       <Award className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">Enterprise Scalability Veteran</div>
-                      <div className="text-muted-foreground text-xs">15+ Years Architecting High-Load Systems</div>
+                      <div className="font-semibold text-foreground">Engineering Craftsmanship</div>
+                      <div className="text-muted-foreground text-xs">Zero-Debt Scalable Architectures</div>
                     </div>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export const FounderHero: React.FC = () => {
                     <blockquote className="text-sm italic text-foreground/90 font-medium leading-relaxed">
                       "World-class software is never an accident. It is the result of high intention, deep architectural craftsmanship, and obsessive execution."
                     </blockquote>
-                    <p className="text-xs text-primary font-semibold mt-1.5">— Michael Chen, Founder</p>
+                    <p className="text-xs text-primary font-semibold mt-1.5">— MD Rasel Mamun, Founder & Lead Software Engineer</p>
                   </div>
                 </div>
               </div>
@@ -367,7 +367,7 @@ export const FounderHero: React.FC = () => {
               >
                 <Link to="/schedule-meeting" className="flex items-center justify-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  Schedule Advisory with Michael
+                  Schedule Advisory with MD Rasel Mamun
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>

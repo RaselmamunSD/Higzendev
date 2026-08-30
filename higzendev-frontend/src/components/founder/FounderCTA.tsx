@@ -35,7 +35,7 @@ export const FounderCTA: React.FC = () => {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Have an ambitious software roadmap or enterprise scaling challenge? Book a 30-minute strategic architecture session directly with Michael Chen.
+            Have an ambitious software roadmap or enterprise scaling challenge? Book a 30-minute strategic architecture session directly with MD Rasel Mamun.
           </p>
 
           {/* CTA Buttons */}

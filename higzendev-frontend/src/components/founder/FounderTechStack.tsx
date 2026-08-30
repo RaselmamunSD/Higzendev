@@ -62,7 +62,7 @@ export const FounderTechStack: React.FC = () => {
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            A deep-dive into the technical stacks and architectural patterns Michael and HigzenDev lead for global enterprises.
+            A deep-dive into the technical stacks and architectural patterns MD Rasel Mamun and HigzenDev lead for global enterprises.
           </p>
         </div>
 

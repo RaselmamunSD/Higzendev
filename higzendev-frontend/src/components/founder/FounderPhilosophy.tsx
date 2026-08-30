@@ -25,7 +25,7 @@ const principles = [
     icon: Zap,
     title: 'Speed with Architectural Rigor',
     tagline: 'Velocity Without Technical Debt',
-    description: 'Startups and scaleups must move rapidly without breaking the foundation. Michael instituted modular micro-architectures that enable agile feature shipping in days while ensuring long-term resilience.',
+    description: 'Startups and scaleups must move rapidly without breaking the foundation. We institute modular micro-architectures that enable agile feature shipping in days while ensuring long-term resilience.',
     color: 'from-purple-500 to-indigo-500',
     borderColor: 'group-hover:border-purple-500/50',
     stat: '3x Faster Delivery'
@@ -72,7 +72,7 @@ export const FounderPhilosophy: React.FC = () => {
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            The core tenets Michael Chen established to guide every engineer, product, and client partnership at HigzenDev.
+            The core tenets MD Rasel Mamun established to guide every engineer, product, and client partnership at HigzenDev.
           </p>
         </div>
 

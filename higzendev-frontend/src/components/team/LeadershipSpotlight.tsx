@@ -158,23 +158,23 @@ export const LeadershipSpotlight: React.FC = () => {
                 
                 {/* Left: Founder Avatar & Core Badges (4 Cols) */}
                 <div className="lg:col-span-4 flex flex-col items-center text-center">
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 mb-5">
+                    <div className="relative w-44 sm:w-48 mb-5">
                     <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-primary via-cyan-400 to-purple-600 opacity-70 blur-md group-hover:opacity-100 transition-all duration-500" />
-                    <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-primary/50 bg-muted">
+                    <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-primary/50 bg-muted shadow-xl">
                       <img 
-                        src="/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png" 
-                        alt="Michael Chen - Founder & CEO"
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        src="/images/rasel-mamun-desk.jpg" 
+                        alt="MD Rasel Mamun - Founder & Lead Software Engineer"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                   </div>
 
                   <div className="inline-flex items-center gap-1.5 justify-center mb-1">
-                    <h3 className="text-2xl font-bold text-foreground">Michael Chen</h3>
+                    <h3 className="text-2xl font-bold text-foreground">MD Rasel Mamun</h3>
                     <CheckCircle2 className="w-5 h-5 text-primary fill-primary/20" />
                   </div>
-                  <p className="text-sm font-semibold text-primary">Founder & Chief Executive Officer</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Ex-Google Principal Engineer • MIT CSAIL</p>
+                  <p className="text-sm font-semibold text-primary">Founder & Lead Software Engineer</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Founding Architect • HigzenDev</p>
 
                   <div className="flex items-center gap-2 mt-4">
                     <a 
