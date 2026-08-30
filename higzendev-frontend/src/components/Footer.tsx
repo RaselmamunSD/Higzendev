@@ -40,10 +40,10 @@ const Footer = () => {
   ];
 
   const socials = [
-    { icon: Facebook, label: 'Facebook' },
-    { icon: Twitter, label: 'Twitter' },
-    { icon: Linkedin, label: 'LinkedIn' },
-    { icon: Instagram, label: 'Instagram' },
+    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/share/19MBiAE2x8/' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/higzendev/' },
+    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/' },
+    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/' },
   ];
 
   return (
@@ -112,12 +112,14 @@ const Footer = () => {
 
               {/* Social Icons */}
               <div className="flex gap-4 pt-1">
-                {socials.map(({ icon: Icon, label }) => (
+                {socials.map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={label}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110"
                   >
                     <Icon size={15} strokeWidth={1.5} />
                   </a>

@@ -27,6 +27,12 @@ const InstagramIcon = () => (
   </svg>
 );
 
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+  </svg>
+);
+
 interface Message {
   id: string;
   content: string;
@@ -350,7 +356,7 @@ const AIChatbot = () => {
 
                     {/* Facebook Option */}
                     <button
-                      onClick={() => handleExternalLink('https://www.facebook.com/HigzenDev')}
+                      onClick={() => handleExternalLink('https://www.facebook.com/share/19MBiAE2x8/')}
                       className="w-full flex items-center gap-3 p-3 sm:p-3.5 rounded-xl bg-card border border-border hover:border-blue-300 hover:shadow-md transition-all duration-300 group"
                     >
                       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-blue-600 flex-shrink-0">
@@ -358,6 +364,19 @@ const AIChatbot = () => {
                       </div>
                       <div className="flex-1 text-left">
                         <div className="text-xs sm:text-sm font-medium text-foreground">Chat with Facebook</div>
+                      </div>
+                    </button>
+
+                    {/* LinkedIn Option */}
+                    <button
+                      onClick={() => handleExternalLink('https://www.linkedin.com/company/higzendev/')}
+                      className="w-full flex items-center gap-3 p-3 sm:p-3.5 rounded-xl bg-card border border-border hover:border-blue-400 hover:shadow-md transition-all duration-300 group"
+                    >
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-blue-500 flex-shrink-0">
+                        <LinkedInIcon />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <div className="text-xs sm:text-sm font-medium text-foreground">Connect on LinkedIn</div>
                       </div>
                     </button>
 

@@ -44,7 +44,7 @@ const allMembers: TeamMember[] = [
     skills: ['Python', 'TensorFlow', 'LLMs', 'Vector DBs'],
     initials: 'NP',
     avatarGradient: 'from-purple-600 to-indigo-600',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'Michael Brown',
@@ -56,7 +56,7 @@ const allMembers: TeamMember[] = [
     skills: ['Node.js', 'Go', 'PostgreSQL', 'Redis'],
     initials: 'MB',
     avatarGradient: 'from-blue-600 to-cyan-600',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'Lisa Chang',
@@ -68,7 +68,7 @@ const allMembers: TeamMember[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'Next.js'],
     initials: 'LC',
     avatarGradient: 'from-cyan-600 to-teal-600',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'Maria Rodriguez',
@@ -80,7 +80,7 @@ const allMembers: TeamMember[] = [
     skills: ['Figma', 'Design Systems', 'Prototyping', 'User Research'],
     initials: 'MR',
     avatarGradient: 'from-pink-600 to-rose-600',
-    socials: { linkedin: 'https://linkedin.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
     name: 'Carlos Mendez',
@@ -92,7 +92,7 @@ const allMembers: TeamMember[] = [
     skills: ['Flutter', 'React Native', 'Swift', 'Kotlin'],
     initials: 'CM',
     avatarGradient: 'from-amber-600 to-orange-600',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'David Kim',
@@ -104,7 +104,7 @@ const allMembers: TeamMember[] = [
     skills: ['Zero-Trust', 'Pen-Testing', 'Kubernetes Security', 'AWS IAM'],
     initials: 'DK',
     avatarGradient: 'from-emerald-600 to-teal-700',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'Robert Taylor',
@@ -116,7 +116,7 @@ const allMembers: TeamMember[] = [
     skills: ['Cypress', 'Playwright', 'Jest', 'K6 Load Testing'],
     initials: 'RT',
     avatarGradient: 'from-blue-600 to-indigo-600',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   },
   {
     name: 'Sophie Laurent',
@@ -128,7 +128,7 @@ const allMembers: TeamMember[] = [
     skills: ['Agile Roadmap', 'Technical Specs', 'System Analysis', 'Jira'],
     initials: 'SL',
     avatarGradient: 'from-violet-600 to-purple-700',
-    socials: { linkedin: 'https://linkedin.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
     name: 'Ryan O\'Connor',
@@ -140,7 +140,7 @@ const allMembers: TeamMember[] = [
     skills: ['Terraform', 'AWS ECS/EKS', 'GCP Cloud Run', 'Grafana'],
     initials: 'RO',
     avatarGradient: 'from-cyan-600 to-blue-700',
-    socials: { linkedin: 'https://linkedin.com', github: 'https://github.com' }
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/', github: 'https://github.com' }
   }
 ];
 

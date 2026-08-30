@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, CheckCircle2, Linkedin, Twitter, Github, Mail, ArrowRight, ShieldCheck, Terminal, Cpu } from 'lucide-react';
+import { Sparkles, CheckCircle2, Linkedin, Facebook, Twitter, Github, Mail, ArrowRight, ShieldCheck, Terminal, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -72,13 +72,22 @@ const EliteFounderSection: React.FC = () => {
 
                   <div className="flex items-center gap-2">
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://www.linkedin.com/company/higzendev/" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="p-1.5 rounded-lg bg-slate-800 hover:bg-cyan-500/20 hover:text-cyan-400 text-slate-400 transition-colors"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="w-3.5 h-3.5" />
+                    </a>
+                    <a 
+                      href="https://www.facebook.com/share/19MBiAE2x8/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="p-1.5 rounded-lg bg-slate-800 hover:bg-blue-500/20 hover:text-blue-400 text-slate-400 transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-3.5 h-3.5" />
                     </a>
                     <a 
                       href="https://github.com" 

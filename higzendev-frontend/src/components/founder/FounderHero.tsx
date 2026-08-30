@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
   Linkedin, 
+  Facebook,
   Twitter, 
   Github, 
   Mail, 
@@ -213,13 +214,22 @@ export const FounderHero: React.FC = () => {
                   <span className="text-xs text-muted-foreground font-medium">Connect Directly:</span>
                   <div className="flex items-center gap-2">
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://www.linkedin.com/company/higzendev/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2.5 rounded-xl bg-muted/60 hover:bg-primary/20 hover:text-primary text-muted-foreground border border-border/60 transition-all duration-200 hover:scale-110"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="w-4 h-4" />
+                    </a>
+                    <a 
+                      href="https://www.facebook.com/share/19MBiAE2x8/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2.5 rounded-xl bg-muted/60 hover:bg-blue-500/20 hover:text-blue-400 text-muted-foreground border border-border/60 transition-all duration-200 hover:scale-110"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-4 h-4" />
                     </a>
                     <a 
                       href="https://twitter.com" 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { PhoneCall, Mail, MapPin, CheckCircle, MessageCircle } from 'lucide-react';
+import { PhoneCall, Mail, MapPin, CheckCircle, MessageCircle, Linkedin, Facebook } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -130,6 +130,31 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">
                       Dhaka, Bangladesh
                     </p>
+                  </div>
+                </div>
+
+                {/* Follow Us Socials */}
+                <div className="pt-2 flex items-center gap-3">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Follow Us:</span>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href="https://www.linkedin.com/company/higzendev/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2.5 rounded-xl bg-card border border-border/80 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200 hover:scale-105"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-4 h-4 text-blue-400" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/share/19MBiAE2x8/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2.5 rounded-xl bg-card border border-border/80 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200 hover:scale-105"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-4 h-4 text-blue-500" />
+                    </a>
                   </div>
                 </div>
               </div>

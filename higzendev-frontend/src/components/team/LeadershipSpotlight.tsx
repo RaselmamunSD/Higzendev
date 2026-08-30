@@ -53,7 +53,7 @@ const leadEngineers: LeadEngineer[] = [
     color: 'from-blue-500 to-cyan-400',
     borderColor: 'group-hover:border-cyan-500/50',
     socials: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://www.linkedin.com/company/higzendev/',
       github: 'https://github.com',
       twitter: 'https://twitter.com'
     }
@@ -71,7 +71,7 @@ const leadEngineers: LeadEngineer[] = [
     color: 'from-purple-500 to-indigo-400',
     borderColor: 'group-hover:border-purple-500/50',
     socials: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://www.linkedin.com/company/higzendev/',
       github: 'https://github.com',
       twitter: 'https://twitter.com'
     }
@@ -89,7 +89,7 @@ const leadEngineers: LeadEngineer[] = [
     color: 'from-emerald-500 to-teal-400',
     borderColor: 'group-hover:border-emerald-500/50',
     socials: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://www.linkedin.com/company/higzendev/',
       github: 'https://github.com',
       twitter: 'https://twitter.com'
     }
@@ -107,7 +107,7 @@ const leadEngineers: LeadEngineer[] = [
     color: 'from-amber-500 to-orange-400',
     borderColor: 'group-hover:border-amber-500/50',
     socials: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://www.linkedin.com/company/higzendev/',
       github: 'https://github.com',
       twitter: 'https://twitter.com'
     }
@@ -178,7 +178,7 @@ export const LeadershipSpotlight: React.FC = () => {
 
                   <div className="flex items-center gap-2 mt-4">
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://www.linkedin.com/company/higzendev/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2 rounded-xl bg-muted/60 hover:bg-primary/20 hover:text-primary text-muted-foreground border border-border/60 transition-all duration-200"
