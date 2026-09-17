@@ -46,12 +46,6 @@ const CTA: React.FC = () => {
             <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md">
-              <Sparkles className="w-4 h-4 text-cyan-400 animate-pulse" />
-              <span>TRANSFORM YOUR DIGITAL ENGINEERING</span>
-            </div>
-
             {/* Sub-heading */}
             <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-slate-300 mb-3 tracking-wide">
               Looking for a reliable enterprise IT & software partner?
