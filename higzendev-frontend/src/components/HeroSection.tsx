@@ -1,41 +1,35 @@
-import React, { useState, useEffect, useCallback, Suspense } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { ArrowRight, ChevronLeft, ChevronRight, Sparkles, MessageCircle } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import HeroSkeleton from '@/components/skeletons/HeroSkeleton';
-
-// Import hero videos
-import heroVideo1 from '@/assets/hero-video.mp4';
-import heroVideo2 from '@/assets/hero-slide-2-video.mp4';
-import heroVideo3 from '@/assets/hero-slide-3-video.mp4';
 
 interface Slide {
   id: number;
-  video: string;
   heading: string;
   subtext: string;
+  badge: string;
 }
 
 const slides: Slide[] = [
   {
     id: 1,
-    video: heroVideo1,
-    heading: "Welcome to Our Platform",
-    subtext: "Digital Solutions Built with Modern Technology"
+    badge: "ENTERPRISE SOFTWARE & AI POWERHOUSE",
+    heading: "Engineering the Future of Digital Innovation",
+    subtext: "Silicon Valley craftsmanship, mission-critical distributed architectures, and top 1% global engineering teams."
   },
   {
     id: 2,
-    video: heroVideo2,
-    heading: "Innovative Design",
-    subtext: "Bring Your Dream Projects to Life"
+    badge: "TAILORED TECH ECOSYSTEMS",
+    heading: "Where Vision Meets Technical Mastery",
+    subtext: "Custom software, high-concurrency cloud systems, and AI workflows built to scale without limits."
   },
   {
     id: 3,
-    video: heroVideo3,
-    heading: "Professional Services",
-    subtext: "We Work with Quality and Reliability"
+    badge: "HIGZENDEV INNOVATION HUB",
+    heading: "Accelerating High-Growth Global Brands",
+    subtext: "Transforming complex business challenges into resilient, high-velocity digital products."
   }
 ];
 
@@ -54,7 +48,7 @@ const TypewriterText = ({ text, className }: { text: string; className?: string 
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, 50); // Speed of typing
+      }, 35); // Speed of typing
       return () => clearTimeout(timeout);
     }
   }, [currentIndex, text]);
@@ -73,11 +67,10 @@ const TypewriterText = ({ text, className }: { text: string; className?: string 
   );
 };
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const reduceMotion = useReducedMotion();
 
   // Simplified animation props for mobile/reduced motion
@@ -110,7 +103,7 @@ const HeroSection = () => {
   useEffect(() => {
     if (!isAutoPlaying) return;
     
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
@@ -119,65 +112,65 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen w-full overflow-hidden"
+      className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-[#040711] flex items-center"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Background Videos with Parallax Effect */}
-      {!isVideoLoaded && <HeroSkeleton />}
-      <AnimatePresence mode="wait">
+      {/* Background Image: HigzenDev Office Headquarters */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          key={currentSlide}
-          {...getMotionProps({
-            initial: { opacity: 0, scale: reduceMotion ? 1 : 1.1 },
-            animate: { opacity: 1, scale: 1 },
-            exit: { opacity: 0, scale: reduceMotion ? 1 : 1.05 },
-            transition: { duration: reduceMotion ? 0.3 : 1, ease: "easeInOut" },
-          })}
-          className="absolute inset-0"
+          animate={{
+            scale: reduceMotion ? 1 : [1, 1.06, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="w-full h-full"
         >
-          <video
-            key={slides[currentSlide].video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            onLoadedData={() => setIsVideoLoaded(true)}
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ transform: reduceMotion ? 'none' : undefined }}
-          >
-            <source src={slides[currentSlide].video} type="video/mp4" />
-          </video>
-          {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+          <img
+            src="/images/higzendev-office-hero.png"
+            alt="HigzenDev Headquarters Office"
+            className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.1]"
+            loading="eager"
+          />
         </motion.div>
-      </AnimatePresence>
+
+        {/* Ambient Warm & Cyan Office Glow Accents */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-primary/20 rounded-full blur-[160px] pointer-events-none" />
+        <div className="absolute top-10 right-10 w-[500px] h-[350px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
+
+        {/* Multi-layered Dark Gradient Overlays for crystal clear typography */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040711]/95 via-[#040711]/80 to-[#040711]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040711] via-transparent to-[#040711]/60" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+      </div>
 
       {/* Content Container */}
-      <div className="relative z-10 min-h-screen flex items-center">
+      <div className="relative z-10 w-full py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
                 {...getMotionProps({
-                  initial: { opacity: 0, x: reduceMotion ? 0 : -50 },
+                  initial: { opacity: 0, x: reduceMotion ? 0 : -40 },
                   animate: { opacity: 1, x: 0 },
-                  exit: { opacity: 0, x: reduceMotion ? 0 : 50 },
-                  transition: { duration: reduceMotion ? 0.2 : 0.6, ease: "easeOut" },
+                  exit: { opacity: 0, x: reduceMotion ? 0 : 40 },
+                  transition: { duration: reduceMotion ? 0.2 : 0.5, ease: "easeOut" },
                 })}
-                className="space-y-6"
+                className="space-y-6 text-left"
               >
-                {/* Badge */}
+                {/* Top Badge */}
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
+                  transition={{ delay: 0.1, duration: 0.4 }}
                 >
-                  <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm">
-                    ✨ Slide {currentSlide + 1} of {slides.length}
+                  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-primary/20 text-cyan-300 border border-primary/40 backdrop-blur-md shadow-lg shadow-primary/10">
+                    <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+                    <span>{slides[currentSlide].badge}</span>
                   </span>
                 </motion.div>
 
@@ -185,57 +178,67 @@ const HeroSection = () => {
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight min-h-[1.2em]"
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight min-h-[1.2em]"
                   style={{ 
-                    textShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
+                    textShadow: '0 4px 30px rgba(0, 0, 0, 0.8)',
                   }}
                 >
                   <TypewriterText 
                     key={currentSlide}
                     text={slides[currentSlide].heading}
-                    className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent"
+                    className="bg-gradient-to-r from-white via-cyan-200 to-primary bg-clip-text text-transparent"
                   />
                 </motion.h1>
 
-                {/* Subtext with Typewriter Effect */}
+                {/* Subtext */}
                 <motion.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl min-h-[1.5em]"
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed"
                   style={{ 
-                    textShadow: '0 2px 20px rgba(0, 0, 0, 0.3)',
+                    textShadow: '0 2px 20px rgba(0, 0, 0, 0.8)',
                   }}
                 >
-                  <TypewriterText 
-                    key={`subtext-${currentSlide}`}
-                    text={slides[currentSlide].subtext}
-                  />
+                  {slides[currentSlide].subtext}
                 </motion.p>
 
-                {/* CTA Buttons */}
+                {/* Action CTA Buttons */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4 pt-4"
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4"
                 >
                   <Button 
                     size="lg"
-                    className="group bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-[position:100%_0] text-primary-foreground px-8 py-6 text-lg shadow-glow hover:shadow-glow-lg transition-all duration-500 rounded-full"
+                    className="h-14 px-8 rounded-2xl bg-gradient-to-r from-primary via-cyan-500 to-blue-600 hover:from-primary/90 hover:to-blue-700 text-white font-bold text-base shadow-xl shadow-primary/30 group transition-all duration-300 hover:scale-105"
                     onClick={() => navigate('/contact')}
                   >
-                    Get Started
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                    <span>Get Started</span>
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
+
                   <Button 
                     size="lg"
                     variant="outline" 
-                    className="border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
+                    className="h-14 px-8 rounded-2xl border-white/20 bg-slate-900/60 hover:bg-slate-800/80 text-white font-semibold text-base backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-cyan-400/50"
                     onClick={() => navigate('/services')}
                   >
                     Explore Services
+                  </Button>
+
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="h-14 px-6 rounded-2xl border-emerald-500/30 bg-emerald-950/30 hover:bg-emerald-950/50 text-emerald-400 hover:text-emerald-300 font-semibold text-sm backdrop-blur-md transition-all duration-300 hover:scale-105"
+                    onClick={() => window.open('https://wa.me/8801870966718', '_blank')}
+                  >
+                    <div className="flex items-center gap-2">
+                      <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-4 h-4 object-contain" />
+                      <span>WhatsApp</span>
+                    </div>
                   </Button>
                 </motion.div>
               </motion.div>
@@ -247,62 +250,56 @@ const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 p-3 sm:p-4 rounded-full bg-background/30 backdrop-blur-md border border-border/50 text-foreground hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group"
+        className="absolute left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 p-3 sm:p-3.5 rounded-full bg-slate-950/60 backdrop-blur-md border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300 group"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 group-hover:-translate-x-1 transition-transform" />
+        <ChevronLeft className="h-5 w-5 group-hover:-translate-x-0.5 transition-transform" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 p-3 sm:p-4 rounded-full bg-background/30 backdrop-blur-md border border-border/50 text-foreground hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 group"
+        className="absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 p-3 sm:p-3.5 rounded-full bg-slate-950/60 backdrop-blur-md border border-white/10 text-white hover:bg-primary hover:border-primary transition-all duration-300 group"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
+        <ChevronRight className="h-5 w-5 group-hover:translate-x-0.5 transition-transform" />
       </button>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`relative transition-all duration-300 ${
               index === currentSlide 
-                ? 'w-10 sm:w-12 h-3 sm:h-4' 
-                : 'w-3 sm:w-4 h-3 sm:h-4 hover:scale-125'
+                ? 'w-10 h-2.5' 
+                : 'w-2.5 h-2.5 hover:scale-125'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           >
             <span 
               className={`absolute inset-0 rounded-full transition-all duration-300 ${
                 index === currentSlide 
-                  ? 'bg-gradient-to-r from-primary to-accent' 
-                  : 'bg-foreground/30 hover:bg-foreground/50'
+                  ? 'bg-gradient-to-r from-primary to-cyan-400 shadow-lg shadow-cyan-500/50' 
+                  : 'bg-white/30 hover:bg-white/50'
               }`}
             />
-            {index === currentSlide && (
-              <motion.span
-                layoutId="activeDot"
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent shadow-glow"
-              />
-            )}
           </button>
         ))}
       </div>
 
       {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-border/30 z-20">
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
         <motion.div
           key={currentSlide}
           initial={{ width: "0%" }}
           animate={{ width: isAutoPlaying ? "100%" : "0%" }}
-          transition={{ duration: 5, ease: "linear" }}
-          className="h-full bg-gradient-to-r from-primary via-accent to-secondary"
+          transition={{ duration: 6, ease: "linear" }}
+          className="h-full bg-gradient-to-r from-primary via-cyan-400 to-blue-500"
         />
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#040711] to-transparent pointer-events-none z-10" />
     </section>
   );
 };
