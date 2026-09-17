@@ -15,6 +15,8 @@ const techListRow1: TechItem[] = [
   { name: 'React', category: 'frontend', categoryLabel: 'UI Library', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'Next.js', category: 'frontend', categoryLabel: 'React Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', color: 'from-white/20 to-slate-500/10', borderHover: 'hover:border-white/60' },
   { name: 'React Native', category: 'mobile', categoryLabel: 'Cross-Platform Mobile', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
+  { name: 'MongoDB', category: 'db', categoryLabel: 'NoSQL Database', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', color: 'from-green-500/20 to-emerald-500/10', borderHover: 'hover:border-green-400/60' },
+  { name: 'Supabase', category: 'db', categoryLabel: 'Postgres & Auth', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg', color: 'from-emerald-500/20 to-teal-500/10', borderHover: 'hover:border-emerald-400/60' },
   { name: 'Terraform', category: 'cloud', categoryLabel: 'IaC & Automation', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg', color: 'from-purple-500/20 to-indigo-500/10', borderHover: 'hover:border-purple-400/60' },
   { name: 'Python', category: 'ai', categoryLabel: 'AI & Data', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', color: 'from-yellow-500/20 to-blue-500/10', borderHover: 'hover:border-yellow-400/60' },
   { name: 'FastAPI', category: 'backend', categoryLabel: 'Python Async API', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg', color: 'from-teal-500/20 to-emerald-500/10', borderHover: 'hover:border-teal-400/60' },
@@ -30,6 +32,7 @@ const techListRow1: TechItem[] = [
 const techListRow2: TechItem[] = [
   { name: 'Django', category: 'backend', categoryLabel: 'Python Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg', color: 'from-emerald-700/20 to-green-600/10', borderHover: 'hover:border-emerald-400/60' },
   { name: 'Azure', category: 'cloud', categoryLabel: 'Microsoft Cloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
+  { name: 'MySQL', category: 'db', categoryLabel: 'Relational Database', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
   { name: 'Flutter', category: 'mobile', categoryLabel: 'Cross-Platform', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'Java', category: 'mobile', categoryLabel: 'Android & Core', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', color: 'from-orange-500/20 to-red-500/10', borderHover: 'hover:border-orange-400/60' },
   { name: 'Docker', category: 'cloud', categoryLabel: 'Containers', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
@@ -48,10 +51,11 @@ const allTechs = [...techListRow1, ...techListRow2];
 const filterCategories = [
   { id: 'all', label: 'All Stacks', icon: Layers },
   { id: 'ai', label: 'AI & Data', icon: Cpu },
-  { id: 'backend', label: 'Backend & Cloud', icon: Server },
+  { id: 'backend', label: 'Backend & APIs', icon: Server },
   { id: 'frontend', label: 'Frontend UI', icon: Sparkles },
-  { id: 'cloud', label: 'DevOps, Cloud & K8s', icon: ShieldCheck },
-  { id: 'mobile', label: 'Mobile & DB', icon: Smartphone },
+  { id: 'cloud', label: 'DevOps & Cloud', icon: ShieldCheck },
+  { id: 'mobile', label: 'Mobile Apps', icon: Smartphone },
+  { id: 'db', label: 'Databases', icon: Database },
 ];
 
 const TechCard: React.FC<{ item: TechItem }> = ({ item }) => (
@@ -80,7 +84,7 @@ const TechStacksSection: React.FC = () => {
 
   const filteredItems = selectedCategory === 'all'
     ? allTechs
-    : allTechs.filter(t => t.category === selectedCategory || (selectedCategory === 'mobile' && t.category === 'db'));
+    : allTechs.filter(t => t.category === selectedCategory);
 
   return (
     <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 relative bg-gradient-to-b from-background via-muted/15 to-background overflow-hidden border-y border-border/40">
