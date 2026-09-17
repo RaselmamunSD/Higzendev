@@ -132,19 +132,19 @@ const HeroSection: React.FC = () => {
           <img
             src="/images/higzendev-office-hero.png"
             alt="HigzenDev Headquarters Office"
-            className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.1]"
+            className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
             loading="eager"
           />
         </motion.div>
 
         {/* Ambient Warm & Cyan Office Glow Accents */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-primary/20 rounded-full blur-[160px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[400px] bg-primary/15 rounded-full blur-[160px] pointer-events-none" />
         <div className="absolute top-10 right-10 w-[500px] h-[350px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
 
-        {/* Multi-layered Dark Gradient Overlays for crystal clear typography */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#040711]/95 via-[#040711]/80 to-[#040711]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#040711] via-transparent to-[#040711]/60" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+        {/* Lighter Gradient Overlays for enhanced background visibility & crisp typography */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040711]/85 via-[#040711]/50 to-[#040711]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040711] via-transparent to-[#040711]/30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:3rem_3rem]" />
       </div>
 
       {/* Content Container */}
