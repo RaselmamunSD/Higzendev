@@ -75,19 +75,6 @@ const SalesStatisticsSection: React.FC = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 max-w-6xl">
-        
-        {/* Top Header Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md"
-        >
-          <TrendingUp className="w-4 h-4 text-cyan-400 animate-pulse" />
-          <span>REVENUE ACCELERATION & BUSINESS SCALING</span>
-        </motion.div>
-
         {/* Main Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
