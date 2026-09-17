@@ -2,15 +2,15 @@ import React from 'react';
 import { MapPin, Phone, Mail, Navigation, Clock, Globe2 } from 'lucide-react';
 
 const LocationSection = () => {
-  const address = "Sel Rose N Dale, 116 Kazi Nazrul Islam Ave, Dhaka – 1205, Bangladesh";
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-  const embedUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+  const address = "Rupnagor Abashik, Road -13, House -27, Floor -07, Mirpur-2, Dhaka, Bangladesh";
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rupnagar Residential Area, Road 13, House 27, Mirpur-2, Dhaka, Bangladesh")}`;
+  const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent("Rupnagar Abashik, Road 13, Mirpur 2, Dhaka, Bangladesh")}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
   const contactCards = [
     {
       icon: MapPin,
       title: 'Our Address',
-      lines: ['Sel Rose N Dale', '116 Kazi Nazrul Islam Ave', 'Dhaka – 1205, Bangladesh'],
+      lines: ['Rupnagor Abashik, Road -13, House -27', 'Floor -07, Mirpur-2', 'Dhaka, Bangladesh'],
       gradient: 'from-cyan-500/20 to-blue-500/20',
       iconColor: 'text-cyan-400',
       ring: 'ring-cyan-400/30',

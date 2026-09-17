@@ -75,7 +75,7 @@ const ScheduleMeeting = () => {
                 <Button 
                   variant="outline"
                   className="w-full border-purple-500/50 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300"
-                  onClick={() => window.open('https://maps.google.com', '_blank')}
+                  onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rupnagar Residential Area, Road 13, House 27, Mirpur-2, Dhaka, Bangladesh")}`, '_blank')}
                 >
                   View Location
                 </Button>
