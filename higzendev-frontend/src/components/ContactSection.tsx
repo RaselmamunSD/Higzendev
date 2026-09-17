@@ -121,14 +121,15 @@ const ContactSection = () => {
                 </div>
 
                 {/* Location */}
-                <div className="flex gap-4 items-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                <div className="flex gap-4 items-start">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
                     <MapPin size={22} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-foreground">Office Location</h4>
-                    <p className="text-muted-foreground">
-                      Dhaka, Bangladesh
+                    <h4 className="text-lg font-medium text-foreground">Our Location</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Rupnagor Abashik, Road -13, House -27, Floor -07,<br />
+                      Mirpur-2, Dhaka, Bangladesh
                     </p>
                   </div>
                 </div>

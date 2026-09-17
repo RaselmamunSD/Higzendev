@@ -118,7 +118,7 @@ const PrivacyPolicy = () => {
                   <p className="text-foreground font-medium">📧 Email: contact@higzendev.com</p>
                   <p className="text-foreground font-medium">📞 Phone: +880 1870-966718</p>
                   <p className="text-foreground font-medium">💬 WhatsApp: +880 1870-966718</p>
-                  <p className="text-foreground font-medium">📍 Address: 123 Tech Street, Dhaka, Bangladesh</p>
+                  <p className="text-foreground font-medium">📍 Address: Rupnagor Abashik, Road -13, House -27, Floor -07, Mirpur-2, Dhaka, Bangladesh</p>
                 </div>
               </div>
               

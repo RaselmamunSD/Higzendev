@@ -108,6 +108,12 @@ const Footer = () => {
                   <span className="text-emerald-400 font-bold">💬</span>
                   <span>WhatsApp: +880 1870-966718</span>
                 </a>
+                <div className="flex items-start gap-2 text-muted-foreground pt-0.5">
+                  <span className="text-primary font-bold">📍</span>
+                  <span className="leading-snug">
+                    Rupnagor Abashik, Road -13, House -27, Floor -07, Mirpur-2, Dhaka
+                  </span>
+                </div>
               </div>
 
               {/* Social Icons */}
