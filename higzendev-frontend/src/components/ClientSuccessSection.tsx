@@ -19,13 +19,6 @@ const ClientSuccessSection: React.FC = () => {
           
           {/* Left Column: Content */}
           <div className="lg:w-1/2 space-y-6 text-left">
-            
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-              <span>PROVEN TRACK RECORD & REAL-WORLD IMPACT</span>
-            </div>
-
             {/* Main Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
               Client Success Stories: How{' '}
