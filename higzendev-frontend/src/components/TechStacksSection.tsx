@@ -14,6 +14,9 @@ interface TechItem {
 const techListRow1: TechItem[] = [
   { name: 'React', category: 'frontend', categoryLabel: 'UI Library', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'Next.js', category: 'frontend', categoryLabel: 'React Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', color: 'from-white/20 to-slate-500/10', borderHover: 'hover:border-white/60' },
+  { name: 'LangChain', category: 'ai', categoryLabel: 'LLM & Agents', logo: '/images/tech/langchain.svg', color: 'from-teal-500/20 to-emerald-500/10', borderHover: 'hover:border-teal-400/60' },
+  { name: 'Hugging Face', category: 'ai', categoryLabel: 'Model Hub & NLP', logo: '/images/tech/huggingface.svg', color: 'from-yellow-500/20 to-amber-500/10', borderHover: 'hover:border-yellow-400/60' },
+  { name: 'Pinecone', category: 'ai', categoryLabel: 'Vector Database', logo: '/images/tech/pinecone.svg', color: 'from-teal-600/20 to-cyan-500/10', borderHover: 'hover:border-teal-400/60' },
   { name: 'React Native', category: 'mobile', categoryLabel: 'Cross-Platform Mobile', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
   { name: 'MongoDB', category: 'db', categoryLabel: 'NoSQL Database', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', color: 'from-green-500/20 to-emerald-500/10', borderHover: 'hover:border-green-400/60' },
   { name: 'Supabase', category: 'db', categoryLabel: 'Postgres & Auth', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg', color: 'from-emerald-500/20 to-teal-500/10', borderHover: 'hover:border-emerald-400/60' },
@@ -31,6 +34,9 @@ const techListRow1: TechItem[] = [
 
 const techListRow2: TechItem[] = [
   { name: 'Django', category: 'backend', categoryLabel: 'Python Framework', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg', color: 'from-emerald-700/20 to-green-600/10', borderHover: 'hover:border-emerald-400/60' },
+  { name: 'Databricks', category: 'ai', categoryLabel: 'Data & Lakehouse', logo: '/images/tech/databricks.svg', color: 'from-red-500/20 to-orange-500/10', borderHover: 'hover:border-red-400/60' },
+  { name: 'MLflow', category: 'ai', categoryLabel: 'MLOps Platform', logo: '/images/tech/mlflow.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
+  { name: 'SageMaker', category: 'ai', categoryLabel: 'AWS ML Platform', logo: '/images/tech/sagemaker.svg', color: 'from-amber-500/20 to-orange-500/10', borderHover: 'hover:border-amber-400/60' },
   { name: 'Azure', category: 'cloud', categoryLabel: 'Microsoft Cloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
   { name: 'MySQL', category: 'db', categoryLabel: 'Relational Database', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', color: 'from-blue-500/20 to-cyan-500/10', borderHover: 'hover:border-blue-400/60' },
   { name: 'Flutter', category: 'mobile', categoryLabel: 'Cross-Platform', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg', color: 'from-cyan-500/20 to-blue-500/10', borderHover: 'hover:border-cyan-400/60' },
