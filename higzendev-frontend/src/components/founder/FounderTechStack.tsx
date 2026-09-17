@@ -19,7 +19,7 @@ const domainMastery = [
     icon: Server,
     color: 'from-blue-500 to-cyan-500',
     description: 'Ultra-low latency microservices, event-driven backends, and fault-tolerant infrastructure built for tens of millions of concurrent requests.',
-    skills: ['Kubernetes & Docker', 'AWS / GCP / Cloudflare Edge', 'Apache Kafka & RabbitMQ', 'Zero-Downtime Migration', 'PostgreSQL & Redis Clusters']
+    skills: ['Kubernetes & Docker', 'AWS / Azure / GCP / Cloudflare', 'Terraform & IaC', 'Apache Kafka & RabbitMQ', 'PostgreSQL & Redis Clusters']
   },
   {
     category: 'Enterprise AI & LLM Systems',
