@@ -263,41 +263,6 @@ const HeroSection: React.FC = () => {
         <ChevronRight className="h-5 w-5 group-hover:translate-x-0.5 transition-transform" />
       </button>
 
-      {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`relative transition-all duration-300 ${
-              index === currentSlide 
-                ? 'w-10 h-2.5' 
-                : 'w-2.5 h-2.5 hover:scale-125'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          >
-            <span 
-              className={`absolute inset-0 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-gradient-to-r from-primary to-cyan-400 shadow-lg shadow-cyan-500/50' 
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          </button>
-        ))}
-      </div>
-
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
-        <motion.div
-          key={currentSlide}
-          initial={{ width: "0%" }}
-          animate={{ width: isAutoPlaying ? "100%" : "0%" }}
-          transition={{ duration: 6, ease: "linear" }}
-          className="h-full bg-gradient-to-r from-primary via-cyan-400 to-blue-500"
-        />
-      </div>
-
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#040711] to-transparent pointer-events-none z-10" />
     </section>
