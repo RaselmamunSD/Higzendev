@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ClientLogosSection from '../components/ClientLogosSection';
 import AboutSection from '../components/AboutSection';
@@ -20,6 +21,11 @@ import LocationSection from '../components/LocationSection';
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO 
+        title="HigzenDev | Enterprise Software Solutions, AI Systems & Dedicated Squads"
+        description="HigzenDev is a premier software engineering & AI development agency founded by MD Rasel Mamun. We build high-throughput distributed backends, autonomous AI pipelines, custom web apps, and enterprise cloud solutions."
+        canonical="https://higzendev.com"
+      />
       <Header />
       <main className="flex-grow">
         <HeroSection />

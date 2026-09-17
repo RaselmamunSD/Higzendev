@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import ClientSuccessSection from '../components/ClientSuccessSection';
 import SalesStatisticsSection from '../components/SalesStatisticsSection';
 import CaseStudiesSection from '../components/CaseStudiesSection';
@@ -13,6 +14,11 @@ import { Sparkles, Layers, ShieldCheck, Zap, TrendingUp, CheckCircle2 } from 'lu
 const Industries: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#040711] text-foreground">
+      <SEO 
+        title="Enterprise Industry Solutions & Digital Transformation | HigzenDev"
+        description="HigzenDev delivers custom software and AI engineering across FinTech, HealthTech, E-Commerce, Logistics, SaaS, and High-Growth tech enterprises."
+        canonical="https://higzendev.com/industries"
+      />
       <Header />
       <main className="flex-grow">
         

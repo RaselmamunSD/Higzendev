@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import ContactSection from '../components/ContactSection';
 import LocationSection from '../components/LocationSection';
 import { motion } from 'framer-motion';
@@ -9,6 +10,11 @@ import { Sparkles, MessageSquare, Zap, Clock, ShieldCheck } from 'lucide-react';
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#040711] text-foreground">
+      <SEO 
+        title="Contact HigzenDev | Rapid Project Consultation & Technical Advisory"
+        description="Get in touch with HigzenDev for custom software development, AI systems, and cloud architectures. Response guaranteed within 2 hours under strict NDA."
+        canonical="https://higzendev.com/contact"
+      />
       <Header />
       <main className="flex-grow">
         

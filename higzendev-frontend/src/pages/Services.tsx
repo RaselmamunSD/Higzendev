@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import ServiceDetailsSection from '../components/ServiceDetailsSection';
 import { motion } from 'framer-motion';
 import { Sparkles, Zap, ShieldCheck, Rocket, Code2, Users2, Clock, CheckCircle2, Award } from 'lucide-react';
@@ -8,6 +9,11 @@ import { Sparkles, Zap, ShieldCheck, Rocket, Code2, Users2, Clock, CheckCircle2,
 const Services: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#040711] text-foreground">
+      <SEO 
+        title="Custom Software & AI Engineering Services | HigzenDev"
+        description="Explore HigzenDev's enterprise software services: custom web apps, mobile applications, distributed cloud backends, AI LLM pipelines, and dedicated developer teams."
+        canonical="https://higzendev.com/services"
+      />
       <Header />
       <main className="flex-grow">
         

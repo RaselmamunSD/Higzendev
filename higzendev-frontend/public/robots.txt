@@ -1,14 +1,14 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Robots.txt for HigzenDev
+# https://higzendev.com
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /private/
+Disallow: /api/
+
+# Host
+Host: https://higzendev.com
+
+# Sitemaps
+Sitemap: https://higzendev.com/sitemap.xml
