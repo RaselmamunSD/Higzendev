@@ -20,7 +20,7 @@ import {
   Check, SendIcon, User, Building2, Mail, Phone, FileText,
   Clock, DollarSign, Shield, ChevronRight, ChevronLeft,
   Globe, Smartphone, Tablet, Monitor, Server, Palette,
-  CheckCircle2, AlertCircle, Loader2, Sparkles
+  CheckCircle2, AlertCircle, Loader2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -472,8 +472,7 @@ const QuoteForm = () => {
                         {...field}
                       />
                     </FormControl>
-                    <FormDescription className="text-xs flex items-center gap-1">
-                      <Sparkles className="h-3 w-3 text-primary/60" />
+                    <FormDescription className="text-xs">
                       The more details you provide, the more accurate our quote will be
                     </FormDescription>
                     <FormMessage />

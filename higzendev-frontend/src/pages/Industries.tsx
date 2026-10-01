@@ -8,8 +8,7 @@ import CaseStudiesSection from '../components/CaseStudiesSection';
 import IndustriesSection from '../components/IndustriesSection';
 import IndustryExpertiseSection from '../components/IndustryExpertiseSection';
 import SuccessStoriesSection from '../components/SuccessStoriesSection';
-import { motion } from 'framer-motion';
-import { Sparkles, Layers, ShieldCheck, Zap, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Layers, ShieldCheck, Zap, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 const Industries: React.FC = () => {
   return (

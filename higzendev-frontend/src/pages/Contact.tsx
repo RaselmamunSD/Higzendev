@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import ContactSection from '../components/ContactSection';
 import LocationSection from '../components/LocationSection';
 import { motion } from 'framer-motion';
-import { Sparkles, MessageSquare, Zap, Clock, ShieldCheck } from 'lucide-react';
+import { MessageSquare, Zap, Clock, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
                 <span>Strict NDA Guaranteed</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 border border-slate-800">
-                <Sparkles className="w-4 h-4 text-purple-400" />
+                <CheckCircle2 className="w-4 h-4 text-purple-400" />
                 <span>Free Technical Advisory</span>
               </div>
             </motion.div>

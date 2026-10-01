@@ -11,7 +11,6 @@ import {
   Users, 
   Award, 
   Building,
-  Sparkles,
   Zap
 } from 'lucide-react';
 

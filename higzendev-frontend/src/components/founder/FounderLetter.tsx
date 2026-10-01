@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Sparkles, HeartHandshake, CheckCircle } from 'lucide-react';
+import { Quote, HeartHandshake, CheckCircle } from 'lucide-react';
 
 export const FounderLetter: React.FC = () => {
   return (

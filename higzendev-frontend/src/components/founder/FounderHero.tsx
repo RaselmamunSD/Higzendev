@@ -10,7 +10,6 @@ import {
   Mail, 
   ArrowRight, 
   Calendar, 
-  Sparkles, 
   GraduationCap, 
   Briefcase, 
   Award, 
@@ -96,9 +95,8 @@ export const FounderHero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary mb-6 backdrop-blur-md"
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary mb-6 backdrop-blur-md"
           >
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
             <span className="text-xs md:text-sm font-semibold tracking-wide uppercase">Architect of Scale & Innovation</span>
           </motion.div>
 
@@ -320,8 +318,7 @@ export const FounderHero: React.FC = () => {
                   transition={{ duration: 0.35 }}
                   className="space-y-4"
                 >
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-semibold">
-                    <Sparkles className="w-3.5 h-3.5" />
+                  <div className="inline-flex items-center px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-semibold">
                     Chapter: {currentTab.title}
                   </div>
 

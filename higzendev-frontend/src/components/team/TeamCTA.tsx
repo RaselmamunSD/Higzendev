@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight, Sparkles, Briefcase, Users2 } from 'lucide-react';
+import { Calendar, ArrowRight, Briefcase, Users2, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const TeamCTA: React.FC = () => {
@@ -21,8 +21,7 @@ export const TeamCTA: React.FC = () => {
           <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             Join or Hire the Elite
           </div>
 
@@ -72,7 +71,7 @@ export const TeamCTA: React.FC = () => {
               Dedicated Full-Stack Pods
             </div>
             <div className="flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <CheckCircle className="w-4 h-4 text-cyan-400" />
               Direct Lead Developer Syncs
             </div>
             <div className="flex items-center gap-1.5">

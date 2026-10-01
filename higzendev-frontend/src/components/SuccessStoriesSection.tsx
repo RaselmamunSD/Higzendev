@@ -5,7 +5,6 @@ import {
   Cog, 
   Users2, 
   Trophy, 
-  Sparkles, 
   ArrowRight,
   CheckCircle2
 } from 'lucide-react';

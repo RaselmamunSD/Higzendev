@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Checkbox } from '@/components/ui/checkbox';
-import { MessageCircle, Send, X, User, Sparkles, ArrowLeft, Phone, Mail, UserCircle, ExternalLink } from 'lucide-react';
+import { MessageCircle, Send, X, User, ArrowLeft, Phone, Mail, UserCircle, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 
@@ -242,7 +242,6 @@ const AIChatbot = () => {
             <div className="relative z-10 h-full w-full rounded-full bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-center shadow-inner">
               <div className="relative">
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-5 md:w-5 text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" />
-                <Sparkles className="absolute -top-1 -right-1 h-2 w-2 sm:h-2.5 sm:w-2.5 text-yellow-300 animate-pulse" />
               </div>
             </div>
             
@@ -285,7 +284,6 @@ const AIChatbot = () => {
                 <div className="min-w-0">
                   <div className="text-sm sm:text-base md:text-lg font-bold flex items-center gap-1.5 sm:gap-2 truncate">
                     HigzenDev AI
-                    <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-300 flex-shrink-0" />
                   </div>
                   <div className="text-[10px] sm:text-xs opacity-90 font-medium">Active • Online</div>
                 </div>
@@ -505,7 +503,6 @@ const AIChatbot = () => {
 
                 {/* Powered By */}
                 <div className="mt-3 sm:mt-4 text-[9px] sm:text-[10px] md:text-xs text-muted-foreground/60 text-center font-medium flex items-center justify-center gap-1">
-                  <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                   Powered by HigzenDev AI
                 </div>
               </div>
@@ -653,7 +650,6 @@ const AIChatbot = () => {
                     </Button>
                   </div>
                   <div className="mt-2 sm:mt-3 text-[9px] sm:text-[10px] md:text-xs text-muted-foreground/60 text-center font-medium flex items-center justify-center gap-1">
-                    <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                     Powered by HigzenDev AI
                   </div>
                 </div>

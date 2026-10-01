@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Star, Quote, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Star, Quote, ArrowRight, CheckCircle2 } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface TestimonialCardProps {
@@ -174,8 +174,7 @@ const ClientTestimonialsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
             <span>CLIENT PROOF & REPUTATION</span>
           </div>
 

@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import ServiceDetailsSection from '../components/ServiceDetailsSection';
 import { motion } from 'framer-motion';
-import { Sparkles, Zap, ShieldCheck, Rocket, Code2, Users2, Clock, CheckCircle2, Award } from 'lucide-react';
+import { Zap, ShieldCheck, Rocket, Code2, Users2, Clock, CheckCircle2, Award } from 'lucide-react';
 
 const Services: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Layers, Cpu, Server, ShieldCheck, Smartphone, Database, CheckCircle2 } from 'lucide-react';
+import { Layers, Cpu, Server, ShieldCheck, Smartphone, Database, CheckCircle2, Layout } from 'lucide-react';
 
 interface TechItem {
   name: string;
@@ -58,7 +58,7 @@ const filterCategories = [
   { id: 'all', label: 'All Stacks', icon: Layers },
   { id: 'ai', label: 'AI & Data', icon: Cpu },
   { id: 'backend', label: 'Backend & APIs', icon: Server },
-  { id: 'frontend', label: 'Frontend UI', icon: Sparkles },
+  { id: 'frontend', label: 'Frontend UI', icon: Layout },
   { id: 'cloud', label: 'DevOps & Cloud', icon: ShieldCheck },
   { id: 'mobile', label: 'Mobile Apps', icon: Smartphone },
   { id: 'db', label: 'Databases', icon: Database },
@@ -105,8 +105,7 @@ const TechStacksSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
             <span>ENTERPRISE-GRADE TECH ARSENAL</span>
           </div>
 

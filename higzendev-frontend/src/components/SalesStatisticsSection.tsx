@@ -10,7 +10,6 @@ import {
   MessageCircle, 
   Calendar, 
   ArrowRight,
-  Sparkles,
   TrendingUp,
   ShieldCheck
 } from 'lucide-react';

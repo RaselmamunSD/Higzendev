@@ -8,7 +8,6 @@ import {
   MapPin, 
   CheckCircle2, 
   ArrowRight, 
-  Sparkles, 
   Clock, 
   ShieldCheck, 
   Send,
@@ -219,7 +218,6 @@ const ContactSection: React.FC = () => {
             {/* Direct Connect Hub Card */}
             <div className="p-7 sm:p-8 rounded-3xl bg-slate-900/80 border border-white/10 backdrop-blur-xl space-y-6 shadow-2xl">
               <h3 className="text-xl font-bold text-white tracking-tight border-b border-white/10 pb-4 flex items-center gap-2.5">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span>Direct Contact Channels</span>
               </h3>
 

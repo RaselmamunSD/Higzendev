@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, CheckCircle2, TrendingUp, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ClientSuccessSection: React.FC = () => {

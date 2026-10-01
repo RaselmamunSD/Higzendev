@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight, Sparkles, MessageCircle } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
@@ -168,8 +168,7 @@ const HeroSection: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.4 }}
                 >
-                  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-primary/20 text-cyan-300 border border-primary/40 backdrop-blur-md shadow-lg shadow-primary/10">
-                    <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-primary/20 text-cyan-300 border border-primary/40 backdrop-blur-md shadow-lg shadow-primary/10">
                     <span>{slides[currentSlide].badge}</span>
                   </span>
                 </motion.div>

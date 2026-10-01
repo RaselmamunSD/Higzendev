@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Users, Cpu, ShieldCheck, Globe2, ArrowRight } from 'lucide-react';
+import { Users, Cpu, ShieldCheck, Globe2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -30,9 +30,8 @@ export const TeamHero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary mb-6 backdrop-blur-md"
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary mb-6 backdrop-blur-md"
           >
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
             <span className="text-xs md:text-sm font-semibold tracking-wide uppercase">The Architects of Scale</span>
           </motion.div>
 

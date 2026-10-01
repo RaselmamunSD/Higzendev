@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
-import { ChevronRight, Calendar, Code, Users, ArrowRight, Sparkles } from 'lucide-react';
+import { ChevronRight, Calendar, Code, Users, ArrowRight } from 'lucide-react';
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -134,8 +134,7 @@ const CaseStudies = () => {
 
             {/* Hero Content */}
             <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6 animate-fade-in">
-                <Sparkles className="h-4 w-4" />
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6 animate-fade-in">
                 Success Stories
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>

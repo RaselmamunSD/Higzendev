@@ -1,5 +1,4 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 
 const logos = [
   { name: 'Google', url: 'https://logo.clearbit.com/google.com' },
@@ -30,8 +29,7 @@ const ClientLogosSection: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10 mb-8 sm:mb-10 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-3 backdrop-blur-md">
-          <Sparkles className="w-3.5 h-3.5 text-primary" />
+        <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-3 backdrop-blur-md">
           <span>TRUSTED BY 100+ GLOBAL</span>
         </div>
 

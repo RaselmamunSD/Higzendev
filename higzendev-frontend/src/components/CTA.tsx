@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { 
   Calendar, 
   ArrowRight, 
-  Sparkles, 
   ShieldCheck, 
   Zap, 
   Users, 
