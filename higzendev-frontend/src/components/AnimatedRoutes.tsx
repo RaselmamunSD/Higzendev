@@ -19,6 +19,7 @@ import Team from "@/pages/Team";
 import ScheduleMeeting from "@/pages/ScheduleMeeting";
 import VideoMeeting from "@/pages/VideoMeeting";
 import Products from "@/pages/Products";
+import Portfolio from "@/pages/Portfolio";
 import CaseStudies from "@/pages/CaseStudies";
 import CaseStudyDetail from "@/pages/CaseStudyDetail";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
@@ -60,6 +61,7 @@ const AnimatedRoutes = () => {
         <Route path="/schedule-meeting" element={<PageTransition><ScheduleMeeting /></PageTransition>} />
         <Route path="/video-meeting" element={<PageTransition><VideoMeeting /></PageTransition>} />
         <Route path="/products" element={<PageTransition><Products /></PageTransition>} />
+        <Route path="/portfolio" element={<PageTransition><Portfolio /></PageTransition>} />
         <Route path="/industries" element={<PageTransition><Industries /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="/careers" element={<PageTransition><Careers /></PageTransition>} />

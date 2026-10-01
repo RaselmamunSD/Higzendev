@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Home, Info, Briefcase, Package, PenLine, Factory, FileText, CalendarDays, Users, BookOpen, Rocket, UserCircle } from 'lucide-react';
+import { Menu, X, ChevronDown, Home, Info, Briefcase, Package, PenLine, Factory, FileText, CalendarDays, Users, BookOpen, Rocket, UserCircle, FolderGit2 } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -113,6 +113,11 @@ const Header = () => {
                           Careers
                         </button>
                       </li>
+                      <li>
+                        <button onClick={() => navigateToTop('/blog')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
+                          Blog & Articles
+                        </button>
+                      </li>
                     </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -121,7 +126,7 @@ const Header = () => {
           
           <button onClick={() => navigateToTop('/services')} className={navItemClass('/services')}>Services</button>
           <button onClick={() => navigateToTop('/products')} className={navItemClass('/products')}>Products</button>
-          <button onClick={() => navigateToTop('/blog')} className={navItemClass('/blog')}>Blog</button>
+          <button onClick={() => navigateToTop('/portfolio')} className={navItemClass('/portfolio')}>Portfolio</button>
           <button onClick={() => navigateToTop('/about/team')} className={navItemClass('/about/team', true)}>Team</button>
           
           <button onClick={() => navigateToTop('/industries')} className={navItemClass('/industries')}>
@@ -205,6 +210,9 @@ const Header = () => {
                   <button onClick={() => navigateToTop('/careers')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
                     <Rocket className="h-4 w-4 text-primary/60" />Careers
                   </button>
+                  <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
+                    <PenLine className="h-4 w-4 text-primary/60" />Blog & Articles
+                  </button>
                 </div>
               )}
             </div>
@@ -223,11 +231,11 @@ const Header = () => {
               Products
             </button>
             
-            <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
-              <div className="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
-                <PenLine className="h-[18px] w-[18px] text-amber-400" />
+            <button onClick={() => navigateToTop('/portfolio')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
+              <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
+                <FolderGit2 className="h-[18px] w-[18px] text-indigo-400" />
               </div>
-              Blog
+              Portfolio
             </button>
 
             <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
