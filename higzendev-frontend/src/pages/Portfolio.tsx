@@ -669,9 +669,9 @@ const Portfolio: React.FC = () => {
                   key={project.id}
                   className="group bg-card/80 border border-border/80 hover:border-primary/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-glow transition-all duration-300 flex flex-col justify-between"
                 >
-                  {/* Image & Badges */}
+                  {/* Full Cover Image & Badges */}
                   <div>
-                    <div className="relative h-52 sm:h-56 bg-muted overflow-hidden">
+                    <div className="relative h-56 sm:h-64 bg-muted overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -682,72 +682,37 @@ const Portfolio: React.FC = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
                       
-                      <div className="absolute top-3 left-3 flex items-center gap-2">
+                      <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
                         <Badge variant="outline" className="bg-background/80 backdrop-blur-md text-xs font-semibold border-white/20">
                           {project.categoryLabel}
                         </Badge>
                       </div>
 
-                      <div className="absolute top-3 right-3">
+                      <div className="absolute top-3.5 right-3.5">
                         <Badge variant="secondary" className="bg-black/60 backdrop-blur-md text-xs font-mono text-cyan-300 border border-cyan-500/30">
                           {project.year}
                         </Badge>
                       </div>
-
-                      <div className="absolute bottom-3 left-3 right-3 text-white">
-                        <div className="text-xs font-semibold text-cyan-300 flex items-center gap-1.5">
-                          <Building2 className="h-3.5 w-3.5 shrink-0" />
-                          <span className="truncate">{project.client}</span>
-                        </div>
-                      </div>
                     </div>
 
-                    {/* Card Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-1 mb-2">
+                    {/* Minimal Two Lines: Client & Project Title */}
+                    <div className="p-5 pb-3">
+                      {/* Line 1: Client Name */}
+                      <div className="text-xs font-semibold text-primary flex items-center gap-1.5 truncate">
+                        <Building2 className="h-3.5 w-3.5 shrink-0" />
+                        <span className="truncate">{project.client}</span>
+                      </div>
+
+                      {/* Line 2: Project Title */}
+                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-1 mt-1.5">
                         {project.title}
                       </h3>
-                      
-                      <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed mb-4">
-                        {project.description}
-                      </p>
-
-                      {/* Impact Metrics Mini Row */}
-                      <div className="grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-muted/40 border border-border/50 mb-4 text-center">
-                        {project.impactMetrics.map((metric, i) => (
-                          <div key={i}>
-                            <div className="text-xs sm:text-sm font-extrabold text-cyan-400 font-mono">
-                              {metric.value}
-                            </div>
-                            <div className="text-[10px] text-muted-foreground truncate">
-                              {metric.label}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Tech Stack Pills */}
-                      <div className="flex flex-wrap gap-1.5 mb-2">
-                        {project.technologies.slice(0, 4).map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-2.5 py-1 bg-muted/70 text-muted-foreground text-[11px] rounded-md font-mono border border-border/40"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {project.technologies.length > 4 && (
-                          <span className="px-2 py-1 bg-muted/40 text-muted-foreground text-[11px] rounded-md font-mono">
-                            +{project.technologies.length - 4}
-                          </span>
-                        )}
-                      </div>
                     </div>
                   </div>
 
-                  {/* 3 Action Buttons */}
-                  <div className="p-6 pt-0 border-t border-border/50">
-                    <div className="grid grid-cols-3 gap-2 pt-4">
+                  {/* Bottom: 3 Action Buttons [Details] [WhatsApp] [Call Now] */}
+                  <div className="p-5 pt-0 border-t border-border/40">
+                    <div className="grid grid-cols-3 gap-2 pt-3">
                       {/* Details Button */}
                       <button
                         type="button"
@@ -760,7 +725,7 @@ const Portfolio: React.FC = () => {
 
                       {/* WhatsApp Button */}
                       <a
-                        href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in building a solution similar to your portfolio project: ${project.title}`)}`}
+                        href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your portfolio project: ${project.title} (${project.client})`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2.5 px-2 text-xs font-semibold rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
