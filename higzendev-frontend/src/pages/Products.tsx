@@ -373,7 +373,7 @@ const Products = () => {
                     {/* Product Info */}
                     <div className="p-5 sm:p-6">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xl font-bold text-primary">{product.price}</span>
+                        <Badge variant="outline" className="text-xs bg-muted/40">{product.category}</Badge>
                         <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
                           <Star className="h-4 w-4 text-yellow-400 fill-current" />
                           <span className="font-semibold text-foreground">{product.rating.toFixed(1)}</span>
@@ -433,7 +433,7 @@ const Products = () => {
 
                       {/* WhatsApp Button */}
                       <a
-                        href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your product: ${product.name} (${product.category}) - ${product.price}`)}`}
+                        href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your product: ${product.name} (${product.category})`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
@@ -516,11 +516,13 @@ const Products = () => {
                     />
                   </div>
 
-                  {/* Price & Rating */}
+                  {/* Category, Status & Rating */}
                   <div className="flex items-center justify-between p-4 bg-muted/40 rounded-xl border border-border">
-                    <div>
-                      <span className="text-xs text-muted-foreground block">Estimated Price</span>
-                      <span className="text-2xl font-bold text-primary">{selectedProduct.price}</span>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="outline" className="text-xs sm:text-sm font-medium">{selectedProduct.category}</Badge>
+                      <Badge variant={selectedProduct.status === 'Available' ? 'default' : 'secondary'}>
+                        {selectedProduct.status}
+                      </Badge>
                     </div>
                     <div className="flex items-center gap-1.5 bg-card px-3 py-1.5 rounded-lg border border-border">
                       <Star className="h-5 w-5 text-yellow-400 fill-current" />
