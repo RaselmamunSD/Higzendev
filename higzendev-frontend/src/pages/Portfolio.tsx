@@ -667,57 +667,56 @@ const Portfolio: React.FC = () => {
               {filteredProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-card rounded-xl overflow-hidden shadow-md hover:shadow-glow transition-all duration-300 border border-border flex flex-col justify-between group"
+                  className="group relative rounded-2xl overflow-hidden bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-primary/50 shadow-2xl hover:shadow-glow transition-all duration-300 flex flex-col justify-between h-[460px] sm:h-[490px]"
                 >
-                  {/* Image & Badges */}
-                  <div>
-                    <div className="relative h-48 sm:h-52 bg-muted overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={(e) => {
-                          e.currentTarget.src = `https://via.placeholder.com/600x400?text=${project.title}`;
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
-                      
-                      <div className="absolute top-3 left-3 flex items-center gap-2">
-                        <Badge variant="outline" className="bg-background/80 backdrop-blur-md text-xs font-semibold border-white/20">
-                          {project.categoryLabel}
-                        </Badge>
-                      </div>
-
-                      <div className="absolute top-3 right-3">
-                        <Badge variant="secondary" className="bg-black/60 backdrop-blur-md text-xs font-mono text-cyan-300 border border-cyan-500/30">
-                          {project.year}
-                        </Badge>
-                      </div>
+                  {/* Full image preview with glass overlay */}
+                  <div className="relative flex-1 w-full overflow-hidden bg-muted/20">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.src = `https://via.placeholder.com/600x800?text=${encodeURIComponent(project.title)}`;
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                    
+                    {/* Top Floating Glass Badges */}
+                    <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
+                      <Badge variant="outline" className="bg-slate-950/70 backdrop-blur-md text-xs font-semibold text-white border-white/20 shadow-sm">
+                        {project.categoryLabel}
+                      </Badge>
                     </div>
 
-                    {/* Minimal Two Lines: Client & Project Title */}
-                    <div className="p-5 sm:p-6 pb-4">
+                    <div className="absolute top-3.5 right-3.5">
+                      <Badge variant="secondary" className="bg-slate-950/70 backdrop-blur-md text-xs font-mono text-cyan-300 border border-cyan-500/30 shadow-sm">
+                        {project.year}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  {/* Bottom Glass Panel: Minimal 2 Lines (Client & Title) + 3 Action Buttons */}
+                  <div className="relative z-10 p-5 bg-slate-950/80 backdrop-blur-xl border-t border-white/10 flex flex-col justify-between">
+                    <div className="mb-3">
                       {/* Line 1: Client Name */}
-                      <div className="text-xs font-semibold text-primary flex items-center gap-1.5 truncate">
+                      <div className="text-xs font-semibold text-cyan-400 flex items-center gap-1.5 truncate">
                         <Building2 className="h-3.5 w-3.5 shrink-0" />
                         <span className="truncate">{project.client}</span>
                       </div>
 
                       {/* Line 2: Project Title */}
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-1 mt-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-primary transition-colors leading-snug line-clamp-1 mt-1">
                         {project.title}
                       </h3>
                     </div>
-                  </div>
 
-                  {/* Bottom: 3 Action Buttons [Details] [WhatsApp] [Call Now] */}
-                  <div className="p-5 sm:p-6 pt-0 border-t border-border/50">
-                    <div className="grid grid-cols-3 gap-2 pt-4">
+                    {/* 3 Action Buttons [Details] [WhatsApp] [Call Now] with existing preserved colors */}
+                    <div className="grid grid-cols-3 gap-2 pt-3 border-t border-white/10">
                       {/* Details Button */}
                       <button
                         type="button"
                         onClick={() => openProjectDetails(project)}
-                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-blue-500/15 text-blue-400 border border-blue-400/40 hover:bg-blue-500/25 hover:border-blue-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-blue-500/15 text-blue-400 border border-blue-400/40 hover:bg-blue-500/25 hover:border-blue-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <Info className="h-3.5 w-3.5 shrink-0" />
                         <span>Details</span>
@@ -728,7 +727,7 @@ const Portfolio: React.FC = () => {
                         href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your portfolio project: ${project.title} (${project.client})`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <MessageCircle className="h-3.5 w-3.5 shrink-0" />
                         <span>WhatsApp</span>
@@ -737,7 +736,7 @@ const Portfolio: React.FC = () => {
                       {/* Call Now Button */}
                       <a
                         href="tel:+8801870966718"
-                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-amber-500/15 text-amber-400 border border-amber-400/40 hover:bg-amber-500/25 hover:border-amber-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-amber-500/15 text-amber-400 border border-amber-400/40 hover:bg-amber-500/25 hover:border-amber-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <Phone className="h-3.5 w-3.5 shrink-0" />
                         <span>Call Now</span>
