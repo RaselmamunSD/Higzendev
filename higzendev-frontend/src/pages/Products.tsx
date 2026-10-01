@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Star, ExternalLink, Github } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import { Star, ExternalLink, Github, MessageCircle, Phone, Info, Check, ArrowRight } from 'lucide-react';
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   // Apps category products with detailed information
   const appsProducts = [
     {
@@ -287,6 +297,11 @@ const Products = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Software Products & Ready-to-Deploy Solutions | HigzenDev"
+        description="Explore ready-to-deploy software solutions, ERP systems, mobile applications, CRM, and SaaS products built with cutting-edge technologies by HigzenDev."
+        keywords="HigzenDev products, ready software solutions, ERP system, CRM software, mobile apps, SaaS products, custom software development"
+      />
       <Header />
       <main className="flex-grow bg-background">
         {/* Hero Section */}
@@ -307,7 +322,7 @@ const Products = () => {
         {/* Category Filter */}
         <section className="py-8 bg-card border-b border-border">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
                 <Button
                   key={category}
@@ -325,73 +340,116 @@ const Products = () => {
         {/* Products Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-glow transition-all border border-border">
-                  {/* Product Image */}
-                  <div className="relative h-64 bg-muted">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = `https://via.placeholder.com/400x300?text=${product.name}`;
-                      }}
-                    />
-                    <div className="absolute top-4 right-4">
-                      <Badge variant={product.status === 'Available' ? 'default' : 'secondary'}>
-                        {product.status}
-                      </Badge>
+                <div 
+                  key={product.id} 
+                  className="bg-card rounded-xl overflow-hidden shadow-md hover:shadow-glow transition-all duration-300 border border-border flex flex-col justify-between"
+                >
+                  {/* Top: Product Image & Content */}
+                  <div>
+                    {/* Product Image */}
+                    <div className="relative h-48 sm:h-52 bg-muted overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.src = `https://via.placeholder.com/400x300?text=${product.name}`;
+                        }}
+                      />
+                      <div className="absolute top-3 right-3">
+                        <Badge variant={product.status === 'Available' ? 'default' : 'secondary'} className="shadow-sm">
+                          {product.status}
+                        </Badge>
+                      </div>
+                      <div className="absolute top-3 left-3">
+                        <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
+                          {product.category}
+                        </Badge>
+                      </div>
+                    </div>
+
+                    {/* Product Info */}
+                    <div className="p-5 sm:p-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xl font-bold text-primary">{product.price}</span>
+                        <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
+                          <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                          <span className="font-semibold text-foreground">{product.rating.toFixed(1)}</span>
+                          <span>({product.reviews})</span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold mb-2 text-foreground line-clamp-1">{product.name}</h3>
+                      <p className="text-muted-foreground mb-4 text-sm line-clamp-2">{product.longDescription}</p>
+
+                      {/* Features */}
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-xs uppercase tracking-wider text-muted-foreground mb-2">Key Highlights:</h4>
+                        <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
+                          {product.features.slice(0, 3).map((feature, index) => (
+                            <li key={index} className="flex items-start gap-1.5">
+                              <span className="text-primary mt-0.5">•</span>
+                              <span className="line-clamp-1">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Technologies */}
+                      <div className="mb-2">
+                        <div className="flex flex-wrap gap-1.5">
+                          {product.technologies.slice(0, 3).map((tech, index) => (
+                            <span key={index} className="px-2 py-1 bg-muted text-xs rounded-md text-foreground font-mono">
+                              {tech}
+                            </span>
+                          ))}
+                          {product.technologies.length > 3 && (
+                            <span className="px-2 py-1 bg-muted/60 text-xs rounded-md text-muted-foreground">
+                              +{product.technologies.length - 3}
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Product Info */}
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="outline">{product.category}</Badge>
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-600 ml-1">
-                          {product.rating.toFixed(1)} ({product.reviews})
-                        </span>
-                      </div>
-                    </div>
+                  {/* Bottom: 3 Action Buttons [Details] [WhatsApp] [Call Now] */}
+                  <div className="p-5 sm:p-6 pt-0 border-t border-border/50">
+                    <div className="grid grid-cols-3 gap-2 pt-4">
+                      {/* Details Button */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedProduct(product);
+                          setIsModalOpen(true);
+                        }}
+                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-blue-500/15 text-blue-400 border border-blue-400/40 hover:bg-blue-500/25 hover:border-blue-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                      >
+                        <Info className="h-3.5 w-3.5 shrink-0" />
+                        <span>Details</span>
+                      </button>
 
-                    <h3 className="text-2xl font-bold mb-3 text-foreground">{product.name}</h3>
-                    <p className="text-muted-foreground mb-6 text-base">{product.longDescription}</p>
+                      {/* WhatsApp Button */}
+                      <a
+                        href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your product: ${product.name} (${product.category}) - ${product.price}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                      >
+                        <MessageCircle className="h-3.5 w-3.5 shrink-0" />
+                        <span>WhatsApp</span>
+                      </a>
 
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-base mb-3 text-foreground">Key Features:</h4>
-                      <ul className="text-sm text-muted-foreground space-y-2">
-                        {product.features.slice(0, 3).map((feature, index) => (
-                          <li key={index}>• {feature}</li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <div className="flex flex-wrap gap-2">
-                        {product.technologies.slice(0, 3).map((tech, index) => (
-                          <span key={index} className="px-3 py-2 bg-muted text-sm rounded-md text-foreground">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Price and Actions */}
-                    <div className="flex items-center justify-between pt-6 border-t border-border">
-                      <span className="text-3xl font-bold text-primary">{product.price}</span>
-                      <div className="flex gap-3">
-                        <Button size="default" variant="outline">
-                          <ExternalLink className="h-5 w-5" />
-                        </Button>
-                        <Button size="default" className="bg-primary hover:bg-primary/80 text-primary-foreground">
-                          View Details
-                        </Button>
-                      </div>
+                      {/* Call Now Button */}
+                      <a
+                        href="tel:+8801870966718"
+                        className="w-full py-2.5 px-2 text-xs sm:text-sm font-semibold rounded-lg bg-amber-500/15 text-amber-400 border border-amber-400/40 hover:bg-amber-500/25 hover:border-amber-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                      >
+                        <Phone className="h-3.5 w-3.5 shrink-0" />
+                        <span>Call Now</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -424,6 +482,117 @@ const Products = () => {
             </div>
           </div>
         </section>
+
+        {/* Product Details Modal */}
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-card border-border">
+            {selectedProduct && (
+              <div>
+                <DialogHeader className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="outline">{selectedProduct.category}</Badge>
+                    <Badge variant={selectedProduct.status === 'Available' ? 'default' : 'secondary'}>
+                      {selectedProduct.status}
+                    </Badge>
+                  </div>
+                  <DialogTitle className="text-2xl font-bold text-foreground">
+                    {selectedProduct.name}
+                  </DialogTitle>
+                  <DialogDescription className="text-sm text-muted-foreground">
+                    {selectedProduct.description}
+                  </DialogDescription>
+                </DialogHeader>
+
+                <div className="space-y-6">
+                  {/* Image */}
+                  <div className="relative h-60 w-full rounded-lg overflow-hidden bg-muted">
+                    <img 
+                      src={selectedProduct.image} 
+                      alt={selectedProduct.name} 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = `https://via.placeholder.com/600x300?text=${selectedProduct.name}`;
+                      }}
+                    />
+                  </div>
+
+                  {/* Price & Rating */}
+                  <div className="flex items-center justify-between p-4 bg-muted/40 rounded-xl border border-border">
+                    <div>
+                      <span className="text-xs text-muted-foreground block">Estimated Price</span>
+                      <span className="text-2xl font-bold text-primary">{selectedProduct.price}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 bg-card px-3 py-1.5 rounded-lg border border-border">
+                      <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                      <span className="font-bold text-foreground">{selectedProduct.rating.toFixed(1)}</span>
+                      <span className="text-xs text-muted-foreground">({selectedProduct.reviews} reviews)</span>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <div>
+                    <h4 className="font-semibold text-base mb-2 text-foreground">Product Overview</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {selectedProduct.longDescription}
+                    </p>
+                  </div>
+
+                  {/* Features */}
+                  <div>
+                    <h4 className="font-semibold text-base mb-3 text-foreground">Key Features & Modules</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {selectedProduct.features.map((feature: string, idx: number) => (
+                        <div key={idx} className="flex items-start gap-2 text-sm bg-muted/30 p-2.5 rounded-lg border border-border/50">
+                          <Check className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <span className="text-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="font-semibold text-base mb-2 text-foreground">Technology Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProduct.technologies.map((tech: string, idx: number) => (
+                        <Badge key={idx} variant="secondary" className="px-3 py-1 font-mono text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Direct Contact / Action Buttons */}
+                  <div className="pt-4 border-t border-border flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I would like to get more details/demo for ${selectedProduct.name}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-3 px-4 text-sm font-semibold rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition-all text-center flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      <span>Chat on WhatsApp</span>
+                    </a>
+
+                    <a
+                      href="tel:+8801870966718"
+                      className="flex-1 py-3 px-4 text-sm font-semibold rounded-lg bg-amber-500 text-white hover:bg-amber-600 transition-all text-center flex items-center justify-center gap-2"
+                    >
+                      <Phone className="h-4 w-4" />
+                      <span>Call Us Directly</span>
+                    </a>
+
+                    <Button asChild className="flex-1" variant="outline">
+                      <Link to="/request-quote" onClick={() => setIsModalOpen(false)}>
+                        <span>Custom Quote</span>
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </main>
       <Footer />
     </div>
