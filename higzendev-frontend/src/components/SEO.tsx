@@ -14,7 +14,7 @@ export interface SEOProps {
 const defaultDescription = "HigzenDev is a premier software engineering & AI development agency founded by MD Rasel Mamun. We build high-throughput distributed backends, autonomous AI pipelines, custom web apps, and enterprise cloud solutions.";
 const defaultKeywords = "HigzenDev, MD Rasel Mamun, software development company, AI development agency, custom enterprise software, cloud architecture, Kubernetes, React, FastAPI, Python AI, DevOps, Bangladesh software company, Silicon Valley engineering";
 const siteUrl = "https://higzendev.com";
-const defaultImage = `${siteUrl}/images/higzendev-office-hero.png`;
+const defaultImage = `${siteUrl}/images/higzendev-share-banner.png`;
 
 export const SEO: React.FC<SEOProps> = ({
   title = "HigzenDev | Enterprise Software Engineering & AI Solutions",
@@ -53,11 +53,13 @@ export const SEO: React.FC<SEOProps> = ({
     const resolvedCanonical = canonical 
       ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical.startsWith('/') ? '' : '/'}${canonical}`)
       : `${siteUrl}${pathname}`;
+    const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
 
     setMeta('property', 'og:title', fullTitle);
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', resolvedCanonical);
-    setMeta('property', 'og:image', ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`);
+    setMeta('property', 'og:image', resolvedOgImage);
+    setMeta('property', 'og:image:secure_url', resolvedOgImage);
     setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:site_name', 'HigzenDev');
     setMeta('property', 'og:locale', 'en_US');
@@ -68,7 +70,7 @@ export const SEO: React.FC<SEOProps> = ({
     setMeta('name', 'twitter:url', resolvedCanonical);
     setMeta('name', 'twitter:title', fullTitle);
     setMeta('name', 'twitter:description', description);
-    setMeta('name', 'twitter:image', ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`);
+    setMeta('name', 'twitter:image', resolvedOgImage);
 
     // 5. Canonical Link
     let linkCanonical = document.querySelector('link[rel="canonical"]');
