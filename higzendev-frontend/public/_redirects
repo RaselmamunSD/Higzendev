@@ -1,0 +1,7 @@
+# Canonical Domain 301 Redirects for SEO
+https://www.higzendev.com/*  https://higzendev.com/:splat  301!
+http://www.higzendev.com/*   https://higzendev.com/:splat  301!
+http://higzendev.com/*       https://higzendev.com/:splat  301!
+
+# SPA Routing Fallback
+/*  /index.html  200

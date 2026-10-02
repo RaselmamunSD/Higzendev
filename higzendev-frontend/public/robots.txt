@@ -1,5 +1,6 @@
-# Robots.txt for HigzenDev
-# https://higzendev.com
+# ==============================================================================
+# ROBOTS.TXT FOR HIGZENDEV (https://higzendev.com)
+# ==============================================================================
 
 User-agent: *
 Allow: /
@@ -7,8 +8,24 @@ Disallow: /admin
 Disallow: /private/
 Disallow: /api/
 
-# Host
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Allow: /assets/
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Canonical Host
 Host: https://higzendev.com
 
-# Sitemaps
+# XML Sitemaps
 Sitemap: https://higzendev.com/sitemap.xml

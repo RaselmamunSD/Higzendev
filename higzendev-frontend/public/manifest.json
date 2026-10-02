@@ -1,0 +1,31 @@
+{
+  "name": "HigzenDev Technologies",
+  "short_name": "HigzenDev",
+  "description": "Enterprise Software Engineering, AI Systems & Cloud Architecture by MD Rasel Mamun",
+  "start_url": "https://higzendev.com/",
+  "scope": "https://higzendev.com/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#040711",
+  "theme_color": "#040711",
+  "icons": [
+    {
+      "src": "/images/higzendev-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/higzendev-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "technology",
+    "software"
+  ]
+}

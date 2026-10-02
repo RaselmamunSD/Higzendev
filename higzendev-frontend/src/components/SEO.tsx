@@ -49,8 +49,14 @@ export const SEO: React.FC<SEOProps> = ({
     setMeta('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
     // 3. OpenGraph Tags
+    const pathname = window.location.pathname === '/' ? '' : window.location.pathname;
+    const resolvedCanonical = canonical 
+      ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical.startsWith('/') ? '' : '/'}${canonical}`)
+      : `${siteUrl}${pathname}`;
+
     setMeta('property', 'og:title', fullTitle);
     setMeta('property', 'og:description', description);
+    setMeta('property', 'og:url', resolvedCanonical);
     setMeta('property', 'og:image', ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`);
     setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:site_name', 'HigzenDev');
@@ -58,19 +64,20 @@ export const SEO: React.FC<SEOProps> = ({
 
     // 4. Twitter Card Tags
     setMeta('name', 'twitter:card', 'summary_large_image');
+    setMeta('name', 'twitter:domain', 'higzendev.com');
+    setMeta('name', 'twitter:url', resolvedCanonical);
     setMeta('name', 'twitter:title', fullTitle);
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:image', ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`);
 
     // 5. Canonical Link
-    const currentUrl = canonical || window.location.href.split('?')[0];
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
       linkCanonical = document.createElement('link');
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.setAttribute('href', currentUrl);
+    linkCanonical.setAttribute('href', resolvedCanonical);
 
     // 6. Schema JSON-LD Injection
     if (schema) {
