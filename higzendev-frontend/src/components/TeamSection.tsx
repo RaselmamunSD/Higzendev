@@ -403,6 +403,18 @@ const TeamSection = () => {
       funFact: "Product & Agile Strategist 🚀"
     },
     {
+      name: 'MD Ekramul Islam',
+      position: 'Marketing Lead',
+      color: 'bg-background',
+      linkedIn: 'https://www.linkedin.com/company/higzendev/',
+      imagePath: '/images/md-ekramul-islam.jpg',
+      facebook: '',
+      twitter: '',
+      isLeadership: true,
+      quote: "Scaling global enterprise reach and brand resonance through data-driven digital growth strategies.",
+      funFact: "Growth & Brand Strategist 📈"
+    },
+    {
       name: 'Md Abdul Mukit',
       position: 'Chief Operating Officer',
       color: 'bg-background',

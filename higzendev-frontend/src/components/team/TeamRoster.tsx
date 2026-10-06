@@ -47,6 +47,19 @@ const allMembers: TeamMember[] = [
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
+    name: 'MD Ekramul Islam',
+    position: 'Marketing Lead',
+    category: 'frontend',
+    categoryLabel: 'Marketing & Growth',
+    bio: 'Oversees digital acquisition pipelines, international tech branding, and global client outreach initiatives.',
+    funFact: 'Growth & Brand Strategist 📈',
+    skills: ['Growth Marketing', 'Brand Strategy', 'Performance Marketing', 'SEO', 'Conversion Optimization'],
+    initials: 'EI',
+    avatarGradient: 'from-amber-600 to-rose-600',
+    imagePath: '/images/md-ekramul-islam.jpg',
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
+  },
+  {
     name: 'Nina Patel',
     position: 'Senior AI / Data Scientist',
     category: 'ai',
