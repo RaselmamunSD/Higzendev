@@ -34,6 +34,19 @@ interface TeamMember {
 
 const allMembers: TeamMember[] = [
   {
+    name: 'Abubakr Kazi',
+    position: 'Software Engineer',
+    category: 'fullstack',
+    categoryLabel: 'Software Engineering',
+    bio: 'Develops robust enterprise backend services, scalable distributed systems, and modern web applications.',
+    funFact: 'Algorithms & Clean Code 💻',
+    skills: ['TypeScript', 'Node.js', 'React', 'Python', 'PostgreSQL', 'Docker'],
+    initials: 'AK',
+    avatarGradient: 'from-blue-600 to-indigo-600',
+    imagePath: '/images/abubakr-kazi.jpg',
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
+  },
+  {
     name: 'Abdur Rahman At Tarak',
     position: 'Lead Product Manager',
     category: 'fullstack',

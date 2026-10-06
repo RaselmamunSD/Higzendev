@@ -458,6 +458,17 @@ const TeamSection = () => {
   // Our Team Members (12 members for marquee)
   const teamMembers = [
     {
+      name: 'Abubakr Kazi',
+      position: 'Software Engineer',
+      color: 'bg-background',
+      linkedIn: 'https://www.linkedin.com/company/higzendev/',
+      imagePath: '/images/abubakr-kazi.jpg',
+      facebook: '',
+      twitter: '',
+      funFact: "Algorithms & Clean Code 💻",
+      bio: "Crafting robust backend services, modern web interfaces, and high-performance algorithms"
+    },
+    {
       name: 'MD Abir Hassan Rabbani',
       position: 'Marketing Executive',
       color: 'bg-background',
