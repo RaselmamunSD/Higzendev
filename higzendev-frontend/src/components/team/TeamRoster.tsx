@@ -60,6 +60,19 @@ const allMembers: TeamMember[] = [
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
+    name: 'MD Abir Hassan Rabbani',
+    position: 'Marketing Executive',
+    category: 'frontend',
+    categoryLabel: 'Marketing & Campaigns',
+    bio: 'Drives high-converting digital campaigns, market research, and audience engagement across global channels.',
+    funFact: 'Campaign Strategist 🎯',
+    skills: ['Digital Marketing', 'Campaign Management', 'Social Outreach', 'Content Distribution', 'Analytics'],
+    initials: 'AR',
+    avatarGradient: 'from-blue-600 to-cyan-600',
+    imagePath: '/images/md-abir-hassan-rabbani.jpg',
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
+  },
+  {
     name: 'Nina Patel',
     position: 'Senior AI / Data Scientist',
     category: 'ai',

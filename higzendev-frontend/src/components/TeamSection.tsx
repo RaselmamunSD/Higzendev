@@ -458,6 +458,17 @@ const TeamSection = () => {
   // Our Team Members (12 members for marquee)
   const teamMembers = [
     {
+      name: 'MD Abir Hassan Rabbani',
+      position: 'Marketing Executive',
+      color: 'bg-background',
+      linkedIn: 'https://www.linkedin.com/company/higzendev/',
+      imagePath: '/images/md-abir-hassan-rabbani.jpg',
+      facebook: '',
+      twitter: '',
+      funFact: "Campaign Strategist 🎯",
+      bio: "Executing dynamic brand campaigns, social growth, and multi-channel outreach initiatives"
+    },
+    {
       name: 'Robert Taylor',
       position: 'QA Engineer',
       color: 'bg-background',
