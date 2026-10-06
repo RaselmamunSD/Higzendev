@@ -34,6 +34,19 @@ interface TeamMember {
 
 const allMembers: TeamMember[] = [
   {
+    name: 'Abdur Rahman At Tarak',
+    position: 'Lead Product Manager',
+    category: 'fullstack',
+    categoryLabel: 'Product & Strategy',
+    bio: 'Drives end-to-end product lifecycle from technical discovery to global scale, aligning user experience with business KPIs.',
+    funFact: 'Agile & Product Strategist 🚀',
+    skills: ['Product Strategy', 'Agile / Scrum', 'Roadmapping', 'User Research', 'System Architecture'],
+    initials: 'AT',
+    avatarGradient: 'from-blue-600 to-emerald-600',
+    imagePath: '/images/abdur-rahman-at-tarak.jpg',
+    socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
+  },
+  {
     name: 'Nina Patel',
     position: 'Senior AI / Data Scientist',
     category: 'ai',

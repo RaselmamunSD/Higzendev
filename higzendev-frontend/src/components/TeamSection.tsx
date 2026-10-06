@@ -391,6 +391,18 @@ const TeamSection = () => {
   // Executive team
   const executiveTeam = [
     {
+      name: 'Abdur Rahman At Tarak',
+      position: 'Lead Product Manager',
+      color: 'bg-background',
+      linkedIn: 'https://www.linkedin.com/company/higzendev/',
+      imagePath: '/images/abdur-rahman-at-tarak.jpg',
+      facebook: '',
+      twitter: '',
+      isLeadership: true,
+      quote: "Transforming complex business requirements into elegant, high-impact enterprise products.",
+      funFact: "Product & Agile Strategist 🚀"
+    },
+    {
       name: 'Md Abdul Mukit',
       position: 'Chief Operating Officer',
       color: 'bg-background',
@@ -577,7 +589,7 @@ const TeamSection = () => {
   ];
 
   // Show all team members on the team page, but limit to 4 on other pages
-  const isTeamPage = window.location.pathname === '/about/team';
+  const isTeamPage = window.location.pathname.includes('/team') || window.location.pathname === '/about/team';
 
   if (!isTeamPage) {
     return <HomeTeamShowcase members={[...foundingTeam, ...executiveTeam, ...teamMembers] as TeamMemberProps[]} />;
@@ -657,7 +669,7 @@ const TeamSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
           {executiveTeam.map((member, index) => (
             <TeamMember 
               key={index}
