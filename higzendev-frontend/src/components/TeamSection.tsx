@@ -78,7 +78,7 @@ const TeamMember = ({
               <img
                 src={imagePath}
                 alt={name}
-                className="object-cover h-full w-full transition-transform duration-700 group-hover:scale-110"
+                className="object-cover object-top h-full w-full transition-transform duration-700 group-hover:scale-105"
               />
             ) : (
               <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/30 relative overflow-hidden">
@@ -95,7 +95,7 @@ const TeamMember = ({
           </AspectRatio>
 
           {/* Bottom gradient overlay for legibility */}
-          <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/70 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/30 to-transparent pointer-events-none"></div>
 
           {/* Fun Fact Tooltip */}
           {funFact && (
