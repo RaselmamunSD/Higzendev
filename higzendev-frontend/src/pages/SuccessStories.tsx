@@ -21,7 +21,7 @@ const SuccessStories = () => {
       duration: "6 months",
       rating: 5,
       testimonial: "HigzenDev transformed our entire business. The new platform can handle 10x our previous traffic.",
-      image: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png",
+      image: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.webp",
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
       year: "2023"
     },
@@ -37,7 +37,7 @@ const SuccessStories = () => {
       duration: "8 months",
       rating: 5,
       testimonial: "The system has revolutionized how we manage patient care. It's intuitive and powerful.",
-      image: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.png",
+      image: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.webp",
       technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
       year: "2023"
     },
@@ -53,7 +53,7 @@ const SuccessStories = () => {
       duration: "10 months",
       rating: 5,
       testimonial: "Our customers love the new app. It's set a new standard in mobile banking.",
-      image: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.png",
+      image: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.webp",
       technologies: ["React Native", "Firebase", "Blockchain", "AI/ML"],
       year: "2022"
     },
@@ -69,7 +69,7 @@ const SuccessStories = () => {
       duration: "12 months",
       rating: 5,
       testimonial: "The IoT platform has transformed our manufacturing process completely.",
-      image: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.png",
+      image: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.webp",
       technologies: ["IoT", "Python", "TensorFlow", "AWS IoT"],
       year: "2023"
     },
@@ -85,7 +85,7 @@ const SuccessStories = () => {
       duration: "7 months",
       rating: 5,
       testimonial: "This platform made remote learning engaging and effective for our students.",
-      image: "/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.png",
+      image: "/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.webp",
       technologies: ["Angular", "Node.js", "WebRTC", "Machine Learning"],
       year: "2022"
     },
@@ -101,7 +101,7 @@ const SuccessStories = () => {
       duration: "9 months",
       rating: 5,
       testimonial: "The platform has completely digitized our real estate operations.",
-      image: "/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.png",
+      image: "/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.webp",
       technologies: ["React", "Django", "PostgreSQL", "Stripe"],
       year: "2023"
     }

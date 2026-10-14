@@ -22,7 +22,7 @@ const CaseStudyDetail = () => {
       duration: "8 months",
       teamSize: "6 developers",
       technologies: ["Django", "React", "PostgreSQL", "Redis", "AWS", "Docker"],
-      hero_image: "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png",
+      hero_image: "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp",
       challenge: "bKash was facing significant challenges with their manual payment processing system, which was causing delays and increasing transaction errors. They needed a comprehensive automation solution that could handle millions of transactions daily while maintaining security and reliability.",
       solution: "We developed a robust automation system using Django for the backend API, React for the admin dashboard, and PostgreSQL for data management. The system included real-time transaction processing, automated fraud detection, and comprehensive reporting features. We also implemented microservices architecture for better scalability.",
       results: [
@@ -38,9 +38,9 @@ const CaseStudyDetail = () => {
         position: "Chief Technology Officer, bKash Limited"
       },
       screenshots: [
-        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png",
-        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png",
-        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png"
+        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp",
+        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp",
+        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp"
       ]
     },
     2: {
@@ -52,7 +52,7 @@ const CaseStudyDetail = () => {
       duration: "10 months",
       teamSize: "8 developers",
       technologies: ["React", "Node.js", "MongoDB", "Redis", "AWS", "Kubernetes"],
-      hero_image: "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png",
+      hero_image: "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp",
       challenge: "Pathao needed a robust e-commerce platform that could handle high traffic volumes, integrate real-time tracking, and provide a seamless payment gateway for millions of users across Bangladesh.",
       solution: "We built a scalable e-commerce platform using React for the frontend, Node.js for the backend, and MongoDB for flexible data storage. The platform includes real-time order tracking, integrated payment systems, and an advanced recommendation engine powered by machine learning.",
       results: [
@@ -68,9 +68,9 @@ const CaseStudyDetail = () => {
         position: "VP of Engineering, Pathao Ltd"
       },
       screenshots: [
-        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png",
-        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png",
-        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png"
+        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp",
+        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp",
+        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp"
       ]
     },
     3: {
@@ -82,7 +82,7 @@ const CaseStudyDetail = () => {
       duration: "6 months",
       teamSize: "5 developers",
       technologies: ["Vue.js", "Python", "AWS", "TensorFlow", "PostgreSQL", "Grafana"],
-      hero_image: "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png",
+      hero_image: "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp",
       challenge: "Grameenphone required an intelligent analytics dashboard that could process massive amounts of telecom data in real-time and provide predictive insights for business decision-making.",
       solution: "We created a comprehensive analytics dashboard using Vue.js for interactive visualizations, Python for data processing, and TensorFlow for predictive analytics. The system integrates with existing telecom infrastructure and provides real-time KPI monitoring.",
       results: [
@@ -98,9 +98,9 @@ const CaseStudyDetail = () => {
         position: "Chief Data Officer, Grameenphone"
       },
       screenshots: [
-        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png",
-        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png",
-        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png"
+        "/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp",
+        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp",
+        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp"
       ]
     },
     4: {
@@ -112,7 +112,7 @@ const CaseStudyDetail = () => {
       duration: "12 months",
       teamSize: "10 developers",
       technologies: ["Angular", "Spring Boot", "MySQL", "Docker", "HL7 FHIR", "Azure"],
-      hero_image: "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png",
+      hero_image: "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp",
       challenge: "Square Hospitals needed a comprehensive healthcare management system to digitize patient records, streamline appointment scheduling, manage billing, and ensure HIPAA-compliant data handling across multiple facilities.",
       solution: "We developed an enterprise-grade healthcare management system using Angular for the frontend, Spring Boot for robust backend services, and MySQL for secure data storage. The system includes electronic health records (EHR), appointment management, billing integration, and telemedicine capabilities.",
       results: [
@@ -128,9 +128,9 @@ const CaseStudyDetail = () => {
         position: "Director of IT, Square Hospitals"
       },
       screenshots: [
-        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png",
-        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png",
-        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png"
+        "/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp",
+        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp",
+        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp"
       ]
     },
     5: {
@@ -142,7 +142,7 @@ const CaseStudyDetail = () => {
       duration: "14 months",
       teamSize: "12 developers",
       technologies: ["React Native", "Laravel", "Redis", "PostgreSQL", "AWS", "Blockchain"],
-      hero_image: "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png",
+      hero_image: "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp",
       challenge: "BRAC Bank wanted to launch a comprehensive digital banking platform with mobile app integration, advanced security features, and seamless integration with their core banking system.",
       solution: "We built a secure digital banking platform using React Native for cross-platform mobile apps, Laravel for the backend API, and PostgreSQL for transaction data. The solution includes biometric authentication, real-time fraud detection, and blockchain-based transaction verification.",
       results: [
@@ -158,9 +158,9 @@ const CaseStudyDetail = () => {
         position: "Head of Digital Banking, BRAC Bank"
       },
       screenshots: [
-        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png",
-        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png",
-        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png"
+        "/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp",
+        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp",
+        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp"
       ]
     },
     6: {
@@ -172,7 +172,7 @@ const CaseStudyDetail = () => {
       duration: "9 months",
       teamSize: "7 developers",
       technologies: ["PHP", "MySQL", "Bootstrap", "Laravel", "IoT", "Power BI"],
-      hero_image: "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png",
+      hero_image: "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp",
       challenge: "ACI Limited needed an advanced inventory management system with real-time tracking, automated reordering, and integration with their existing ERP system to optimize their supply chain operations.",
       solution: "We implemented a comprehensive inventory management system using Laravel for the backend, MySQL for data management, and IoT sensors for real-time tracking. The system includes automated reorder points, barcode scanning, and Power BI integration for advanced analytics.",
       results: [
@@ -188,9 +188,9 @@ const CaseStudyDetail = () => {
         position: "Supply Chain Director, ACI Limited"
       },
       screenshots: [
-        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png",
-        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png",
-        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png"
+        "/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp",
+        "/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp",
+        "/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp"
       ]
     }
   };

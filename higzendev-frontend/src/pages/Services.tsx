@@ -29,7 +29,7 @@ const Services: React.FC = () => {
               className="w-full h-full"
             >
               <img
-                src="/images/services-hero-office.jpg"
+                src="/images/services-hero-office.webp"
                 alt="HigzenDev Engineering Hub Headquarters"
                 className="w-full h-full object-cover object-center filter brightness-[0.90] contrast-[1.05]"
                 loading="eager"

@@ -160,7 +160,7 @@ export const LeadershipSpotlight: React.FC = () => {
                     <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-primary via-cyan-400 to-purple-600 opacity-70 blur-md group-hover:opacity-100 transition-all duration-500" />
                     <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-primary/50 bg-muted shadow-xl">
                       <img 
-                        src="/images/rasel-mamun-desk.jpg" 
+                        src="/images/rasel-mamun-desk.webp" 
                         alt="MD Rasel Mamun - Founder & Lead Software Engineer"
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       />
@@ -207,7 +207,7 @@ export const LeadershipSpotlight: React.FC = () => {
                       aria-label="WhatsApp"
                     >
                       <img 
-                        src="/images/whatsapp-icon.png" 
+                        src="/images/whatsapp-icon.webp" 
                         alt="WhatsApp" 
                         className="w-full h-full object-contain"
                       />

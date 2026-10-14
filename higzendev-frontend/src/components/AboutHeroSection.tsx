@@ -28,7 +28,7 @@ const AboutHeroSection = () => {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden h-64">
                     <img 
-                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" 
+                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" 
                       alt="Team member" 
                       className="w-full h-full object-cover"
                     />
@@ -45,7 +45,7 @@ const AboutHeroSection = () => {
                   </div>
                   <div className="rounded-2xl overflow-hidden h-64">
                     <img 
-                      src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" 
+                      src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" 
                       alt="Team member" 
                       className="w-full h-full object-cover"
                     />

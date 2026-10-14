@@ -18,7 +18,7 @@ const Founder: React.FC = () => {
         description="Meet MD Rasel Mamun, Founder and Lead Software Engineer at HigzenDev Technologies. Full-Stack architect, distributed systems engineer, and enterprise cloud strategist."
         canonical="https://higzendev.com/about/founder"
         ogType="profile"
-        ogImage="/images/rasel-mamun-desk.jpg"
+        ogImage="/images/rasel-mamun-desk.webp"
       />
       <Header />
       <main className="flex-grow">

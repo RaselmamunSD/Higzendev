@@ -230,7 +230,7 @@ const ContactSection: React.FC = () => {
                   className="flex items-center gap-4 p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 hover:bg-emerald-900/50 hover:border-emerald-500/60 transition-all duration-200 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center p-2.5 shrink-0 border border-emerald-500/40 group-hover:scale-110 transition-transform">
-                    <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-full h-full object-contain" />
+                    <img src="/images/whatsapp-icon.webp" alt="WhatsApp" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <div className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Instant Messaging</div>

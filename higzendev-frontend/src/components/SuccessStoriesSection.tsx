@@ -70,7 +70,7 @@ const SuccessStoriesSection: React.FC = () => {
               {/* Image Frame Card */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-white/15 bg-card/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] backdrop-blur-md p-2">
                 <img 
-                  src="/images/higzendev-success-stories.jpg" 
+                  src="/images/higzendev-success-stories.webp" 
                   alt="HigzenDev Success Stories That Inspire" 
                   className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   loading="lazy"

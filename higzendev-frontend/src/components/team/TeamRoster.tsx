@@ -43,7 +43,7 @@ const allMembers: TeamMember[] = [
     skills: ['TypeScript', 'Node.js', 'React', 'Python', 'PostgreSQL', 'Docker'],
     initials: 'AK',
     avatarGradient: 'from-blue-600 to-indigo-600',
-    imagePath: '/images/abubakr-kazi.jpg',
+    imagePath: '/images/abubakr-kazi.webp',
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
@@ -56,7 +56,7 @@ const allMembers: TeamMember[] = [
     skills: ['Product Strategy', 'Agile / Scrum', 'Roadmapping', 'User Research', 'System Architecture'],
     initials: 'AT',
     avatarGradient: 'from-blue-600 to-emerald-600',
-    imagePath: '/images/abdur-rahman-at-tarak.jpg',
+    imagePath: '/images/abdur-rahman-at-tarak.webp',
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
@@ -69,7 +69,7 @@ const allMembers: TeamMember[] = [
     skills: ['Growth Marketing', 'Brand Strategy', 'Performance Marketing', 'SEO', 'Conversion Optimization'],
     initials: 'EI',
     avatarGradient: 'from-amber-600 to-rose-600',
-    imagePath: '/images/md-ekramul-islam.jpg',
+    imagePath: '/images/md-ekramul-islam.webp',
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {
@@ -82,7 +82,7 @@ const allMembers: TeamMember[] = [
     skills: ['Digital Marketing', 'Campaign Management', 'Social Outreach', 'Content Distribution', 'Analytics'],
     initials: 'AR',
     avatarGradient: 'from-blue-600 to-cyan-600',
-    imagePath: '/images/md-abir-hassan-rabbani.jpg',
+    imagePath: '/images/md-abir-hassan-rabbani.webp',
     socials: { linkedin: 'https://www.linkedin.com/company/higzendev/' }
   },
   {

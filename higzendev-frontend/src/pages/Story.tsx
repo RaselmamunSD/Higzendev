@@ -158,12 +158,12 @@ const Story = () => {
               </div>
               <div className="md:w-1/2">
                 <div className="grid grid-cols-3 gap-3">
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" alt="Team images" className="rounded-xl w-full h-32 object-cover transform rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-purple-400" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-yellow-400" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover transform rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-purple-400" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-yellow-400" />
                 </div>
               </div>
             </div>
@@ -313,7 +313,7 @@ const Story = () => {
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                   <img 
-                    src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" 
+                    src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" 
                     alt="Team" 
                     className="relative rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300"
                   />
@@ -349,7 +349,7 @@ const Story = () => {
                 <div className="relative group mb-6">
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                   <img 
-                    src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png" 
+                    src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" 
                     alt="Team with award" 
                     className="relative rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300"
                   />

@@ -14,7 +14,7 @@ export interface SEOProps {
 const defaultDescription = "HigzenDev is a premier software engineering & AI development agency founded by MD Rasel Mamun. We build high-throughput distributed backends, autonomous AI pipelines, custom web apps, and enterprise cloud solutions.";
 const defaultKeywords = "HigzenDev, MD Rasel Mamun, software development company, AI development agency, custom enterprise software, cloud architecture, Kubernetes, React, FastAPI, Python AI, DevOps, Bangladesh software company, Silicon Valley engineering";
 const siteUrl = "https://higzendev.com";
-const defaultImage = `${siteUrl}/images/higzendev-share-banner.png`;
+const defaultImage = `${siteUrl}/images/higzendev-share-banner.webp`;
 
 export const SEO: React.FC<SEOProps> = ({
   title = "HigzenDev | Enterprise Software Engineering & AI Solutions",

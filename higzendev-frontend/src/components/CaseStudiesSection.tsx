@@ -46,7 +46,7 @@ const CaseStudiesSection = () => {
   const caseStudies = [
     {
       title: "FinTech Pro",
-      image: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.png",
+      image: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.webp",
       description: "Revolutionary FinTech mobile banking solution with advanced security and 2.5M+ downloads.",
       category: "Financial Technology",
       link: "/case-study-details/fintech",
@@ -54,7 +54,7 @@ const CaseStudiesSection = () => {
     },
     {
       title: "MediCare Plus",
-      image: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.png",
+      image: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.webp",
       description: "Advanced healthcare management system improving patient care across 50+ medical facilities.",
       category: "Healthcare Technology",
       link: "/case-study-details/healthcare",
@@ -62,7 +62,7 @@ const CaseStudiesSection = () => {
     },
     {
       title: "RetailTech Hub",
-      image: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png",
+      image: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.webp",
       description: "Next-generation e-commerce platform handling millions of transactions with 400% performance boost.",
       category: "E-commerce & Retail",
       link: "/case-study-details/ecommerce",
@@ -70,7 +70,7 @@ const CaseStudiesSection = () => {
     },
     {
       title: "IndustrialTech IoT",
-      image: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.png",
+      image: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.webp",
       description: "Smart manufacturing IoT platform with AI-powered analytics saving $2.5M annually.",
       category: "Industrial IoT",
       link: "/case-study-details/manufacturing",

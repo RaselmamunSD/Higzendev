@@ -10,28 +10,28 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="h-64 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.png" 
+                  src="/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.webp" 
                   alt="Developer coding on laptop"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-72 rounded-lg mt-8 overflow-hidden">
                 <img 
-                  src="/lovable-uploads/f1d2b0e1-1812-4659-9841-f6fd4f6a06a8.png" 
+                  src="/lovable-uploads/f1d2b0e1-1812-4659-9841-f6fd4f6a06a8.webp" 
                   alt="Person coding HTML"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-72 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.png" 
+                  src="/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.webp" 
                   alt="Developers working together"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-64 rounded-lg mt-8 overflow-hidden">
                 <img 
-                  src="/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.png" 
+                  src="/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.webp" 
                   alt="Code through glasses"
                   className="w-full h-full object-cover"
                 />

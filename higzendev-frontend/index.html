@@ -17,11 +17,14 @@
     <link rel="alternate" href="https://higzendev.com/" hreflang="x-default" />
     <link rel="alternate" href="https://higzendev.com/" hreflang="en" />
 
-    <!-- Theme, Manifest & Icons -->
+    <!-- Theme, Manifest & WebP Icons -->
     <meta name="theme-color" content="#040711" />
-    <link rel="icon" type="image/png" href="/images/higzendev-logo.png" />
-    <link rel="apple-touch-icon" href="/images/higzendev-logo.png" />
+    <link rel="icon" type="image/webp" href="/images/higzendev-logo.webp" />
+    <link rel="apple-touch-icon" href="/images/higzendev-logo.webp" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Performance: Preload Critical Hero Image (WebP) -->
+    <link rel="preload" as="image" href="/images/higzendev-office-hero.webp" type="image/webp" fetchpriority="high" />
 
     <!-- Geographic & Business Tags -->
     <meta name="geo.region" content="BD-13" />

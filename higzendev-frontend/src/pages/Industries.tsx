@@ -33,7 +33,7 @@ const Industries: React.FC = () => {
               className="w-full h-full"
             >
               <img
-                src="/images/industries-hero-team.jpg"
+                src="/images/industries-hero-team.webp"
                 alt="HigzenDev Engineering Team Delivering Industry Solutions"
                 className="w-full h-full object-cover object-center filter brightness-[0.90] contrast-[1.05]"
                 loading="eager"

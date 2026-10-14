@@ -160,7 +160,7 @@ export const FounderHero: React.FC = () => {
                   
                   <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/15 bg-slate-900 shadow-2xl">
                     <img 
-                      src="/images/rasel-mamun-desk.jpg" 
+                      src="/images/rasel-mamun-desk.webp" 
                       alt="MD Rasel Mamun - Founder & Lead Software Engineer at HigzenDev"
                       className="w-full h-full object-cover object-center group-hover/photo:scale-105 transition-transform duration-700"
                     />
@@ -265,7 +265,7 @@ export const FounderHero: React.FC = () => {
                       aria-label="WhatsApp"
                     >
                       <img 
-                        src="/images/whatsapp-icon.png" 
+                        src="/images/whatsapp-icon.webp" 
                         alt="WhatsApp" 
                         className="w-full h-full object-contain"
                       />

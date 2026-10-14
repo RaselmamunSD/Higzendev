@@ -77,7 +77,7 @@ const ClientSuccessSection: React.FC = () => {
               {/* Frame Container */}
               <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-card/80 shadow-2xl backdrop-blur-md p-2">
                 <img 
-                  src="/images/higzendev-client-success.jpg" 
+                  src="/images/higzendev-client-success.webp" 
                   alt="HigzenDev Client Success Collaboration & Handshake" 
                   className="rounded-xl w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />

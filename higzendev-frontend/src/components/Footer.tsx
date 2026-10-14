@@ -78,7 +78,7 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-xl bg-white p-1 flex items-center justify-center shadow-md">
                     <img
-                      src="/images/higzendev-logo.png"
+                      src="/images/higzendev-logo.webp"
                       alt="HigzenDev Logo"
                       className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                     />

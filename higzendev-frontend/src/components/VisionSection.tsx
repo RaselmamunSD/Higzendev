@@ -12,7 +12,7 @@ const VisionSection = () => {
             </h2>
             <div className="rounded-3xl overflow-hidden">
               <img 
-                src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" 
+                src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" 
                 alt="Team meeting"
                 className="w-full h-auto"
               />

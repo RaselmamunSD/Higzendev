@@ -141,7 +141,7 @@ const EliteFounderSection: React.FC = () => {
                       aria-label="WhatsApp"
                     >
                       <img 
-                        src="/images/whatsapp-icon.png" 
+                        src="/images/whatsapp-icon.webp" 
                         alt="WhatsApp" 
                         className="w-full h-full object-contain"
                       />
@@ -182,7 +182,7 @@ const EliteFounderSection: React.FC = () => {
               {/* Photo Frame Container */}
               <div className="relative rounded-[26px] overflow-hidden border-2 border-white/15 bg-card/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] backdrop-blur-md">
                 <img 
-                  src="/images/elite-founder-higzendev.jpg" 
+                  src="/images/elite-founder-higzendev.webp" 
                   alt="MD Rasel Mamun - Founder & Lead Software Engineer at HigzenDev" 
                   className="w-full h-auto object-cover object-center group-hover:scale-[1.03] transition-transform duration-700"
                   loading="lazy"

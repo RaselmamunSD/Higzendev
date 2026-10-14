@@ -14,7 +14,7 @@ const allBlogPosts = [
     date: 'May 5, 2025',
     category: 'AI & ML',
     readTime: '5 min read',
-    image: '/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png'
+    image: '/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.webp'
   },
   {
     id: 'machine-learning-trends',
@@ -23,7 +23,7 @@ const allBlogPosts = [
     date: 'May 3, 2025',
     category: 'AI & ML',
     readTime: '6 min read',
-    image: '/lovable-uploads/a0e619bc-b97f-4cfd-bef8-5fa4212e2be8.png'
+    image: '/lovable-uploads/a0e619bc-b97f-4cfd-bef8-5fa4212e2be8.webp'
   },
   {
     id: 'neural-networks-explained',
@@ -32,7 +32,7 @@ const allBlogPosts = [
     date: 'May 1, 2025',
     category: 'AI & ML',
     readTime: '8 min read',
-    image: '/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png'
+    image: '/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp'
   },
   {
     id: 'ai-automation-business',
@@ -41,7 +41,7 @@ const allBlogPosts = [
     date: 'April 28, 2025',
     category: 'AI & ML',
     readTime: '7 min read',
-    image: '/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.png'
+    image: '/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.webp'
   },
   {
     id: 'deep-learning-applications',
@@ -50,7 +50,7 @@ const allBlogPosts = [
     date: 'April 25, 2025',
     category: 'AI & ML',
     readTime: '9 min read',
-    image: '/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png'
+    image: '/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp'
   },
   {
     id: 'ai-ethics-considerations',
@@ -59,7 +59,7 @@ const allBlogPosts = [
     date: 'April 23, 2025',
     category: 'AI & ML',
     readTime: '6 min read',
-    image: '/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png'
+    image: '/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp'
   },
   
   // Security Category (6 posts)
@@ -70,7 +70,7 @@ const allBlogPosts = [
     date: 'April 22, 2025',
     category: 'Security',
     readTime: '7 min read',
-    image: '/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.png'
+    image: '/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.webp'
   },
   {
     id: 'cybersecurity-threats-2025',
@@ -79,7 +79,7 @@ const allBlogPosts = [
     date: 'April 20, 2025',
     category: 'Security',
     readTime: '8 min read',
-    image: '/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png'
+    image: '/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp'
   },
   {
     id: 'api-security-best-practices',
@@ -88,7 +88,7 @@ const allBlogPosts = [
     date: 'April 18, 2025',
     category: 'Security',
     readTime: '6 min read',
-    image: '/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png'
+    image: '/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp'
   },
   {
     id: 'zero-trust-architecture',
@@ -97,7 +97,7 @@ const allBlogPosts = [
     date: 'April 15, 2025',
     category: 'Security',
     readTime: '10 min read',
-    image: '/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png'
+    image: '/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp'
   },
   {
     id: 'data-encryption-strategies',
@@ -106,7 +106,7 @@ const allBlogPosts = [
     date: 'April 12, 2025',
     category: 'Security',
     readTime: '7 min read',
-    image: '/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.png'
+    image: '/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.webp'
   },
   {
     id: 'security-incident-response',
@@ -115,7 +115,7 @@ const allBlogPosts = [
     date: 'April 10, 2025',
     category: 'Security',
     readTime: '9 min read',
-    image: '/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.png'
+    image: '/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp'
   },
 
   // Cloud Category (6 posts)
@@ -126,7 +126,7 @@ const allBlogPosts = [
     date: 'March 28, 2025',
     category: 'Cloud',
     readTime: '8 min read',
-    image: '/lovable-uploads/64e0086b-d1a8-4fbe-9242-556584c00448.png'
+    image: '/lovable-uploads/64e0086b-d1a8-4fbe-9242-556584c00448.webp'
   },
   {
     id: 'serverless-architecture-guide',
@@ -135,7 +135,7 @@ const allBlogPosts = [
     date: 'March 25, 2025',
     category: 'Cloud',
     readTime: '7 min read',
-    image: '/lovable-uploads/ee4edf23-a52a-49aa-bee5-8e9610ca4992.png'
+    image: '/lovable-uploads/ee4edf23-a52a-49aa-bee5-8e9610ca4992.webp'
   },
   {
     id: 'multi-cloud-strategies',
@@ -144,7 +144,7 @@ const allBlogPosts = [
     date: 'March 22, 2025',
     category: 'Cloud',
     readTime: '9 min read',
-    image: '/lovable-uploads/f1d2b0e1-1812-4659-9841-f6fd4f6a06a8.png'
+    image: '/lovable-uploads/f1d2b0e1-1812-4659-9841-f6fd4f6a06a8.webp'
   },
   {
     id: 'cloud-cost-optimization',
@@ -153,7 +153,7 @@ const allBlogPosts = [
     date: 'March 20, 2025',
     category: 'Cloud',
     readTime: '6 min read',
-    image: '/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png'
+    image: '/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.webp'
   },
   {
     id: 'kubernetes-deployment',
@@ -162,7 +162,7 @@ const allBlogPosts = [
     date: 'March 18, 2025',
     category: 'Cloud',
     readTime: '10 min read',
-    image: '/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.png'
+    image: '/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.webp'
   },
   {
     id: 'cloud-native-development',
@@ -171,7 +171,7 @@ const allBlogPosts = [
     date: 'March 15, 2025',
     category: 'Cloud',
     readTime: '8 min read',
-    image: '/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.png'
+    image: '/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.webp'
   },
 
   // DevOps Category (6 posts)
@@ -182,7 +182,7 @@ const allBlogPosts = [
     date: 'March 15, 2025',
     category: 'DevOps',
     readTime: '6 min read',
-    image: '/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.png'
+    image: '/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.webp'
   },
   {
     id: 'ci-cd-pipeline-setup',
@@ -191,7 +191,7 @@ const allBlogPosts = [
     date: 'March 12, 2025',
     category: 'DevOps',
     readTime: '9 min read',
-    image: '/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.png'
+    image: '/lovable-uploads/954ddfc6-3ae2-41b6-9dd6-0f792497c6d0.webp'
   },
   {
     id: 'infrastructure-as-code',
@@ -200,7 +200,7 @@ const allBlogPosts = [
     date: 'March 10, 2025',
     category: 'DevOps',
     readTime: '7 min read',
-    image: '/lovable-uploads/a0e619bc-b97f-4cfd-bef8-5fa4212e2be8.png'
+    image: '/lovable-uploads/a0e619bc-b97f-4cfd-bef8-5fa4212e2be8.webp'
   },
   {
     id: 'monitoring-observability',
@@ -209,7 +209,7 @@ const allBlogPosts = [
     date: 'March 8, 2025',
     category: 'DevOps',
     readTime: '8 min read',
-    image: '/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png'
+    image: '/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp'
   },
   {
     id: 'containerization-docker',
@@ -218,7 +218,7 @@ const allBlogPosts = [
     date: 'March 5, 2025',
     category: 'DevOps',
     readTime: '6 min read',
-    image: '/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.png'
+    image: '/lovable-uploads/04bb71ef-9de4-4174-949b-c195f9072db7.webp'
   },
   {
     id: 'gitops-deployment',
@@ -227,7 +227,7 @@ const allBlogPosts = [
     date: 'March 3, 2025',
     category: 'DevOps',
     readTime: '7 min read',
-    image: '/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.png'
+    image: '/lovable-uploads/1b4c9fe7-adc0-4f33-89aa-6204e7dc1622.webp'
   },
 
   // Architecture Category (6 posts)
@@ -238,7 +238,7 @@ const allBlogPosts = [
     date: 'April 10, 2025',
     category: 'Architecture',
     readTime: '6 min read',
-    image: '/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.png'
+    image: '/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.webp'
   },
   {
     id: 'event-driven-architecture',
@@ -247,7 +247,7 @@ const allBlogPosts = [
     date: 'April 8, 2025',
     category: 'Architecture',
     readTime: '8 min read',
-    image: '/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.png'
+    image: '/lovable-uploads/345bcc74-1822-47c9-a1ff-a8ae70f92542.webp'
   },
   {
     id: 'api-design-principles',
@@ -256,7 +256,7 @@ const allBlogPosts = [
     date: 'April 5, 2025',
     category: 'Architecture',
     readTime: '7 min read',
-    image: '/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.png'
+    image: '/lovable-uploads/4acf0bb3-60b8-4cf6-b59d-d2af4a64cb00.webp'
   },
   {
     id: 'domain-driven-design',
@@ -265,7 +265,7 @@ const allBlogPosts = [
     date: 'April 3, 2025',
     category: 'Architecture',
     readTime: '10 min read',
-    image: '/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.png'
+    image: '/lovable-uploads/54285353-c710-4552-b5a9-36c4ce0ed9b8.webp'
   },
   {
     id: 'scalable-system-design',
@@ -274,7 +274,7 @@ const allBlogPosts = [
     date: 'April 1, 2025',
     category: 'Architecture',
     readTime: '9 min read',
-    image: '/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.png'
+    image: '/lovable-uploads/5c92dc4a-0075-470b-8d8c-73a6fde02be3.webp'
   },
   {
     id: 'database-architecture-patterns',
@@ -283,7 +283,7 @@ const allBlogPosts = [
     date: 'March 30, 2025',
     category: 'Architecture',
     readTime: '8 min read',
-    image: '/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.png'
+    image: '/lovable-uploads/62f17d6a-05cb-40df-8227-75e88f970645.webp'
   }
 ];
 

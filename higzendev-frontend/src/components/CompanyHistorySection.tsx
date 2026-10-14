@@ -32,7 +32,7 @@ const CompanyHistorySection = () => {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden h-64">
                     <img 
-                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" 
+                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" 
                       alt="Team member" 
                       className="w-full h-full object-cover"
                     />
@@ -45,14 +45,14 @@ const CompanyHistorySection = () => {
                 <div className="space-y-4 mt-10">
                   <div className="rounded-2xl overflow-hidden h-64">
                     <img 
-                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" 
+                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" 
                       alt="Team member" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden h-64">
                     <img 
-                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.png" 
+                      src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" 
                       alt="Team member" 
                       className="w-full h-full object-cover"
                     />

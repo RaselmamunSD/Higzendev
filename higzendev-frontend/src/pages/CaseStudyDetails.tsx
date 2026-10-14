@@ -20,7 +20,7 @@ const CaseStudyDetails = () => {
       teamSize: "12 developers",
       budget: "$850K",
       year: "2023",
-      heroImage: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.png",
+      heroImage: "/lovable-uploads/72ace780-45bd-4fc9-a7d4-43f9d6b33361.webp",
       overview: "SecureBank Digital approached us to create a next-generation mobile banking platform that would compete with industry leaders while maintaining the highest security standards.",
       challenge: {
         title: "The Challenge",
@@ -116,7 +116,7 @@ const CaseStudyDetails = () => {
       teamSize: "10 developers",
       budget: "$650K",
       year: "2023",
-      heroImage: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.png",
+      heroImage: "/lovable-uploads/b44b4376-6a18-4433-9b0e-6719c11aa425.webp",
       overview: "MediCare Plus needed a comprehensive healthcare management system to streamline operations across their 50+ clinics and hospitals.",
       challenge: {
         title: "The Challenge",
@@ -211,7 +211,7 @@ const CaseStudyDetails = () => {
       teamSize: "15 developers",
       budget: "$750K",
       year: "2023",
-      heroImage: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.png",
+      heroImage: "/lovable-uploads/a364049e-ac00-4930-bd2f-53ac02e911d9.webp",
       overview: "RetailTech Global needed a scalable e-commerce platform to handle their rapid growth and compete with industry giants.",
       challenge: {
         title: "The Challenge",
@@ -306,7 +306,7 @@ const CaseStudyDetails = () => {
       teamSize: "18 developers",
       budget: "$1.2M",
       year: "2023",
-      heroImage: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.png",
+      heroImage: "/lovable-uploads/e86d3e88-9e98-45c2-bae4-e324c827606f.webp",
       overview: "IndustrialTech needed a comprehensive IoT platform to monitor and optimize their manufacturing processes across multiple facilities.",
       challenge: {
         title: "The Challenge",

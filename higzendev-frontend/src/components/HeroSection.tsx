@@ -130,7 +130,7 @@ const HeroSection: React.FC = () => {
           className="w-full h-full"
         >
           <img
-            src="/images/higzendev-office-hero.png"
+            src="/images/higzendev-office-hero.webp"
             alt="HigzenDev Headquarters Office"
             className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
             loading="eager"
@@ -235,7 +235,7 @@ const HeroSection: React.FC = () => {
                     onClick={() => window.open('https://wa.me/8801870966718', '_blank')}
                   >
                     <div className="flex items-center gap-2">
-                      <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-4 h-4 object-contain" />
+                      <img src="/images/whatsapp-icon.webp" alt="WhatsApp" className="w-4 h-4 object-contain" />
                       <span>WhatsApp</span>
                     </div>
                   </Button>

@@ -274,7 +274,7 @@ const AIChatbot = () => {
                 <div className="relative flex-shrink-0">
                   <div className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 rounded-full bg-white p-1 shadow-lg flex items-center justify-center">
                     <img 
-                      src="/images/higzendev-logo.png" 
+                      src="/images/higzendev-logo.webp" 
                       alt="HigzenDev AI Assistant" 
                       className="h-full w-full object-contain"
                     />
@@ -310,7 +310,7 @@ const AIChatbot = () => {
                     <div className="relative flex-shrink-0">
                       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white p-1 shadow-md flex items-center justify-center border border-purple-300/40">
                         <img 
-                          src="/images/higzendev-logo.png" 
+                          src="/images/higzendev-logo.webp" 
                           alt="HigzenDev AI Assistant" 
                           className="w-full h-full object-contain"
                         />
@@ -419,7 +419,7 @@ const AIChatbot = () => {
                   <div className="relative flex-shrink-0">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white p-1 shadow-md flex items-center justify-center border-2 border-purple-400/30">
                       <img 
-                        src="/images/higzendev-logo.png" 
+                        src="/images/higzendev-logo.webp" 
                         alt="HigzenDev AI Assistant" 
                         className="w-full h-full object-contain"
                       />
@@ -538,7 +538,7 @@ const AIChatbot = () => {
                           <div className="relative flex-shrink-0 mt-1">
                             <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white p-0.5 shadow-md flex items-center justify-center border border-purple-400/30">
                               <img 
-                                src="/images/higzendev-logo.png" 
+                                src="/images/higzendev-logo.webp" 
                                 alt="HigzenDev AI Assistant" 
                                 className="w-full h-full object-contain"
                               />
@@ -577,7 +577,7 @@ const AIChatbot = () => {
                         <div className="relative flex-shrink-0 mt-1">
                           <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-white p-0.5 shadow-md flex items-center justify-center border border-purple-400/30">
                             <img 
-                              src="/images/higzendev-logo.png" 
+                              src="/images/higzendev-logo.webp" 
                               alt="HigzenDev AI Assistant" 
                               className="w-full h-full object-contain"
                             />

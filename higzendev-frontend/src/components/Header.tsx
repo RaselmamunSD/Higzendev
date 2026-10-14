@@ -61,7 +61,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2.5">
             <div className={`transition-all duration-300 rounded-xl bg-white p-1 flex items-center justify-center shadow-md ${isScrolled ? 'h-9 w-9' : 'h-11 w-11'}`}>
               <img 
-                src="/images/higzendev-logo.png" 
+                src="/images/higzendev-logo.webp" 
                 alt="HigzenDev Logo" 
                 className="h-full w-full object-contain"
               />
