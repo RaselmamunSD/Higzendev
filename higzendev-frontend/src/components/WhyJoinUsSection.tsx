@@ -6,34 +6,35 @@ const WhyJoinUsSection = () => {
     {
       icon: Heart,
       title: "Make a Real Difference",
-      description: "Help improve mental health and wellbeing for thousands of people worldwide"
+      description: "Build cutting-edge solutions that solve mission-critical problems for global businesses"
     },
     {
       icon: Target,
       title: "Meaningful Work",
-      description: "Every line of code you write contributes to someone's journey to better mental health"
+      description: "Every line of code and design you craft creates lasting real-world impact and growth"
     },
     {
       icon: Users,
       title: "Collaborative Culture",
-      description: "Work with passionate, talented people who care about making an impact"
+      description: "Work alongside passionate, world-class engineers and creators who love what they do"
     },
     {
       icon: Zap,
       title: "Innovation First",
-      description: "Use cutting-edge technology to solve real-world mental health challenges"
+      description: "Leverage modern tech stacks, AI, cloud architecture, and modern best practices"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="why-join-us" className="py-20 bg-gradient-to-b from-background to-muted/20 border-t border-border/40">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            Why Join MoodMate?
+          <span className="text-primary text-sm font-semibold uppercase tracking-wider mb-2 block">Our Culture</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
+            Why Join HigzenDev?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We offer more than just a job – we offer a chance to make a real difference
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            We offer more than just a job – we offer an environment where your talent thrives and leads the future
           </p>
         </div>
         
@@ -41,11 +42,13 @@ const WhyJoinUsSection = () => {
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="bg-card p-8 rounded-lg border border-border hover:border-primary transition-all hover:shadow-glow-strong"
+              className="bg-card p-8 rounded-2xl border border-border/70 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
             >
-              <reason.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-3 text-foreground">{reason.title}</h3>
-              <p className="text-muted-foreground">{reason.description}</p>
+              <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <reason.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">{reason.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{reason.description}</p>
             </div>
           ))}
         </div>
