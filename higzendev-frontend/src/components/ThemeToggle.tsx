@@ -17,7 +17,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   if (!mounted) {
     return (
       <div 
-        className={`w-9 h-9 rounded-xl border border-border/40 bg-card/60 ${className}`} 
+        className={`w-10 h-10 min-h-[40px] min-w-[40px] aspect-square rounded-full border border-border/40 bg-card/60 ${className}`} 
         aria-hidden="true"
       />
     );
@@ -29,7 +29,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     <button
       type="button"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className={`relative w-9 h-9 rounded-xl border border-border/60 bg-card/80 hover:bg-card text-foreground flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-primary/50 shadow-sm ${className}`}
+      className={`relative w-10 h-10 min-h-[40px] max-h-[40px] min-w-[40px] max-w-[40px] aspect-square rounded-full border border-border/70 bg-card/90 hover:bg-card text-foreground flex items-center justify-center transition-all duration-300 hover:scale-105 hover:border-primary/50 shadow-sm shrink-0 ${className}`}
       aria-label={isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
       title={isDark ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
     >
