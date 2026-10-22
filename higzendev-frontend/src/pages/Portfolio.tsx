@@ -512,7 +512,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#040711] text-foreground">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <SEO 
         title="Client Portfolio & Featured Software Engineering Work | HigzenDev"
         description="Explore HigzenDev's 20+ enterprise software case studies: mission-critical web applications, AI LLM pipelines, mobile apps, and distributed cloud backends delivered for global brands."
@@ -523,13 +523,13 @@ const Portfolio: React.FC = () => {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-20 overflow-hidden bg-gradient-to-b from-background via-[#090d1f] to-background border-b border-border/40">
+        <section className="relative pt-24 pb-20 overflow-hidden bg-gradient-to-b from-background via-slate-100/70 to-background dark:via-[#090d1f] border-b border-border/40">
           {/* Ambient Glows */}
           <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/15 rounded-full blur-[140px] pointer-events-none" />
           <div className="absolute bottom-10 -right-32 w-96 h-96 bg-purple-500/15 rounded-full blur-[140px] pointer-events-none" />
 
           {/* Cyber Grid Lines */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
           <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
             {/* Top Badge */}
@@ -547,10 +547,10 @@ const Portfolio: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight"
             >
               Our Portfolio &{' '}
-              <span className="bg-gradient-to-r from-primary via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-cyan-500 to-purple-600 dark:via-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
                 Engineered Works
               </span>
             </motion.h1>
@@ -591,9 +591,9 @@ const Portfolio: React.FC = () => {
               {stats.map((stat, idx) => (
                 <div 
                   key={idx}
-                  className="p-5 sm:p-6 rounded-2xl bg-card/60 border border-border/60 backdrop-blur-xl text-center hover:border-primary/40 transition-all duration-300"
+                  className="p-5 sm:p-6 rounded-2xl bg-card/80 border border-border/60 backdrop-blur-xl text-center hover:border-primary/40 shadow-sm transition-all duration-300"
                 >
-                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-primary via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-primary via-cyan-500 to-purple-600 dark:via-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
                     {stat.value}
                   </div>
                   <div className="text-sm font-bold text-foreground mt-1">
@@ -609,7 +609,7 @@ const Portfolio: React.FC = () => {
         </section>
 
         {/* Search & Category Filter Toolbar */}
-        <section className="py-8 bg-card/40 border-b border-border/60 sticky top-[60px] z-30 backdrop-blur-md">
+        <section className="py-8 bg-card/70 border-b border-border/60 sticky top-[60px] z-30 backdrop-blur-md">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               {/* Category Pills */}
@@ -623,8 +623,8 @@ const Portfolio: React.FC = () => {
                       onClick={() => setActiveCategory(cat.id)}
                       className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 shrink-0 ${
                         isSelected
-                          ? 'bg-primary text-white shadow-md shadow-primary/20 scale-105'
-                          : 'bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/50'
+                          ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-105'
+                          : 'bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/60'
                       }`}
                     >
                       <IconComponent className="h-4 w-4" />
@@ -642,7 +642,7 @@ const Portfolio: React.FC = () => {
                   placeholder="Search 20+ projects, stacks..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-4 py-2 bg-background/80 border border-border/60 rounded-xl text-xs sm:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all"
+                  className="w-full pl-9 pr-4 py-2 bg-background border border-border/60 rounded-xl text-xs sm:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all"
                 />
               </div>
             </div>
@@ -654,7 +654,7 @@ const Portfolio: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
                   Featured Case Work ({filteredProjects.length} Projects)
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -667,7 +667,7 @@ const Portfolio: React.FC = () => {
               {filteredProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-2xl overflow-hidden bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-primary/50 shadow-2xl hover:shadow-glow transition-all duration-300 flex flex-col justify-between h-[460px] sm:h-[490px]"
+                  className="group relative rounded-2xl overflow-hidden bg-white dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 hover:border-primary/50 shadow-md hover:shadow-xl dark:shadow-2xl dark:hover:shadow-glow transition-all duration-300 flex flex-col justify-between h-[460px] sm:h-[490px]"
                 >
                   {/* Full image preview with glass overlay */}
                   <div className="relative flex-1 w-full overflow-hidden bg-muted/20">
@@ -679,44 +679,44 @@ const Portfolio: React.FC = () => {
                         e.currentTarget.src = `https://via.placeholder.com/600x800?text=${encodeURIComponent(project.title)}`;
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/20 to-transparent dark:from-slate-950 dark:via-slate-950/30 dark:to-transparent" />
                     
                     {/* Top Floating Glass Badges */}
                     <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
-                      <Badge variant="outline" className="bg-slate-950/70 backdrop-blur-md text-xs font-semibold text-white border-white/20 shadow-sm">
+                      <Badge variant="outline" className="bg-white/80 dark:bg-slate-950/70 backdrop-blur-md text-xs font-semibold text-slate-800 dark:text-white border-slate-200 dark:border-white/20 shadow-sm">
                         {project.categoryLabel}
                       </Badge>
                     </div>
 
                     <div className="absolute top-3.5 right-3.5">
-                      <Badge variant="secondary" className="bg-slate-950/70 backdrop-blur-md text-xs font-mono text-cyan-300 border border-cyan-500/30 shadow-sm">
+                      <Badge variant="secondary" className="bg-white/80 dark:bg-slate-950/70 backdrop-blur-md text-xs font-mono text-cyan-700 dark:text-cyan-300 border border-cyan-500/30 shadow-sm">
                         {project.year}
                       </Badge>
                     </div>
                   </div>
 
                   {/* Bottom Glass Panel: Minimal 2 Lines (Client & Title) + 3 Action Buttons */}
-                  <div className="relative z-10 p-5 bg-slate-950/80 backdrop-blur-xl border-t border-white/10 flex flex-col justify-between">
+                  <div className="relative z-10 p-5 bg-white/95 dark:bg-slate-950/80 backdrop-blur-xl border-t border-slate-200/80 dark:border-white/10 flex flex-col justify-between">
                     <div className="mb-3">
                       {/* Line 1: Client Name */}
-                      <div className="text-xs font-semibold text-cyan-400 flex items-center gap-1.5 truncate">
+                      <div className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 flex items-center gap-1.5 truncate">
                         <Building2 className="h-3.5 w-3.5 shrink-0" />
                         <span className="truncate">{project.client}</span>
                       </div>
 
                       {/* Line 2: Project Title */}
-                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-primary transition-colors leading-snug line-clamp-1 mt-1">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-snug line-clamp-1 mt-1">
                         {project.title}
                       </h3>
                     </div>
 
-                    {/* 3 Action Buttons [Details] [WhatsApp] [Call Now] with existing preserved colors */}
-                    <div className="grid grid-cols-3 gap-2 pt-3 border-t border-white/10">
+                    {/* 3 Action Buttons [Details] [WhatsApp] [Call Now] with light & dark theme styling */}
+                    <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-200/80 dark:border-white/10">
                       {/* Details Button */}
                       <button
                         type="button"
                         onClick={() => openProjectDetails(project)}
-                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-blue-500/15 text-blue-400 border border-blue-400/40 hover:bg-blue-500/25 hover:border-blue-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-blue-500/10 dark:bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 dark:border-blue-400/40 hover:bg-blue-500/20 dark:hover:bg-blue-500/25 hover:border-blue-500/50 dark:hover:border-blue-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <Info className="h-3.5 w-3.5 shrink-0" />
                         <span>Details</span>
@@ -727,7 +727,7 @@ const Portfolio: React.FC = () => {
                         href={`https://wa.me/8801870966718?text=${encodeURIComponent(`Hello HigzenDev! I am interested in your portfolio project: ${project.title} (${project.client})`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 dark:border-emerald-400/40 hover:bg-emerald-500/20 dark:hover:bg-emerald-500/25 hover:border-emerald-500/50 dark:hover:border-emerald-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <MessageCircle className="h-3.5 w-3.5 shrink-0" />
                         <span>WhatsApp</span>
@@ -736,7 +736,7 @@ const Portfolio: React.FC = () => {
                       {/* Call Now Button */}
                       <a
                         href="tel:+8801870966718"
-                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-amber-500/15 text-amber-400 border border-amber-400/40 hover:bg-amber-500/25 hover:border-amber-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                        className="w-full py-2.5 px-2 text-xs font-semibold rounded-xl bg-amber-500/10 dark:bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30 dark:border-amber-400/40 hover:bg-amber-500/20 dark:hover:bg-amber-500/25 hover:border-amber-500/50 dark:hover:border-amber-400/70 transition-all text-center flex items-center justify-center gap-1 active:scale-95 shadow-sm"
                       >
                         <Phone className="h-3.5 w-3.5 shrink-0" />
                         <span>Call Now</span>
@@ -763,14 +763,14 @@ const Portfolio: React.FC = () => {
         </section>
 
         {/* Featured Case Study Spotlight Banner */}
-        <section className="py-16 bg-muted/20 border-y border-border/40">
+        <section className="py-16 bg-muted/30 border-y border-border/40">
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-purple-900/10 border border-primary/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-purple-900/10 border border-primary/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl dark:shadow-2xl">
               <div className="space-y-4 max-w-xl">
-                <Badge variant="outline" className="text-xs bg-primary/20 text-cyan-300 border-primary/40">
+                <Badge variant="outline" className="text-xs bg-primary/15 text-primary dark:text-cyan-300 border-primary/40">
                   ENTERPRISE ARCHITECTURE HIGHLIGHT
                 </Badge>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                   Need a Custom High-Concurrency Architecture?
                 </h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -826,7 +826,7 @@ const Portfolio: React.FC = () => {
                   <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-muted/40 border border-border">
                     {selectedProject.impactMetrics.map((m, idx) => (
                       <div key={idx} className="text-center">
-                        <div className="text-xl sm:text-2xl font-black text-cyan-400 font-mono">
+                        <div className="text-xl sm:text-2xl font-black text-primary dark:text-cyan-400 font-mono">
                           {m.value}
                         </div>
                         <div className="text-xs text-muted-foreground font-medium">
@@ -839,14 +839,14 @@ const Portfolio: React.FC = () => {
                   {/* Problem & Solution */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20">
-                      <h4 className="font-bold text-sm text-rose-400 mb-1.5">The Challenge</h4>
+                      <h4 className="font-bold text-sm text-rose-600 dark:text-rose-400 mb-1.5">The Challenge</h4>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {selectedProject.problem}
                       </p>
                     </div>
 
                     <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
-                      <h4 className="font-bold text-sm text-emerald-400 mb-1.5">Our Solution</h4>
+                      <h4 className="font-bold text-sm text-emerald-600 dark:text-emerald-400 mb-1.5">Our Solution</h4>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {selectedProject.solution}
                       </p>
