@@ -28,7 +28,7 @@ const Header = () => {
     return `relative hover:text-primary transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'} ${active ? 'text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full' : 'after:content-[""] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all after:duration-300 hover:after:w-full'}`;
   };
 
-  const isAboutActive = currentPath.startsWith('/about') && currentPath !== '/about/team';
+  const isAboutActive = currentPath.startsWith('/about');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,7 +127,6 @@ const Header = () => {
           <button onClick={() => navigateToTop('/services')} className={navItemClass('/services')}>Services</button>
           <button onClick={() => navigateToTop('/products')} className={navItemClass('/products')}>Products</button>
           <button onClick={() => navigateToTop('/portfolio')} className={navItemClass('/portfolio')}>Portfolio</button>
-          <button onClick={() => navigateToTop('/about/team')} className={navItemClass('/about/team', true)}>Team</button>
           
           <button onClick={() => navigateToTop('/industries')} className={navItemClass('/industries')}>
             Industries
@@ -238,12 +237,6 @@ const Header = () => {
               Portfolio
             </button>
 
-            <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
-              <div className="w-9 h-9 rounded-lg bg-sky-500/10 flex items-center justify-center group-hover:bg-sky-500/20 transition-colors">
-                <Users className="h-[18px] w-[18px] text-sky-400" />
-              </div>
-              Team
-            </button>
             
             <button onClick={() => navigateToTop('/industries')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
               <div className="w-9 h-9 rounded-lg bg-rose-500/10 flex items-center justify-center group-hover:bg-rose-500/20 transition-colors">
