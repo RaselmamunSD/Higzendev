@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const ClientSuccessSection: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#050814] relative overflow-hidden border-y border-border/40">
+    <section className="py-20 sm:py-24 bg-card/40 dark:bg-[#050814] relative overflow-hidden border-y border-border/40 transition-colors duration-200">
       {/* Ambient background glows */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[400px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none" />
@@ -20,22 +20,22 @@ const ClientSuccessSection: React.FC = () => {
           {/* Left Column: Content */}
           <div className="lg:w-1/2 space-y-6 text-left">
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
               Client Success Stories: How{' '}
-              <span className="bg-gradient-to-r from-primary via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary via-cyan-500 to-blue-500 bg-clip-text text-transparent">
                 HigzenDev Delivers
               </span>{' '}
               Results
             </h2>
 
             {/* Body Paragraphs */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
               At HigzenDev, we believe success isn't just about products or services, but the real results we deliver to our clients. 
               Our client success stories showcase how we partner with businesses from various industries to solve complex 
               challenges and create tailored solutions that drive true value.
             </p>
 
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Whether it's streamlining business processes, boosting efficiency, or developing innovative digital products, 
               our projects are diverse and impactful. Explore our customer success stories to see how we've helped companies 
               achieve their goals and transform their visions into reality.
@@ -43,12 +43,12 @@ const ClientSuccessSection: React.FC = () => {
 
             {/* Value Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                 <span>Tailored Enterprise Solutions</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-300">
-                <TrendingUp className="w-4 h-4 text-cyan-400 shrink-0" />
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
+                <TrendingUp className="w-4 h-4 text-primary shrink-0" />
                 <span>Measurable ROI & Performance</span>
               </div>
             </div>
@@ -75,7 +75,7 @@ const ClientSuccessSection: React.FC = () => {
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-primary/30 via-cyan-500/20 to-purple-500/30 opacity-70 blur-xl group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
               
               {/* Frame Container */}
-              <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-card/80 shadow-2xl backdrop-blur-md p-2">
+              <div className="relative rounded-2xl overflow-hidden border border-border/60 bg-card/80 shadow-2xl backdrop-blur-md p-2">
                 <img 
                   src="/images/higzendev-client-success.webp" 
                   alt="HigzenDev Client Success Collaboration & Handshake" 

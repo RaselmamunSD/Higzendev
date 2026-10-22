@@ -115,29 +115,29 @@ const SuccessStories = () => {
     : successStories.filter(story => story.industry === selectedIndustry);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-green-900 to-blue-900 text-white">
+        <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background dark:via-slate-900/40 relative overflow-hidden border-b border-border/40">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Real results, real impact. Discover how we've helped businesses transform and thrive.
             </p>
-            <div className="flex items-center justify-center gap-8 text-lg">
-              <div className="flex items-center gap-2">
-                <Users className="text-green-400" />
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-base md:text-lg">
+              <div className="flex items-center gap-2 font-medium text-foreground">
+                <Users className="text-emerald-500" />
                 <span>100+ Happy Clients</span>
               </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="text-blue-400" />
+              <div className="flex items-center gap-2 font-medium text-foreground">
+                <TrendingUp className="text-primary" />
                 <span>$10M+ Revenue Generated</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Award className="text-yellow-400" />
+              <div className="flex items-center gap-2 font-medium text-foreground">
+                <Award className="text-amber-500" />
                 <span>99% Success Rate</span>
               </div>
             </div>
@@ -145,11 +145,11 @@ const SuccessStories = () => {
         </section>
 
         {/* Filter Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 bg-muted/30 border-b border-border/40">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Filter by Industry</h2>
-              <div className="flex flex-wrap justify-center gap-4">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6">Filter by Industry</h2>
+              <div className="flex flex-wrap justify-center gap-3">
                 {industries.map((industry) => (
                   <Button
                     key={industry}
@@ -157,8 +157,8 @@ const SuccessStories = () => {
                     onClick={() => setSelectedIndustry(industry)}
                     className={`${
                       selectedIndustry === industry
-                        ? "bg-gradient-to-r from-green-500 to-blue-500 text-white"
-                        : "bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600"
+                        ? "bg-primary text-primary-foreground shadow-md"
+                        : "bg-card text-foreground border-border/80 hover:bg-muted"
                     }`}
                   >
                     {industry}
@@ -174,9 +174,9 @@ const SuccessStories = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredStories.map((story) => (
-                <Card key={story.id} className="bg-muted/30 border-gray-700 hover:border-green-500 transition-all duration-300 group">
+                <Card key={story.id} className="bg-card border-border/70 hover:border-primary/50 shadow-sm transition-all duration-300 group">
                   <CardHeader>
-                    <div className="aspect-video mb-4 overflow-hidden rounded-lg">
+                    <div className="aspect-video mb-4 overflow-hidden rounded-lg bg-muted/20">
                       <img 
                         src={story.image} 
                         alt={story.title}
@@ -184,19 +184,19 @@ const SuccessStories = () => {
                       />
                     </div>
                     <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary" className="bg-green-600 text-white">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border border-primary/20">
                         {story.industry}
                       </Badge>
                       <div className="flex items-center gap-1">
                         {[...Array(story.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                         ))}
                       </div>
                     </div>
-                    <CardTitle className="text-white group-hover:text-green-400 transition-colors">
+                    <CardTitle className="text-slate-900 dark:text-white group-hover:text-primary transition-colors text-xl font-bold">
                       {story.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-400 flex items-center gap-2">
+                    <CardDescription className="text-muted-foreground flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       {story.year} • {story.duration}
                     </CardDescription>
@@ -205,48 +205,48 @@ const SuccessStories = () => {
                   <CardContent>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-green-400 mb-2">Challenge:</h4>
-                        <p className="text-gray-300 text-sm">{story.challenge}</p>
+                        <h4 className="font-semibold text-emerald-600 dark:text-emerald-400 mb-1 text-sm">Challenge:</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{story.challenge}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-blue-400 mb-2">Solution:</h4>
-                        <p className="text-gray-300 text-sm">{story.solution}</p>
+                        <h4 className="font-semibold text-primary mb-1 text-sm">Solution:</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{story.solution}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-purple-400 mb-2">Results:</h4>
-                        <ul className="text-gray-300 text-sm space-y-1">
+                        <h4 className="font-semibold text-violet-600 dark:text-violet-400 mb-1 text-sm">Results:</h4>
+                        <ul className="text-muted-foreground text-sm space-y-1">
                           {story.results.map((result, index) => (
                             <li key={index} className="flex items-center gap-2">
-                              <ArrowRight className="w-3 h-3 text-green-400" />
-                              {result}
+                              <ArrowRight className="w-3 h-3 text-emerald-500 shrink-0" />
+                              <span>{result}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 p-4 rounded-lg">
-                        <h4 className="font-semibold text-yellow-400 mb-2">Impact:</h4>
-                        <p className="text-white font-semibold">{story.impact}</p>
+                      <div className="bg-primary/5 dark:bg-primary/10 border border-primary/20 p-4 rounded-xl">
+                        <h4 className="font-semibold text-amber-600 dark:text-amber-400 mb-1 text-xs uppercase tracking-wider">Impact:</h4>
+                        <p className="text-slate-900 dark:text-white font-bold text-sm sm:text-base">{story.impact}</p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-gray-300 mb-2">Technologies:</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200 mb-2 text-sm">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {story.technologies.map((tech, index) => (
-                            <Badge key={index} variant="outline" className="border-gray-600 text-gray-300">
+                            <Badge key={index} variant="outline" className="border-border text-muted-foreground bg-muted/40 text-xs">
                               {tech}
                             </Badge>
                           ))}
                         </div>
                       </div>
                       
-                      <div className="border-t border-gray-700 pt-4">
-                        <blockquote className="text-gray-300 italic">
+                      <div className="border-t border-border/70 pt-4">
+                        <blockquote className="text-muted-foreground italic text-sm leading-relaxed">
                           "{story.testimonial}"
                         </blockquote>
-                        <p className="text-green-400 font-semibold mt-2">- {story.client}</p>
+                        <p className="text-primary font-semibold mt-2 text-sm">- {story.client}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -257,17 +257,17 @@ const SuccessStories = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-900 to-blue-900 text-white">
+        <section className="py-20 bg-muted/20 border-t border-border/40">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Ready to Write Your Success Story?</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Join our growing list of successful clients. Let's discuss how we can help transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20">
                 <Link to="/request-quote">Start Your Project</Link>
               </Button>
-              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg">
+              <Button asChild variant="outline" className="border-border hover:bg-muted px-8 py-3 text-base">
                 <Link to="/schedule-meeting">Schedule Consultation</Link>
               </Button>
             </div>

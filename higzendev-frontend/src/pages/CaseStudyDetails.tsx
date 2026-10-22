@@ -400,12 +400,15 @@ const CaseStudyDetails = () => {
 
   if (!caseStudy) {
     return (
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
         <Header />
         <main className="flex-grow flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
-            <p className="text-gray-400">The requested case study could not be found.</p>
+          <div className="text-center">
+            <h1 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Case Study Not Found</h1>
+            <p className="text-muted-foreground mb-6">The requested case study could not be found.</p>
+            <Button asChild>
+              <Link to="/case-studies">Back to Case Studies</Link>
+            </Button>
           </div>
         </main>
         <Footer />
@@ -414,58 +417,57 @@ const CaseStudyDetails = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
+        <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background dark:via-slate-900/40 relative overflow-hidden border-b border-border/40">
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="bg-green-600 text-white mb-4">{caseStudy.industry}</Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <Badge className="bg-primary text-primary-foreground mb-4 shadow-sm">{caseStudy.industry}</Badge>
+                <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-white leading-tight">
                   {caseStudy.title}
                 </h1>
-                <p className="text-xl text-gray-300 mb-8">
+                <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
                   {caseStudy.overview}
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-6 p-6 rounded-2xl bg-card border border-border/70 shadow-sm">
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="text-blue-400" />
-                      <span className="text-gray-300">Duration</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Calendar className="text-primary h-4 w-4" />
+                      <span className="text-xs text-muted-foreground uppercase font-semibold">Duration</span>
                     </div>
-                    <p className="font-semibold">{caseStudy.duration}</p>
+                    <p className="font-bold text-foreground text-sm sm:text-base">{caseStudy.duration}</p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Users className="text-green-400" />
-                      <span className="text-gray-300">Team Size</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Users className="text-emerald-500 h-4 w-4" />
+                      <span className="text-xs text-muted-foreground uppercase font-semibold">Team Size</span>
                     </div>
-                    <p className="font-semibold">{caseStudy.teamSize}</p>
+                    <p className="font-bold text-foreground text-sm sm:text-base">{caseStudy.teamSize}</p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Target className="text-purple-400" />
-                      <span className="text-gray-300">Budget</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Target className="text-purple-500 h-4 w-4" />
+                      <span className="text-xs text-muted-foreground uppercase font-semibold">Budget</span>
                     </div>
-                    <p className="font-semibold">{caseStudy.budget}</p>
+                    <p className="font-bold text-foreground text-sm sm:text-base">{caseStudy.budget}</p>
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Award className="text-yellow-400" />
-                      <span className="text-gray-300">Year</span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Award className="text-amber-500 h-4 w-4" />
+                      <span className="text-xs text-muted-foreground uppercase font-semibold">Year</span>
                     </div>
-                    <p className="font-semibold">{caseStudy.year}</p>
+                    <p className="font-bold text-foreground text-sm sm:text-base">{caseStudy.year}</p>
                   </div>
                 </div>
               </div>
-              <div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-border/60">
                 <img 
                   src={caseStudy.heroImage} 
                   alt={caseStudy.title}
-                  className="rounded-lg shadow-2xl w-full"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -473,19 +475,19 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Challenge Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/30 border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                <Target className="text-red-400" />
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                <Target className="text-rose-500" />
                 {caseStudy.challenge.title}
               </h2>
-              <p className="text-gray-300 text-lg mb-8">{caseStudy.challenge.description}</p>
+              <p className="text-muted-foreground text-base sm:text-lg mb-8 leading-relaxed">{caseStudy.challenge.description}</p>
               <div className="grid md:grid-cols-2 gap-6">
                 {caseStudy.challenge.points.map((point, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-gray-700 rounded-lg">
-                    <ArrowRight className="text-red-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{point}</span>
+                  <div key={index} className="flex items-start gap-3 p-4 bg-card border border-border/70 rounded-2xl shadow-sm">
+                    <ArrowRight className="text-rose-500 mt-1 flex-shrink-0 h-4 w-4" />
+                    <span className="text-foreground text-sm sm:text-base leading-relaxed">{point}</span>
                   </div>
                 ))}
               </div>
@@ -494,26 +496,26 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Solution Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                <Lightbulb className="text-yellow-400" />
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                <Lightbulb className="text-amber-500" />
                 {caseStudy.solution.title}
               </h2>
-              <p className="text-gray-300 text-lg mb-12">{caseStudy.solution.description}</p>
+              <p className="text-muted-foreground text-base sm:text-lg mb-12 leading-relaxed">{caseStudy.solution.description}</p>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {caseStudy.solution.approaches.map((approach, index) => (
-                  <Card key={index} className="bg-muted/30 border-gray-700">
+                  <Card key={index} className="bg-card border border-border/70 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                     <CardHeader>
-                      <CardTitle className="text-white flex items-center gap-3">
+                      <CardTitle className="text-slate-900 dark:text-white flex items-center gap-3 text-xl font-bold">
                         <span className="text-2xl">{approach.icon}</span>
                         {approach.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">{approach.description}</p>
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{approach.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -523,13 +525,13 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Technologies Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/30 border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-white mb-8">Technologies Used</h2>
-              <div className="flex flex-wrap justify-center gap-4">
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-8">Technologies Used</h2>
+              <div className="flex flex-wrap justify-center gap-3">
                 {caseStudy.technologies.map((tech, index) => (
-                  <Badge key={index} variant="outline" className="border-gray-600 text-gray-300 px-4 py-2 text-lg">
+                  <Badge key={index} variant="secondary" className="px-4 py-2 text-sm sm:text-base font-mono border border-border/80 shadow-sm">
                     {tech}
                   </Badge>
                 ))}
@@ -539,19 +541,19 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Results Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-12 text-center">Results & Impact</h2>
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">Results & Impact</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {caseStudy.results.map((result, index) => (
-                  <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600 text-center">
+                  <Card key={index} className="bg-card border border-border/80 rounded-2xl shadow-sm hover:shadow-lg transition-all text-center">
                     <CardContent className="p-6">
                       <div className="flex justify-center mb-4">
                         {result.icon}
                       </div>
-                      <h3 className="text-3xl font-bold text-white mb-2">{result.metric}</h3>
-                      <p className="text-gray-300">{result.description}</p>
+                      <h3 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">{result.metric}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{result.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -561,20 +563,20 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Timeline Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/30 border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-12 text-center">Project Timeline</h2>
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">Project Timeline</h2>
               <div className="space-y-6">
                 {caseStudy.timeline.map((phase, index) => (
-                  <div key={index} className="flex gap-6 items-start">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div key={index} className="flex gap-6 items-start p-4 rounded-2xl bg-card border border-border/60 shadow-sm">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
                       {index + 1}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>
-                      <p className="text-green-400 font-semibold mb-2">{phase.duration}</p>
-                      <p className="text-gray-300">{phase.description}</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1">{phase.phase}</h3>
+                      <p className="text-primary font-semibold text-xs sm:text-sm mb-2">{phase.duration}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{phase.description}</p>
                     </div>
                   </div>
                 ))}
@@ -584,16 +586,16 @@ const CaseStudyDetails = () => {
         </section>
 
         {/* Testimonial Section */}
-        <section className="py-16 bg-gradient-to-r from-green-900 to-blue-900">
+        <section className="py-16 bg-gradient-to-br from-primary/10 via-card to-accent/10 border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <blockquote className="text-2xl text-white italic mb-8">
+              <blockquote className="text-2xl sm:text-3xl font-medium text-slate-900 dark:text-white italic mb-6 leading-relaxed">
                 "{caseStudy.testimonial.quote}"
               </blockquote>
-              <div className="text-green-400 font-semibold text-lg">
+              <div className="text-primary font-bold text-lg">
                 {caseStudy.testimonial.author}
               </div>
-              <div className="text-gray-300">
+              <div className="text-muted-foreground text-sm">
                 {caseStudy.testimonial.position}
               </div>
             </div>
@@ -603,15 +605,15 @@ const CaseStudyDetails = () => {
         {/* CTA Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Success Story?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">Ready to Start Your Success Story?</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Let's discuss how we can help transform your business with cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-3 text-lg">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20">
                 <Link to="/request-quote">Start Your Project</Link>
               </Button>
-              <Button asChild variant="outline" className="border-gray-600 text-gray-300 hover:bg-muted/30 px-8 py-3 text-lg">
+              <Button asChild variant="outline" className="border-border hover:bg-muted px-8 py-3 text-base">
                 <Link to="/schedule-meeting">Schedule Consultation</Link>
               </Button>
             </div>
