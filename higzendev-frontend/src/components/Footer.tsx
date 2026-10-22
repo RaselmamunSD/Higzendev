@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="relative z-10 px-8 sm:px-12 pt-12 pb-8">
+        <div className="relative z-10 px-5 sm:px-8 lg:px-12 pt-12 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {/* Brand Column */}
             <div className="space-y-4">
@@ -141,12 +141,12 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-foreground mb-4 tracking-wide">
                 Quick Links
               </h4>
-              <ul className="space-y-1.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-1 md:block md:space-y-1.5">
                 {quickLinks.map(({ label, path }) => (
                   <li key={path}>
                     <button
                       onClick={() => navigateToTop(path)}
-                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center"
+                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center text-left"
                     >
                       {label}
                     </button>
@@ -160,12 +160,12 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-foreground mb-4 tracking-wide">
                 Our Services
               </h4>
-              <ul className="space-y-1.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-1 md:block md:space-y-1.5">
                 {services.map(({ label, path }) => (
                   <li key={path}>
                     <button
                       onClick={() => navigateToTop(path)}
-                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center"
+                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center text-left"
                     >
                       {label}
                     </button>
@@ -179,12 +179,12 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-foreground mb-4 tracking-wide">
                 More Services
               </h4>
-              <ul className="space-y-1.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-1 md:block md:space-y-1.5">
                 {moreServices.map(({ label, path }) => (
                   <li key={path}>
                     <button
                       onClick={() => navigateToTop(path)}
-                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center"
+                      className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 min-h-[36px] flex items-center text-left"
                     >
                       {label}
                     </button>
@@ -200,7 +200,7 @@ const Footer = () => {
               <p className="text-xs text-muted-foreground">
                 © {new Date().getFullYear()} HigzenDev. All rights reserved.
               </p>
-              <div className="flex gap-6">
+              <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6">
                 {[
                   { label: 'Privacy Policy', path: '/privacy-policy' },
                   { label: 'Terms & Conditions', path: '/terms-conditions' },
