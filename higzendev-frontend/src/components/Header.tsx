@@ -86,40 +86,58 @@ const Header = () => {
                      About
                    </span>
                  </NavigationMenuTrigger>
-                 <NavigationMenuContent className="min-w-[200px] z-[100]">
-                   <ul className="p-3 space-y-2">
-                     <li>
-                       <button onClick={() => navigateToTop('/about')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                         About Us
-                       </button>
-                     </li>
-                     <li>
-                       <button onClick={() => navigateToTop('/about/story')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                         Our Story
-                       </button>
-                     </li>
-                     <li>
-                       <button onClick={() => navigateToTop('/about/founder')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                         About Founder
-                       </button>
-                     </li>
+                  <NavigationMenuContent className="min-w-[220px] z-[100]">
+                    <ul className="p-2 space-y-1">
                       <li>
-                        <button onClick={() => navigateToTop('/about/team')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                          Meet The Team
+                        <button onClick={() => navigateToTop('/about')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
+                            <Users className="h-4 w-4 text-blue-400" />
+                          </div>
+                          <span>About Us</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/careers')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                          Careers
+                        <button onClick={() => navigateToTop('/about/story')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors shrink-0">
+                            <BookOpen className="h-4 w-4 text-purple-400" />
+                          </div>
+                          <span>Our Story</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/blog')} className="block w-full text-left px-4 py-2.5 text-gray-200 hover:bg-primary/90 hover:text-white rounded-lg transition-all duration-300 font-medium hover:shadow-glow hover:scale-[1.02] text-sm">
-                          Blog & Articles
+                        <button onClick={() => navigateToTop('/about/founder')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
+                            <UserCircle className="h-4 w-4 text-amber-400" />
+                          </div>
+                          <span>About Founder</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors shrink-0">
+                            <Users className="h-4 w-4 text-cyan-400" />
+                          </div>
+                          <span>Meet The Team</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => navigateToTop('/careers')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors shrink-0">
+                            <Rocket className="h-4 w-4 text-emerald-400" />
+                          </div>
+                          <span>Careers</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                          <div className="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors shrink-0">
+                            <PenLine className="h-4 w-4 text-pink-400" />
+                          </div>
+                          <span>Blog & Articles</span>
                         </button>
                       </li>
                     </ul>
-                </NavigationMenuContent>
+                  </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -193,24 +211,60 @@ const Header = () => {
               </button>
               
               {isAboutOpen && (
-                <div className="ml-[52px] mt-1 mb-1 space-y-0.5 border-l-2 border-primary/20 pl-4 animate-in slide-in-from-top-2">
-                  <button onClick={() => navigateToTop('/about')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <Users className="h-4 w-4 text-primary/60" />About Us
+                <div className="ml-[52px] mt-1.5 mb-1.5 space-y-1 border-l-2 border-primary/20 pl-3 animate-in slide-in-from-top-2">
+                  <button 
+                    onClick={() => navigateToTop('/about')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
+                      <Users className="h-4 w-4 text-blue-400" />
+                    </div>
+                    <span>About Us</span>
                   </button>
-                  <button onClick={() => navigateToTop('/about/story')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <BookOpen className="h-4 w-4 text-primary/60" />Our Story
+                  <button 
+                    onClick={() => navigateToTop('/about/story')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors shrink-0">
+                      <BookOpen className="h-4 w-4 text-purple-400" />
+                    </div>
+                    <span>Our Story</span>
                   </button>
-                  <button onClick={() => navigateToTop('/about/founder')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <UserCircle className="h-4 w-4 text-primary/60" />About Founder
+                  <button 
+                    onClick={() => navigateToTop('/about/founder')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
+                      <UserCircle className="h-4 w-4 text-amber-400" />
+                    </div>
+                    <span>About Founder</span>
                   </button>
-                  <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <Users className="h-4 w-4 text-primary/60" />Meet The Team
+                  <button 
+                    onClick={() => navigateToTop('/about/team')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors shrink-0">
+                      <Users className="h-4 w-4 text-cyan-400" />
+                    </div>
+                    <span>Meet The Team</span>
                   </button>
-                  <button onClick={() => navigateToTop('/careers')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <Rocket className="h-4 w-4 text-primary/60" />Careers
+                  <button 
+                    onClick={() => navigateToTop('/careers')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors shrink-0">
+                      <Rocket className="h-4 w-4 text-emerald-400" />
+                    </div>
+                    <span>Careers</span>
                   </button>
-                  <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-2.5 text-gray-400 hover:text-white transition-all font-medium min-h-[42px] px-3 hover:bg-white/[0.04] rounded-lg w-full text-sm">
-                    <PenLine className="h-4 w-4 text-primary/60" />Blog & Articles
+                  <button 
+                    onClick={() => navigateToTop('/blog')} 
+                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors shrink-0">
+                      <PenLine className="h-4 w-4 text-pink-400" />
+                    </div>
+                    <span>Blog & Articles</span>
                   </button>
                 </div>
               )}
