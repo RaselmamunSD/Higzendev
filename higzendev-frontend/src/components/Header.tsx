@@ -189,11 +189,6 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white dark:bg-[#0d1117] border-t border-border/50 absolute w-full top-full left-0 shadow-2xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto">
           <nav className="flex flex-col p-5 gap-2">
-            {/* Quick theme toggle in mobile menu */}
-            <div className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-card border border-border/60 mb-1 shadow-sm">
-              <span className="text-sm font-semibold text-slate-800 dark:text-foreground">Theme</span>
-              <ThemeToggle />
-            </div>
             {/* Nav Items with icons */}
             <button 
               onClick={() => navigateToTop('/')} 
