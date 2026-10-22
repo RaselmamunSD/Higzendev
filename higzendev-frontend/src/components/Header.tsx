@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Home, Info, Briefcase, Package, PenLine, Factory, FileText, CalendarDays, Users, BookOpen, Rocket, UserCircle, FolderGit2 } from 'lucide-react';
 import {
@@ -25,7 +26,7 @@ const Header = () => {
 
   const navItemClass = (path: string, exact: boolean = false) => {
     const active = isActive(path, exact);
-    return `relative hover:text-primary transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'} ${active ? 'text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full' : 'after:content-[""] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all after:duration-300 hover:after:w-full'}`;
+    return `relative transition-all duration-300 font-semibold px-2 py-1 ${isScrolled ? 'text-sm' : 'text-base'} ${active ? 'text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-0 after:w-full after:h-[2px] after:bg-primary after:rounded-full' : 'text-foreground/80 hover:text-primary after:content-[""] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all after:duration-300 hover:after:w-full'}`;
   };
 
   const isAboutActive = currentPath.startsWith('/about');
@@ -50,10 +51,10 @@ const Header = () => {
 
   return (
     <header 
-      className={`sticky top-0 z-50 text-white border-b border-border/30 transition-all duration-300 ${
+      className={`sticky top-0 z-50 text-foreground border-b border-border/40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#1a1a1a]/95 backdrop-blur-lg py-2 shadow-lg' 
-          : 'bg-[#1a1a1a] backdrop-blur-sm py-4'
+          ? 'bg-background/95 backdrop-blur-lg py-2 shadow-lg shadow-black/5 dark:shadow-black/40' 
+          : 'bg-background/90 dark:bg-[#1a1a1a] backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -67,7 +68,7 @@ const Header = () => {
               />
             </div>
             <span className={`font-bold transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-2xl'}`}>
-              <span className="text-white">Higzen</span>
+              <span className="text-foreground">Higzen</span>
               <span className="text-blue-500">Dev</span>
             </span>
           </Link>
@@ -151,6 +152,7 @@ const Header = () => {
           </button>
           
           <div className="flex items-center space-x-2 ml-3">
+            <ThemeToggle />
             <Button 
               onClick={() => navigateToTop('/request-quote')} 
               className={`bg-primary hover:bg-primary/80 text-white font-medium rounded-md transition-all duration-300 hover:scale-105 ${
@@ -170,11 +172,12 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Mobile Menu Button - Touch-friendly 44px target */}
-        <div className="lg:hidden">
+        {/* Mobile Menu Button & Theme Toggle */}
+        <div className="lg:hidden flex items-center gap-1.5">
+          <ThemeToggle />
           <button 
             onClick={toggleMenu} 
-            className="text-white p-3 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
+            className="text-foreground p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-muted/80 transition-colors"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -184,12 +187,17 @@ const Header = () => {
       
       {/* Mobile Navigation - Modern glassmorphism design */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-gradient-to-b from-[#0d1117] to-[#161b22] border-t border-white/5 absolute w-full top-full left-0 shadow-2xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="lg:hidden bg-background/98 dark:bg-gradient-to-b dark:from-[#0d1117] dark:to-[#161b22] border-t border-border/40 absolute w-full top-full left-0 shadow-2xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto backdrop-blur-xl">
           <nav className="flex flex-col p-5 gap-2">
+            {/* Quick theme toggle in mobile menu */}
+            <div className="flex items-center justify-between px-4 py-2 rounded-xl bg-card/60 border border-border/50 mb-1">
+              <span className="text-sm font-semibold text-foreground">Theme</span>
+              <ThemeToggle />
+            </div>
             {/* Nav Items with icons */}
             <button 
               onClick={() => navigateToTop('/')} 
-              className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group"
+              className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group"
             >
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Home className="h-[18px] w-[18px] text-primary" />
@@ -201,7 +209,7 @@ const Header = () => {
             <div>
               <button 
                 onClick={toggleAbout} 
-                className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] w-full text-[15px] group"
+                className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 w-full text-[15px] group"
               >
                 <div className="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
                   <Info className="h-[18px] w-[18px] text-cyan-400" />
@@ -214,7 +222,7 @@ const Header = () => {
                 <div className="ml-[52px] mt-1.5 mb-1.5 space-y-1 border-l-2 border-primary/20 pl-3 animate-in slide-in-from-top-2">
                   <button 
                     onClick={() => navigateToTop('/about')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
                       <Users className="h-4 w-4 text-blue-400" />
@@ -223,7 +231,7 @@ const Header = () => {
                   </button>
                   <button 
                     onClick={() => navigateToTop('/about/story')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors shrink-0">
                       <BookOpen className="h-4 w-4 text-purple-400" />
@@ -232,7 +240,7 @@ const Header = () => {
                   </button>
                   <button 
                     onClick={() => navigateToTop('/about/founder')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
                       <UserCircle className="h-4 w-4 text-amber-400" />
@@ -241,7 +249,7 @@ const Header = () => {
                   </button>
                   <button 
                     onClick={() => navigateToTop('/about/team')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors shrink-0">
                       <Users className="h-4 w-4 text-cyan-400" />
@@ -250,7 +258,7 @@ const Header = () => {
                   </button>
                   <button 
                     onClick={() => navigateToTop('/careers')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors shrink-0">
                       <Rocket className="h-4 w-4 text-emerald-400" />
@@ -259,7 +267,7 @@ const Header = () => {
                   </button>
                   <button 
                     onClick={() => navigateToTop('/blog')} 
-                    className="flex items-center gap-3 text-gray-200 hover:text-white transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-white/[0.06] w-full text-[14px] group"
+                    className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-all duration-200 font-medium min-h-[44px] px-3 rounded-xl hover:bg-muted/70 w-full text-[14px] group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors shrink-0">
                       <PenLine className="h-4 w-4 text-pink-400" />
@@ -270,21 +278,21 @@ const Header = () => {
               )}
             </div>
             
-            <button onClick={() => navigateToTop('/services')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
+            <button onClick={() => navigateToTop('/services')} className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group">
               <div className="w-9 h-9 rounded-lg bg-violet-500/10 flex items-center justify-center group-hover:bg-violet-500/20 transition-colors">
                 <Briefcase className="h-[18px] w-[18px] text-violet-400" />
               </div>
               Services
             </button>
             
-            <button onClick={() => navigateToTop('/products')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
+            <button onClick={() => navigateToTop('/products')} className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group">
               <div className="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
                 <Package className="h-[18px] w-[18px] text-emerald-400" />
               </div>
               Products
             </button>
             
-            <button onClick={() => navigateToTop('/portfolio')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
+            <button onClick={() => navigateToTop('/portfolio')} className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group">
               <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
                 <FolderGit2 className="h-[18px] w-[18px] text-indigo-400" />
               </div>
@@ -292,7 +300,7 @@ const Header = () => {
             </button>
 
             
-            <button onClick={() => navigateToTop('/industries')} className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group">
+            <button onClick={() => navigateToTop('/industries')} className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group">
               <div className="w-9 h-9 rounded-lg bg-rose-500/10 flex items-center justify-center group-hover:bg-rose-500/20 transition-colors">
                 <Factory className="h-[18px] w-[18px] text-rose-400" />
               </div>
@@ -306,7 +314,7 @@ const Header = () => {
             <div className="space-y-2">
               <button 
                 onClick={() => navigateToTop('/request-quote')} 
-                className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group w-full"
+                className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group w-full"
               >
                 <div className="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
                   <FileText className="h-[18px] w-[18px] text-cyan-400" />
@@ -315,7 +323,7 @@ const Header = () => {
               </button>
               <button 
                 onClick={() => navigateToTop('/schedule-meeting')} 
-                className="flex items-center gap-3.5 text-gray-200 hover:text-white transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-white/[0.06] text-[15px] group w-full"
+                className="flex items-center gap-3.5 text-foreground/85 hover:text-foreground transition-all duration-300 font-medium min-h-[50px] px-4 rounded-xl hover:bg-muted/70 text-[15px] group w-full"
               >
                 <div className="w-9 h-9 rounded-lg bg-violet-500/10 flex items-center justify-center group-hover:bg-violet-500/20 transition-colors">
                   <CalendarDays className="h-[18px] w-[18px] text-violet-400" />

@@ -52,7 +52,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-background py-10 px-4 sm:px-6 lg:px-8">
       {/* Main footer card */}
-      <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden border border-border/40" style={{ background: 'linear-gradient(135deg, hsl(210 20% 6%) 0%, hsl(210 25% 8%) 40%, hsl(199 40% 10%) 100%)' }}>
+      <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden border border-border/50 bg-gradient-to-br from-slate-100 via-white to-blue-50/50 dark:bg-[linear-gradient(135deg,hsl(210_20%_6%)_0%,hsl(210_25%_8%)_40%,hsl(199_40%_10%)_100%)] shadow-xl shadow-black/5 dark:shadow-none">
         
         {/* Abstract blue glow art - left side */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="absolute -bottom-20 right-[10%] w-[300px] h-[250px] rounded-full blur-[100px]" style={{ background: 'radial-gradient(circle, hsl(var(--primary) / 0.08) 0%, transparent 70%)' }} />
           
           {/* Watermark text */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[7rem] md:text-[10rem] font-black tracking-[0.2em] select-none whitespace-nowrap uppercase" style={{ color: 'hsl(0 0% 100% / 0.015)' }}>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[7rem] md:text-[10rem] font-black tracking-[0.2em] select-none whitespace-nowrap uppercase" style={{ color: 'hsl(var(--foreground) / 0.03)' }}>
             HIGZENDEV
           </div>
         </div>
