@@ -4,22 +4,24 @@ import Footer from '../components/Footer';
 
 const VideoMeeting = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <Header />
-      <main className="flex-grow bg-white">
-        <section className="py-20">
+      <main className="flex-grow">
+        <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background dark:via-slate-900/40 border-b border-border/40">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-8">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Schedule Video Meeting</h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
+                Schedule Video Meeting
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8">
                 Book a convenient time for your video consultation
               </p>
             </div>
             
             {/* Calendly Widget */}
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto bg-card border border-border/70 rounded-2xl shadow-xl p-4 sm:p-6 overflow-hidden">
               <div 
-                className="calendly-inline-widget" 
+                className="calendly-inline-widget rounded-xl" 
                 data-url="https://calendly.com/rasel-mamun314?hide_landing_page_details=1&hide_gdpr_banner=1" 
                 style={{ minWidth: '320px', height: '700px' }}
               ></div>
