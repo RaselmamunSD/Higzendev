@@ -303,18 +303,21 @@ const Blog = () => {
   
   const filteredPosts = getFilteredPosts();
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-50"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background dark:via-slate-900/40 border-b border-border/40">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-50 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent pointer-events-none"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-6">
-              Tech Insights & Innovation
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+              Tech Insights &{' '}
+              <span className="bg-gradient-to-r from-primary via-cyan-500 to-purple-600 dark:via-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
+                Innovation
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Stay updated with the latest insights, trends, and breakthrough technologies from HigzenDev
@@ -338,14 +341,14 @@ const Blog = () => {
       </section>
 
       <main className="flex-grow">
-        <div className="container mx-auto px-4 pb-20">
+        <div className="container mx-auto px-4 py-16">
           {/* Featured Categories */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (
               <Button 
                 key={category} 
                 variant={category === selectedCategory ? 'default' : 'outline'}
-                className="rounded-full"
+                className="rounded-full shadow-sm"
                 onClick={() => {
                   setSelectedCategory(category);
                   setShowAll(false);
@@ -361,7 +364,7 @@ const Blog = () => {
             {filteredPosts.map((post, index) => (
               <article 
                 key={post.id} 
-                className="group bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
+                className="group bg-card dark:bg-slate-900/60 backdrop-blur-sm border border-border/80 dark:border-white/10 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-xl dark:shadow-2xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -369,9 +372,9 @@ const Blog = () => {
                     className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
                     style={{ backgroundImage: `url(${post.image})` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-primary/90 text-primary-foreground text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full shadow-md">
                         {post.category}
                       </span>
                     </div>
@@ -385,17 +388,17 @@ const Blog = () => {
                     <span>{post.readTime}</span>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                  <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
                   </h2>
                   
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                  <p className="text-muted-foreground mb-4 line-clamp-3 text-sm leading-relaxed">
                     {post.excerpt}
                   </p>
                   
                   <Link 
                     to={`/blog/${post.id}`}
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors group-hover:gap-3"
+                    className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors group-hover:gap-3 text-sm"
                   >
                     Read More 
                     <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

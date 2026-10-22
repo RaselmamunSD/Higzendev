@@ -36,23 +36,23 @@ const Story = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
       <Header />
       <main className="flex-grow">
         {/* Our Story - Hero Section */}
-        <section className="relative bg-[#0D1B2A] text-white py-24 px-8 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-background via-slate-100/60 to-background dark:via-[#090d1f] text-foreground py-24 px-4 sm:px-8 overflow-hidden border-b border-border/40">
           {/* Wave Overlay Background */}
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-5 pointer-events-none">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="absolute bottom-0 w-full h-full">
               <path d="M0,0V120H1200V0C900,60 300,60 0,0Z" fill="currentColor"/>
             </svg>
           </div>
           
           <div className="relative max-w-6xl mx-auto text-center scroll-animate">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-[#1E90FF] to-[#00C896] bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#1E90FF] dark:to-[#00C896] bg-clip-text text-transparent">
               Our Story
             </h1>
-            <p className="text-xl md:text-2xl text-[#A0AEC0] max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               A journey of innovation, growth, and impact — from idea to global reach. 
               We transform businesses through cutting-edge technology and creative solutions.
             </p>
@@ -63,20 +63,20 @@ const Story = () => {
         </section>
 
         {/* Brand Identity and Elements */}
-        <section className="bg-[#1A1A1A] py-20 px-8">
+        <section className="bg-background dark:bg-[#121624] py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center bg-gradient-to-r from-[#1E90FF] to-[#00C896] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#1E90FF] dark:to-[#00C896] bg-clip-text text-transparent">
               Brand Identity and Elements
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#00C896] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group bg-card dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-emerald-500/50 shadow-md hover:shadow-xl dark:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/5 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-center text-[#00C896]">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-emerald-600 dark:text-[#00C896]">
                     Explain the tagline: "The Soul of Tech"? What message does it convey?
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     The tagline "The Soul of Tech" communicates HigzenDev's commitment to infusing 
                     technology with creativity, humanity, and depth. It encapsulates the company's belief that 
                     technology is not just a tool but a medium through which businesses can express 
@@ -85,13 +85,13 @@ const Story = () => {
                 </div>
               </div>
               
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#1E90FF] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group bg-card dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-blue-500/50 shadow-md hover:shadow-xl dark:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-center text-[#1E90FF]">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-blue-600 dark:text-[#1E90FF]">
                     What symbolism is embedded in the logo, and how does it represent the brand?
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     Our logo draws inspiration from modern technology platforms, reflecting one of our core 
                     strengths. The logo's color palette is carefully selected to represent our brand's identity 
                     and values - innovation, reliability, and growth.
@@ -99,13 +99,13 @@ const Story = () => {
                 </div>
               </div>
               
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-purple-400 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group bg-card dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-purple-500/50 shadow-md hover:shadow-xl dark:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-[#00C896]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-center text-purple-400">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-purple-600 dark:text-purple-400">
                     Why was the ROBOTO and how does it maintain visual consistency?
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     We intended to use a clear, versatile font that supports all platforms. We went with 
                     ROBOTO, a popular Google font that's used in Google's logo now.
                     
@@ -117,13 +117,13 @@ const Story = () => {
                 </div>
               </div>
               
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-yellow-400 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="group bg-card dark:bg-slate-900/60 backdrop-blur-xl p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 hover:border-amber-500/50 shadow-md hover:shadow-xl dark:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-[#00C896]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-center text-yellow-400">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-amber-600 dark:text-yellow-400">
                     The Importance of the brand colors: Green, Orange, Red, and Violet colors
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     At first, our core strength was technology, and technology platforms inspired us. All four colors, 
                     Green, Orange, Red, and Violet, are present in our logo but in a different approach. The 
                     4 Directional Arrow symbolizes that we work on all verticals and worldwide. The www symbolizes a 
@@ -137,14 +137,14 @@ const Story = () => {
         </section>
         
         {/* The Glorious Story Section */}
-        <section className="bg-gradient-to-br from-[#0D1117] to-[#1A1A1A] py-20 px-8">
+        <section className="bg-muted/30 dark:bg-gradient-to-br dark:from-[#0D1117] dark:to-[#1A1A1A] py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <div className="md:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-8 bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#00C896] dark:to-[#1E90FF] bg-clip-text text-transparent">
                   The Glorious Story of HigzenDev
                 </h2>
-                <p className="text-lg text-[#A0AEC0] leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   HigzenDev stands apart as a dynamic B2B-focused agency, renowned for delivering 
                   comprehensive, innovative digital solutions tailored specifically to the evolving needs of 
                   businesses. We help web and software development agencies grow faster by reducing 
@@ -158,12 +158,12 @@ const Story = () => {
               </div>
               <div className="md:w-1/2">
                 <div className="grid grid-cols-3 gap-3">
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover transform rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-purple-400" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896]" />
-                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF]" />
-                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-yellow-400" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover transform rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896] shadow-md" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF] shadow-md" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-purple-400 shadow-md" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-3 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#00C896] shadow-md" />
+                  <img src="/lovable-uploads/53486b42-3a97-4b33-9947-cc3dc4e85b5c.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover rotate-2 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#1E90FF] shadow-md" />
+                  <img src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" alt="Team images" className="rounded-xl w-full h-32 object-cover -rotate-1 hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-yellow-400 shadow-md" />
                 </div>
               </div>
             </div>
@@ -171,9 +171,9 @@ const Story = () => {
         </section>
 
         {/* The Birth of a Concept: Early Beginnings */}
-        <section className="bg-gradient-to-br from-[#2D1B69] via-[#1E1B3A] to-[#0D1117] py-20 px-8">
+        <section className="bg-background dark:bg-gradient-to-br dark:from-[#2D1B69] dark:via-[#1E1B3A] dark:to-[#0D1117] py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-16 text-center">
               The Birth of a Concept: Early Beginnings
             </h2>
             
@@ -185,12 +185,12 @@ const Story = () => {
                 <div className="flex items-center justify-between">
                   <div className="w-5/12"></div>
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-6 h-6 bg-[#1E90FF] rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="w-6 h-6 bg-[#1E90FF] rounded-full border-4 border-background shadow-lg"></div>
                   </div>
                   <div className="w-5/12">
-                    <div className="bg-gradient-to-r from-[#1E1E1E] to-[#2A2A2A] p-8 rounded-2xl hover:scale-105 transition-all duration-300 border border-[#1E90FF]/30">
-                      <h3 className="text-2xl font-bold text-[#1E90FF] mb-4">2018 - The Spark</h3>
-                      <p className="text-[#F5F7FA]">
+                    <div className="bg-card dark:bg-gradient-to-r dark:from-[#1E1E1E] dark:to-[#2A2A2A] p-8 rounded-3xl hover:scale-105 transition-all duration-300 border border-border/70 dark:border-[#1E90FF]/30 shadow-md hover:shadow-xl dark:shadow-2xl">
+                      <h3 className="text-xl sm:text-2xl font-bold text-blue-600 dark:text-[#1E90FF] mb-4">2018 - The Spark</h3>
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                         Started as a freelance web developer with a vision to transform how businesses approach technology. 
                         Working remotely with a small but dedicated team.
                       </p>
@@ -200,16 +200,16 @@ const Story = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="w-5/12">
-                    <div className="bg-gradient-to-l from-[#1E1E1E] to-[#2A2A2A] p-8 rounded-2xl hover:scale-105 transition-all duration-300 border border-[#00C896]/30">
-                      <h3 className="text-2xl font-bold text-[#00C896] mb-4">2019 - First Growth</h3>
-                      <p className="text-[#F5F7FA]">
+                    <div className="bg-card dark:bg-gradient-to-l dark:from-[#1E1E1E] dark:to-[#2A2A2A] p-8 rounded-3xl hover:scale-105 transition-all duration-300 border border-border/70 dark:border-[#00C896]/30 shadow-md hover:shadow-xl dark:shadow-2xl">
+                      <h3 className="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-[#00C896] mb-4">2019 - First Growth</h3>
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                         Expanding services and building stronger client relationships. 
                         The demand for quality work began to exceed expectations.
                       </p>
                     </div>
                   </div>
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-6 h-6 bg-[#00C896] rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="w-6 h-6 bg-[#00C896] rounded-full border-4 border-background shadow-lg"></div>
                   </div>
                   <div className="w-5/12"></div>
                 </div>
@@ -217,12 +217,12 @@ const Story = () => {
                 <div className="flex items-center justify-between">
                   <div className="w-5/12"></div>
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-6 h-6 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-full border-4 border-background shadow-lg"></div>
                   </div>
                   <div className="w-5/12">
-                    <div className="bg-gradient-to-r from-[#1E1E1E] to-[#2A2A2A] p-8 rounded-2xl hover:scale-105 transition-all duration-300 border border-purple-400/30">
-                      <h3 className="text-2xl font-bold text-purple-400 mb-4">2020 - Transformation</h3>
-                      <p className="text-[#F5F7FA]">
+                    <div className="bg-card dark:bg-gradient-to-r dark:from-[#1E1E1E] dark:to-[#2A2A2A] p-8 rounded-3xl hover:scale-105 transition-all duration-300 border border-border/70 dark:border-purple-400/30 shadow-md hover:shadow-xl dark:shadow-2xl">
+                      <h3 className="text-xl sm:text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">2020 - Transformation</h3>
+                      <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                         The pivotal transition from freelancer to company founder. 
                         HigzenDev was officially born with a mission to innovate.
                       </p>
@@ -235,9 +235,9 @@ const Story = () => {
         </section>
 
         {/* A Sister Company Formed (2018) */}
-        <section className="relative bg-gradient-to-br from-[#0D4A2B] via-[#1A5F3F] to-[#0D1117] py-20 px-8 overflow-hidden">
+        <section className="relative bg-muted/20 dark:bg-gradient-to-br dark:from-[#0D4A2B] dark:via-[#1A5F3F] dark:to-[#0D1117] py-20 px-4 sm:px-8 overflow-hidden border-b border-border/40">
           {/* Circuit Pattern Background */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-5 pointer-events-none">
             <svg width="60" height="60" viewBox="0 0 60 60" className="w-full h-full">
               <defs>
                 <pattern id="circuit" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -251,17 +251,17 @@ const Story = () => {
           </div>
 
           <div className="relative max-w-6xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-16 text-center">
               A Sister Company Formed (2018)
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#00C896] to-[#1E90FF] rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
-                <div className="relative bg-[#0D1117] p-8 rounded-2xl border border-[#00C896]/30">
-                  <Building className="w-16 h-16 text-[#00C896] mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Strategic Expansion</h3>
-                  <p className="text-[#A0AEC0] leading-relaxed">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#00C896] to-[#1E90FF] rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative bg-card dark:bg-[#0D1117] p-8 rounded-3xl border border-border/70 dark:border-[#00C896]/30 shadow-md hover:shadow-xl dark:shadow-2xl">
+                  <Building className="w-14 h-14 text-emerald-600 dark:text-[#00C896] mb-6" />
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Strategic Expansion</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     In 2018, we launched our first hosting platform, built entirely from scratch. 
                     This venture taught us valuable lessons about scalability and business partnerships.
                   </p>
@@ -269,11 +269,11 @@ const Story = () => {
               </div>
 
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
-                <div className="relative bg-[#0D1117] p-8 rounded-2xl border border-[#1E90FF]/30">
-                  <Award className="w-16 h-16 text-[#1E90FF] mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Sustainable Growth</h3>
-                  <p className="text-[#A0AEC0] leading-relaxed">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative bg-card dark:bg-[#0D1117] p-8 rounded-3xl border border-border/70 dark:border-[#1E90FF]/30 shadow-md hover:shadow-xl dark:shadow-2xl">
+                  <Award className="w-14 h-14 text-blue-600 dark:text-[#1E90FF] mb-6" />
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Sustainable Growth</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     By 2019, we established another hosting service that remains under company ownership today, 
                     demonstrating our commitment to long-term value creation.
                   </p>
@@ -284,24 +284,24 @@ const Story = () => {
         </section>
 
         {/* What inspired the name */}
-        <section className="bg-gradient-to-br from-[#0D1117] to-[#1A1A1A] py-20 px-8">
+        <section className="bg-background dark:bg-gradient-to-br dark:from-[#0D1117] dark:to-[#1A1A1A] py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#00C896] relative overflow-hidden">
+                <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-[#00C896]/30 hover:border-emerald-500/50 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/10 to-[#1E90FF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <Lightbulb className="w-12 h-12 text-[#00C896] mb-6" />
-                    <h3 className="text-2xl font-bold mb-4 text-[#00C896]">
+                    <Lightbulb className="w-12 h-12 text-emerald-600 dark:text-[#00C896] mb-6" />
+                    <h3 className="text-2xl font-bold mb-4 text-emerald-600 dark:text-[#00C896]">
                       What inspired using the brand name?
                     </h3>
-                    <p className="text-lg mb-6 text-[#F5F7FA] leading-relaxed">
+                    <p className="text-base sm:text-lg mb-6 text-foreground leading-relaxed">
                       The inspiration behind our brand name is rooted in our commitment to
                       illuminate businesses. Just as "tech wave" signifies a wave of technology, we aim to enhance businesses through services
                       like Web Development, App Creation, Software Solutions, SEO, and Digital Marketing. The name aligns
                       perfectly with our mission.
                     </p>
-                    <p className="text-lg text-[#A0AEC0] leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       We were also motivated by the desire to secure a domain name with an IT focus that harmonized
                       well with our vision. Our offerings encompass various aspects of making businesses shine, including Web
                       Design, UI/UX Development, Application Creation, ERP Solutions, Graphic Design, and Digital Marketing.
@@ -311,11 +311,11 @@ const Story = () => {
               </div>
               <div className="order-1 md:order-2">
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                   <img 
                     src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" 
                     alt="Team" 
-                    className="relative rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300"
+                    className="relative rounded-3xl shadow-xl dark:shadow-2xl hover:scale-105 transition-all duration-300 w-full object-cover"
                   />
                 </div>
               </div>
@@ -324,18 +324,18 @@ const Story = () => {
         </section>
         
         {/* Transition to Current Name */}
-        <section className="bg-gradient-to-br from-[#1A1A1A] to-[#0D1117] py-20 px-8">
+        <section className="bg-muted/30 dark:bg-gradient-to-br dark:from-[#1A1A1A] dark:to-[#0D1117] py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#00C896] dark:to-[#1E90FF] bg-clip-text text-transparent">
               The Transition to HigzenDev (2020)
             </h2>
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <div className="md:w-1/2">
-                <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#1E90FF] relative overflow-hidden">
+                <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-500/50 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-4 text-[#1E90FF]">How did the transition happen?</h3>
-                    <p className="text-[#F5F7FA] leading-relaxed">
+                    <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-[#1E90FF]">How did the transition happen?</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                       Our previous brand name might convey a limited focus, while our proper
                       emphasis has always been global. Thus, we embarked on a quest to discover a suitable name
                       that could encompass the entirety of our services. Through diligent searching, we stumbled
@@ -347,18 +347,18 @@ const Story = () => {
               </div>
               <div className="md:w-1/2">
                 <div className="relative group mb-6">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#1E90FF] to-[#00C896] rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
                   <img 
                     src="/lovable-uploads/7dee89d9-7ad3-4f44-8567-2fab5c93a862.webp" 
                     alt="Team with award" 
-                    className="relative rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300"
+                    className="relative rounded-3xl shadow-xl dark:shadow-2xl hover:scale-105 transition-all duration-300 w-full object-cover"
                   />
                 </div>
-                <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-6 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#00C896] relative overflow-hidden">
+                <div className="group bg-card dark:bg-slate-900/60 p-6 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-emerald-500/50 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/10 to-[#1E90FF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <h3 className="text-xl font-bold mb-2 text-[#00C896]">Recognition Achievement</h3>
-                    <p className="text-[#F5F7FA] leading-relaxed">
+                    <h3 className="text-xl font-bold mb-2 text-emerald-600 dark:text-[#00C896]">Recognition Achievement</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                       Our founder was honored with an industry award for significant contributions
                       to the local tech industry. Around the same time, the company rebranded. 
                       Winning the award became a turning point, encouraging the team to dream bigger. This
@@ -373,35 +373,35 @@ const Story = () => {
         </section>
         
         {/* Formation Section */}
-        <section className="bg-black py-20 px-8">
+        <section className="bg-background dark:bg-black py-20 px-4 sm:px-8 border-b border-border/40">
           <div className="max-w-7xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#00C896] dark:to-[#1E90FF] bg-clip-text text-transparent">
               The Formation of HigzenDev (2020)
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <h3 className="text-3xl font-bold mb-8 text-white">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-slate-900 dark:text-white">
                   How does our brand identity translate to our values?
                 </h3>
-                <p className="text-xl text-[#A0AEC0] leading-relaxed">
+                <p className="text-base sm:text-xl text-muted-foreground leading-relaxed">
                   The term "HigzenDev" implies innovation and technological advancement. This concept reflects our aspiration to excel through our partnerships with our
                   clients. Likewise, we strive to empower our clients, aiding them in achieving their own brilliance in the business landscape.
                 </p>
               </div>
               
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#1E90FF] to-[#00C896] bg-clip-text text-transparent">
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#1E90FF] dark:to-[#00C896] bg-clip-text text-transparent">
                 Building a Brand: Shaping HigzenDev
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#1E90FF] relative overflow-hidden">
+                <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-500/50 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <Users className="w-12 h-12 text-[#1E90FF] mb-6" />
-                    <h3 className="text-2xl font-bold mb-4 text-center text-[#1E90FF]">
+                    <Users className="w-12 h-12 text-blue-600 dark:text-[#1E90FF] mb-6" />
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-blue-600 dark:text-[#1E90FF]">
                       How did HigzenDev's website develop over time?
                     </h3>
-                    <p className="text-[#F5F7FA] leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                       The journey began with our initial website and later transformed into HigzenDev. Initially, our
                       offerings were limited to services such as Web Development, WordPress Web
                       Development, and SEO. However, as time progressed, HigzenDev expanded its horizons to
@@ -410,14 +410,14 @@ const Story = () => {
                   </div>
                 </div>
                 
-                <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#00C896] relative overflow-hidden">
+                <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-emerald-500/50 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/10 to-[#1E90FF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
-                    <Building className="w-12 h-12 text-[#00C896] mb-6" />
-                    <h3 className="text-2xl font-bold mb-4 text-center text-[#00C896]">
+                    <Building className="w-12 h-12 text-emerald-600 dark:text-[#00C896] mb-6" />
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center text-emerald-600 dark:text-[#00C896]">
                       The preparations for the official launch
                     </h3>
-                    <p className="text-[#F5F7FA] leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                       HigzenDev officially launched in 2020, starting as a venture with a small team.
                       After registering the domain and securing an office, the initial team included
                       web developers, an SEO expert, a social media marketer, and office staff. Now we've
@@ -433,21 +433,21 @@ const Story = () => {
         </section>
         
         {/* Official Launch Section */}
-        <section className="bg-gradient-to-br from-[#0D1117] to-[#1A1A1A] py-20 px-8">
+        <section className="bg-muted/20 dark:bg-gradient-to-br dark:from-[#0D1117] dark:to-[#1A1A1A] py-20 px-4 sm:px-8">
           <div className="max-w-7xl mx-auto scroll-animate">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#00C896] to-[#1E90FF] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 dark:from-[#00C896] dark:to-[#1E90FF] bg-clip-text text-transparent">
               HigzenDev's Official Launch and Vision (2021)
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#1E90FF] relative overflow-hidden">
+              <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-500/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1E90FF]/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <Users className="w-12 h-12 text-[#1E90FF] mb-6" />
-                  <h3 className="text-xl font-bold mb-4 text-center text-[#1E90FF]">
+                  <Users className="w-12 h-12 text-blue-600 dark:text-[#1E90FF] mb-6" />
+                  <h3 className="text-xl font-bold mb-4 text-center text-blue-600 dark:text-[#1E90FF]">
                     Establishing a dedicated team: How did this shape growth?
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     The choice to form dedicated teams at HigzenDev aimed to
                     enhance services and offer specialized client support. As
                     our company grew, dedicated teams improved efficiency,
@@ -461,14 +461,14 @@ const Story = () => {
                 </div>
               </div>
               
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-[#00C896] relative overflow-hidden">
+              <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-emerald-500/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00C896]/10 to-[#1E90FF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <Target className="w-12 h-12 text-[#00C896] mb-6" />
-                  <h3 className="text-xl font-bold mb-4 text-center text-[#00C896]">
+                  <Target className="w-12 h-12 text-emerald-600 dark:text-[#00C896] mb-6" />
+                  <h3 className="text-xl font-bold mb-4 text-center text-emerald-600 dark:text-[#00C896]">
                     The mission of HigzenDev: Aim to encourage creativity
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     HigzenDev is on a mission to simplify our clients'
                     businesses and help them expand. We believe that if our
                     clients succeed, we succeed. Our goal is to make
@@ -479,14 +479,14 @@ const Story = () => {
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-[#2A2A2A] to-[#1E1E1E] p-8 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:border-2 hover:border-purple-400 relative overflow-hidden">
+              <div className="group bg-card dark:bg-slate-900/60 p-8 rounded-3xl hover:scale-[1.02] hover:shadow-xl dark:shadow-2xl transition-all duration-300 border border-slate-200/80 dark:border-white/10 hover:border-purple-500/50 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-[#00C896]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <TrendingUp className="w-12 h-12 text-purple-400 mb-6" />
-                  <h3 className="text-xl font-bold mb-4 text-center text-purple-400">
+                  <TrendingUp className="w-12 h-12 text-purple-600 dark:text-purple-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-4 text-center text-purple-600 dark:text-purple-400">
                     Future Vision and Growth
                   </h3>
-                  <p className="text-[#F5F7FA] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     Looking forward, HigzenDev continues to evolve and adapt to
                     emerging technologies and market demands. Our vision is to
                     become a global leader in digital transformation,

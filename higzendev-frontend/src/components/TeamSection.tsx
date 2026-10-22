@@ -18,13 +18,13 @@ interface FeatureCardProps {
 const FeatureCard = ({ icon, title, description, bgColor }: FeatureCardProps) => {
   return (
     <div className="group relative">
-      <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 h-full transition-all duration-300 hover:border-primary/50 hover:bg-gradient-to-br hover:from-primary/5 hover:to-secondary/5 hover:scale-105 hover:shadow-xl hover:shadow-primary/10">
-        <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${bgColor} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+      <div className="bg-card dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200/80 dark:border-white/10 rounded-2xl p-6 h-full transition-all duration-300 hover:border-primary/50 shadow-sm hover:shadow-xl dark:shadow-2xl hover:scale-105">
+        <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${bgColor} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
           {icon}
         </div>
-        <h3 className="font-bold text-xl mb-3 text-white group-hover:text-primary transition-colors duration-300">{title}</h3>
-        <p className="text-gray-300 leading-relaxed">{description}</p>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+        <h3 className="font-bold text-xl mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors duration-300">{title}</h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
       </div>
     </div>
   );
@@ -67,7 +67,7 @@ const TeamMember = ({
       {/* Animated gradient glow halo */}
       <div className={`absolute -inset-[2px] rounded-2xl bg-gradient-to-br ${isLeadership ? 'from-primary via-secondary to-accent' : 'from-primary/40 via-secondary/40 to-accent/40'} opacity-40 group-hover:opacity-100 blur-md transition-all duration-500 group-hover:blur-lg`}></div>
 
-      <Card className="relative bg-gradient-to-br from-[#0f1419] via-[#161b22] to-[#0d1117] border border-white/10 rounded-2xl overflow-hidden h-full transition-all duration-500 group-hover:-translate-y-2 group-hover:border-primary/40 group-hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.5)]">
+      <Card className="relative bg-white dark:bg-gradient-to-br dark:from-[#0f1419] dark:via-[#161b22] dark:to-[#0d1117] border border-slate-200/80 dark:border-white/10 rounded-2xl overflow-hidden h-full transition-all duration-500 group-hover:-translate-y-2 group-hover:border-primary/40 shadow-sm hover:shadow-xl dark:shadow-2xl">
         {/* Decorative corner accents */}
         <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-primary/0 group-hover:border-primary/60 rounded-tl-2xl transition-all duration-500"></div>
         <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-secondary/0 group-hover:border-secondary/60 rounded-br-2xl transition-all duration-500"></div>
@@ -87,7 +87,7 @@ const TeamMember = ({
                   <div className="absolute top-0 left-0 w-32 h-32 bg-primary/40 rounded-full blur-2xl animate-pulse"></div>
                   <div className="absolute bottom-0 right-0 w-32 h-32 bg-secondary/40 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
                 </div>
-                <span className="relative z-10 text-5xl font-extrabold text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-500 tracking-wider">
+                <span className="relative z-10 text-5xl font-extrabold text-slate-900 dark:text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-500 tracking-wider">
                   {initials}
                 </span>
               </div>
@@ -95,7 +95,7 @@ const TeamMember = ({
           </AspectRatio>
 
           {/* Bottom gradient overlay for legibility */}
-          <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/30 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-white/90 via-white/20 to-transparent dark:from-[#0d1117] dark:via-[#0d1117]/30 dark:to-transparent pointer-events-none"></div>
 
           {/* Fun Fact Tooltip */}
           {funFact && (
@@ -138,14 +138,14 @@ const TeamMember = ({
               {position}
             </span>
           </div>
-          <h3 className="font-bold text-2xl text-white mb-2 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+          <h3 className="font-bold text-2xl text-slate-900 dark:text-white mb-2 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
             {name}
           </h3>
-          {bio && <p className="text-sm text-gray-400 leading-relaxed">{bio}</p>}
+          {bio && <p className="text-sm text-muted-foreground leading-relaxed">{bio}</p>}
           {quote && isLeadership && (
-            <div className="mt-4 p-4 bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent rounded-xl border-l-4 border-primary relative">
+            <div className="mt-4 p-4 bg-muted/40 dark:bg-gradient-to-br dark:from-primary/10 dark:via-secondary/5 dark:to-transparent rounded-xl border-l-4 border-primary relative">
               <span className="absolute -top-2 left-3 text-3xl text-primary/60 font-serif leading-none">"</span>
-              <p className="text-sm text-gray-300 italic leading-relaxed pl-2">{quote}</p>
+              <p className="text-sm text-muted-foreground italic leading-relaxed pl-2">{quote}</p>
             </div>
           )}
 
@@ -171,7 +171,7 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="relative w-full pt-8 sm:pt-10 lg:pt-12 pb-8 sm:pb-10 lg:pb-12 bg-gradient-to-br from-[#070b1a] via-[#0a1230] to-[#050816] overflow-hidden border-y border-white/5"
+      className="relative w-full pt-8 sm:pt-10 lg:pt-12 pb-8 sm:pb-10 lg:pb-12 bg-gradient-to-b from-background via-muted/20 to-background dark:from-[#070b1a] dark:via-[#0a1230] dark:to-[#050816] overflow-hidden border-y border-border/40"
     >
       {/* ambient glows */}
       <div aria-hidden="true" className="absolute -top-32 -left-20 w-[20rem] sm:w-[28rem] h-[20rem] sm:h-[28rem] rounded-full bg-primary/10 blur-[80px] sm:blur-[120px] pointer-events-none"></div>
@@ -187,12 +187,12 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
               The Engineering Core
             </span>
           </div>
-          <h2 id={headingId} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
+          <h2 id={headingId} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-[1.05] tracking-tight">
             Technological <span className="block md:inline">Masters<span className="text-primary" aria-hidden="true">.</span></span>
           </h2>
         </div>
         <div className="lg:text-right space-y-2 sm:space-y-3 lg:space-y-4">
-          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-md lg:ml-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-md lg:ml-auto leading-relaxed">
             A multi-disciplinary collective of engineers pushing the boundaries
             of what's possible in the digital realm.
           </p>
@@ -203,15 +203,15 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
                 onClick={() => setIsPaused(p => !p)}
                 aria-label={isPaused ? 'Resume team carousel animation' : 'Pause team carousel animation'}
                 aria-pressed={isPaused}
-                className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-border/80 dark:border-white/15 text-foreground/80 dark:text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {isPaused ? <Play size={16} aria-hidden="true" /> : <Pause size={16} aria-hidden="true" />}
               </button>
             )}
-            <Link to="/about/team" aria-label="View all team members" className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+            <Link to="/about/team" aria-label="View all team members" className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-border/80 dark:border-white/15 text-foreground/80 dark:text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
               <span className="text-lg sm:text-xl leading-none" aria-hidden="true">‹</span>
             </Link>
-            <Link to="/about/team" aria-label="View all team members" className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-white/15 text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+            <Link to="/about/team" aria-label="View all team members" className="inline-flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-border/80 dark:border-white/15 text-foreground/80 dark:text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
               <span className="text-lg sm:text-xl leading-none" aria-hidden="true">›</span>
             </Link>
           </div>
@@ -220,8 +220,8 @@ const HomeTeamShowcase = ({ members }: HomeTeamShowcaseProps) => {
       </div>
 
       {/* Edge fades */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-r from-[#050816] to-transparent z-20"></div>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-l from-[#050816] to-transparent z-20"></div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-r from-background dark:from-[#050816] to-transparent z-20"></div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 md:w-32 lg:w-40 bg-gradient-to-l from-background dark:from-[#050816] to-transparent z-20"></div>
 
       {/* Auto-rotating row */}
       <div
@@ -621,7 +621,7 @@ const TeamSection = () => {
   }
 
   return (
-    <section aria-label="Meet our team" className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+    <section aria-label="Meet our team" className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-background dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-black relative overflow-hidden transition-colors duration-200">
       {/* Background Pattern */}
       <div aria-hidden="true" className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20"></div>
@@ -633,25 +633,25 @@ const TeamSection = () => {
         {/* Hero Section */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <div className="max-w-4xl mx-auto px-2 sm:px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 text-slate-900 dark:text-white leading-tight">
               Meet the Minds Behind the Code
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-              A passionate team driving digital innovation and <span className="text-white font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">solving problems</span> with cutting-edge technology
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
+              A passionate team driving digital innovation and <span className="text-primary font-bold">solving problems</span> with cutting-edge technology
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <Heart size={14} className="text-red-400" />
+                <Heart size={14} className="text-red-500" />
                 <span>We build with passion</span>
               </div>
-              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+              <div className="w-1 h-1 bg-muted-foreground/60 rounded-full"></div>
               <div className="flex items-center space-x-2">
-                <Coffee size={14} className="text-amber-400" />
+                <Coffee size={14} className="text-amber-500" />
                 <span>Fueled by coffee</span>
               </div>
-              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+              <div className="w-1 h-1 bg-muted-foreground/60 rounded-full"></div>
               <div className="flex items-center space-x-2">
-                <Star size={14} className="text-yellow-400" />
+                <Star size={14} className="text-yellow-500" />
                 <span>Driven by innovation</span>
               </div>
             </div>
@@ -661,8 +661,8 @@ const TeamSection = () => {
         {/* Our Values Section */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
           <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-2 sm:px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white">Journey With Us</h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 text-slate-900 dark:text-white">Journey With Us</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
               Collaborating With Us Is Your Pathway to Success
             </p>
           </div>
@@ -689,7 +689,7 @@ const TeamSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
             Executive Team
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Strategic leaders driving operational excellence and innovation
           </p>
         </div>
@@ -716,7 +716,7 @@ const TeamSection = () => {
           <h2 id="our-team-members-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
             Our Team Members
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Talented individuals who bring our vision to life every day
           </p>
           {!prefersReducedMotion && (
@@ -727,7 +727,7 @@ const TeamSection = () => {
                 aria-label={membersPaused ? 'Resume team members carousel' : 'Pause team members carousel'}
                 aria-pressed={membersPaused}
                 aria-controls="team-members-carousel"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-xs sm:text-sm text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/80 dark:border-white/15 text-xs sm:text-sm text-foreground/80 dark:text-white/80 hover:bg-primary hover:text-white hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {membersPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
                 <span>{membersPaused ? 'Resume' : 'Pause'} animation</span>
@@ -766,11 +766,11 @@ const TeamSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10 mb-12 sm:mb-16 lg:mb-20">
         <div className="text-center px-2 sm:px-4">
-          <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-10 lg:p-12 max-w-4xl mx-auto">
+          <div className="bg-card dark:bg-gradient-to-r dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-border/80 dark:border-gray-700/50 rounded-3xl p-6 sm:p-10 lg:p-12 max-w-4xl mx-auto shadow-xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Want to Join the Team?
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
               We're always looking for passionate individuals who want to make a difference
             </p>
             <Link to="/careers">
