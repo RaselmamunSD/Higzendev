@@ -28,7 +28,8 @@ import {
   Info,
   ShieldCheck,
   Star,
-  Search
+  Search,
+  X
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -608,44 +609,105 @@ const Portfolio: React.FC = () => {
           </div>
         </section>
 
-        {/* Search & Category Filter Toolbar */}
-        <section className="py-8 bg-card/70 border-b border-border/60 sticky top-[60px] z-30 backdrop-blur-md">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Modern Interactive Filter Hub */}
+        <section className="relative z-20 -mt-6 sm:-mt-8 mb-4 container mx-auto px-4 sm:px-6">
+          <div className="bg-card/95 dark:bg-slate-900/90 backdrop-blur-2xl border border-border/80 shadow-2xl rounded-3xl p-3.5 sm:p-5 transition-all">
+            <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
               {/* Category Pills */}
-              <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+              <div className="flex items-center gap-2 overflow-x-auto lg:flex-wrap scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-1">
                 {categories.map((cat) => {
                   const IconComponent = cat.icon;
                   const isSelected = activeCategory === cat.id;
+                  const count = cat.id === 'all' 
+                    ? portfolioProjects.length 
+                    : portfolioProjects.filter(p => p.category === cat.id).length;
+
                   return (
                     <button
                       key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 shrink-0 ${
+                      className={`group relative flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 shrink-0 select-none ${
                         isSelected
-                          ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20 scale-105'
-                          : 'bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/60'
+                          ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-[1.02]'
+                          : 'bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground border border-border/60 hover:border-border'
                       }`}
                     >
-                      <IconComponent className="h-4 w-4" />
+                      <IconComponent className={`h-4 w-4 transition-transform group-hover:scale-110 ${isSelected ? 'text-white' : 'text-primary'}`} />
                       <span>{cat.label}</span>
+                      <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-mono font-bold transition-colors ${
+                        isSelected
+                          ? 'bg-white/20 text-white'
+                          : 'bg-background/80 text-muted-foreground group-hover:text-foreground border border-border/40'
+                      }`}>
+                        {count}
+                      </span>
                     </button>
                   );
                 })}
               </div>
 
-              {/* Quick Search */}
-              <div className="relative w-full md:w-72 shrink-0">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Search 20+ projects, stacks..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-4 py-2 bg-background border border-border/60 rounded-xl text-xs sm:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all"
-                />
+              {/* Quick Search & Clear Controls */}
+              <div className="flex items-center gap-2.5 shrink-0 w-full lg:w-auto">
+                <div className="relative flex-1 lg:w-72">
+                  <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder="Search 20+ projects, stacks..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-9 pr-8 py-2.5 bg-background border border-border/70 rounded-2xl text-xs sm:text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground rounded-full hover:bg-muted transition-colors"
+                      title="Clear search"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  )}
+                </div>
+
+                {(activeCategory !== 'all' || searchQuery) && (
+                  <button
+                    onClick={() => { setActiveCategory('all'); setSearchQuery(''); }}
+                    className="px-3 py-2.5 text-xs font-semibold rounded-2xl bg-muted/60 hover:bg-muted text-muted-foreground hover:text-foreground border border-border/60 transition-all flex items-center gap-1.5 shrink-0"
+                    title="Reset all filters"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                    <span className="hidden sm:inline">Reset</span>
+                  </button>
+                )}
               </div>
             </div>
+
+            {/* Active Filter Status & Count */}
+            {(activeCategory !== 'all' || searchQuery) && (
+              <div className="mt-3 pt-3 border-t border-border/50 flex items-center justify-between text-xs text-muted-foreground flex-wrap gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span>Filtered by:</span>
+                  {activeCategory !== 'all' && (
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-primary/10 text-primary font-medium border border-primary/20">
+                      {categories.find(c => c.id === activeCategory)?.label}
+                      <button onClick={() => setActiveCategory('all')} className="hover:text-primary-foreground hover:bg-primary/50 rounded-full p-0.5">
+                        <X className="h-3 w-3" />
+                      </button>
+                    </span>
+                  )}
+                  {searchQuery && (
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-primary/10 text-primary font-medium border border-primary/20">
+                      "{searchQuery}"
+                      <button onClick={() => setSearchQuery('')} className="hover:text-primary-foreground hover:bg-primary/50 rounded-full p-0.5">
+                        <X className="h-3 w-3" />
+                      </button>
+                    </span>
+                  )}
+                </div>
+                <div className="font-medium text-foreground">
+                  Showing <span className="text-primary font-bold">{filteredProjects.length}</span> of {portfolioProjects.length} works
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
