@@ -87,52 +87,52 @@ const Header = () => {
                      About
                    </span>
                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="min-w-[220px] z-[100]">
+                  <NavigationMenuContent className="min-w-[220px] z-[100] bg-white dark:bg-transparent">
                     <ul className="p-2 space-y-1">
                       <li>
-                        <button onClick={() => navigateToTop('/about')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/about')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
-                            <Users className="h-4 w-4 text-blue-400" />
+                            <Users className="h-4 w-4 text-blue-500 dark:text-blue-400" />
                           </div>
                           <span>About Us</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/about/story')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/about/story')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors shrink-0">
-                            <BookOpen className="h-4 w-4 text-purple-400" />
+                            <BookOpen className="h-4 w-4 text-purple-500 dark:text-purple-400" />
                           </div>
                           <span>Our Story</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/about/founder')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/about/founder')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
-                            <UserCircle className="h-4 w-4 text-amber-400" />
+                            <UserCircle className="h-4 w-4 text-amber-500 dark:text-amber-400" />
                           </div>
                           <span>About Founder</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/about/team')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors shrink-0">
-                            <Users className="h-4 w-4 text-cyan-400" />
+                            <Users className="h-4 w-4 text-cyan-500 dark:text-cyan-400" />
                           </div>
                           <span>Meet The Team</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/careers')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/careers')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors shrink-0">
-                            <Rocket className="h-4 w-4 text-emerald-400" />
+                            <Rocket className="h-4 w-4 text-emerald-500 dark:text-emerald-400" />
                           </div>
                           <span>Careers</span>
                         </button>
                       </li>
                       <li>
-                        <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-gray-200 hover:bg-white/[0.08] hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
+                        <button onClick={() => navigateToTop('/blog')} className="flex items-center gap-3 w-full text-left px-3 py-2 text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-white/[0.08] hover:text-primary dark:hover:text-white rounded-lg transition-all duration-200 font-medium text-sm group">
                           <div className="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors shrink-0">
-                            <PenLine className="h-4 w-4 text-pink-400" />
+                            <PenLine className="h-4 w-4 text-pink-500 dark:text-pink-400" />
                           </div>
                           <span>Blog & Articles</span>
                         </button>
